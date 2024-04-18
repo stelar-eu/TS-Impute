@@ -1,0 +1,13 @@
+{
+    "message": "StelarImputation project Imputation Ensemble Model executed successfully!",
+    "output": [
+        {
+            "name": "Model imputed results in CSV format",
+            "path": "s3://XXXXXXXX-bucket/b7c0cb11-f56a-4530-a829-a04676b4c82c.csv"
+        }
+    ],
+    "metrics": {
+        "total_time": 6.240252494812012
+    },
+    "status": 200
+}

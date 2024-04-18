@@ -1,0 +1,48 @@
+{
+    "message": "StelarImputation project Train Ensemble Model executed successfully!",
+    "output": [
+        {
+            "name": "Model in JSON format",
+            "path": "s3://XXXXXXXX-bucket/19e99504-6c70-44af-847e-115068e6d7a0.json"
+        }
+    ],
+    "metrics": {
+        "total_time": 13.601062059402466,
+        "SoftImpute": {
+            "mae": 0.3336659064265825,
+            "mse": 0.19180339877993893,
+            "rmse": 0.43795364912275697,
+            "r2": 0.8085439987819207,
+            "euclidean_distance": 628.4634864911562
+        },
+        "IterativeSVD": {
+            "mae": 0.39776940817300926,
+            "mse": 0.2786345508475742,
+            "rmse": 0.5278584572094817,
+            "r2": 0.7218701167663995,
+            "euclidean_distance": 757.4768860956063
+        },
+        "SVT": {
+            "mae": 0.3037017739183278,
+            "mse": 0.15883563314893326,
+            "rmse": 0.3985418838076285,
+            "r2": 0.8414520526378847,
+            "euclidean_distance": 571.907603263947
+        },
+        "TimesNet": {
+            "mae": 0.3280960737504645,
+            "mse": 0.17486829534935477,
+            "rmse": 0.4181725664714925,
+            "r2": 0.8254484290665698,
+            "euclidean_distance": 600.0776328865916
+        },
+        "Ensemble_Model": {
+            "mae": 0.24998764607675808,
+            "mse": 0.10096284043749196,
+            "rmse": 0.3177465034229204,
+            "r2": 0.8992200251677555,
+            "euclidean_distance": 455.9662324118906
+        }
+    },
+    "status": 200
+}

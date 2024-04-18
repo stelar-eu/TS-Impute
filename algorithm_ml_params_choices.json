@@ -1,0 +1,92 @@
+{
+	"saits":
+	{
+		"n_layers": 4,
+		"d_model": 256,
+		"d_inner": 256, 
+		"n_heads": 4,
+		"d_k": 64,
+		"d_v": 64,
+		"dropout": 0.1,
+		"epochs": 50,
+		"batch_size": 32,
+		"ORT_weight": 1,
+		"MIT_weight": 1,
+		"attn_dropout": 0,
+		"diagonal_attention_mask": true,
+		"num_workers": 0
+	},
+	"brits":
+	{
+		"rnn_hidden_size": 256,
+		"batch_size": 32,
+		"epochs": 50,
+		"num_workers": 0
+	},
+	"csdi":
+	{
+		"n_layers": 4,
+		"n_channels": 32,
+		"n_heads": 4,
+		"d_time_embedding": 64,
+		"d_feature_embedding": 3,
+		"d_diffusion_embedding": 64,
+		"is_unconditional": false,
+		"beta_start": 0.0001,
+		"beta_end": 0.1,
+		"epochs": 50,
+		"batch_size": 32,
+		"n_diffusion_steps": 50,
+		"num_workers": 0
+	},
+	"usgan":
+	{
+		"rnn_hidden_size": 256,
+		"lambda_mse": 1,
+		"hint_rate": 0.7, 
+		"dropout": 0.1,
+		"G_steps": 1,
+		"D_steps": 1,
+		"epochs": 50,
+		"batch_size": 32,
+		"num_workers": 0
+	},
+	"mrnn":
+	{
+		"rnn_hidden_size": 256,
+		"batch_size": 32,
+		"epochs": 50,
+		"num_workers": 0
+	},
+	"gpvae":
+	{
+		"latent_size": 256,
+		"encoder_sizes": [64, 64],
+		"decoder_sizes": [64, 64], 
+		"kernel": "cauchy",
+		"_comment": " The type of kernel function chosen in the Gaussain Process Proir. ['cauchy', 'diffusion', 'rbf', 'matern']",
+		"beta": 0.2,
+		"M": 1,
+		"K": 1,
+		"sigma": 1.0,
+		"length_scale": 7.0,
+		"kernel_scales": 1,
+		"window_size": 3,
+		"batch_size": 32, 
+		"epochs": 50,
+		"num_workers": 0
+	},
+	"timesnet":
+	{
+		"n_layers": 2,
+		"top_k": 3,
+		"d_model":128,
+		"d_ffn":256,
+		"n_kernels":3,
+		"dropout":0.1, 
+		"apply_nonstationary_norm": false,
+		"batch_size": 32,
+		"epochs":50,
+		"num_workers": 0
+	}
+}
