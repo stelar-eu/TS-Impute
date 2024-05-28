@@ -360,7 +360,7 @@ def fill_missing_values(time_series: pd.DataFrame, algorithm, var_dict):
     3. Other
         1. MeanImpute
         2. LinearImpute
-        3. ZaeroImpute
+        3. ZeroImpute
 
     :param time_series: A pandas DataFrame with missing values containing the loaded time series as columns.
     :type time_series: pandas.DataFrame
