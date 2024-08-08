@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 12,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 32,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "d_k": 16,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0007963406280958749,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.531185743660041,
+        "Missing value percentage between 4 and 9": 0.273224043715847,
+        "Mean absolute error": 0.06939021477741124,
+        "Mean square error": 0.011862501608022836,
+        "Root mean square error": 0.10891511193596064,
+        "Mean relative error": 0.1541752019801639,
+        "Euclidean Distance": 0.7545860303405489,
+        "r2 score": 0.9348672628081921,
+        "Execution Time": 12.468934297561646
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.281407754358572,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.571688819836254
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.28444801298423,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.21850795023389,
+            "vintage_score": -10.590954281489218
+        },
+        "Deviation missing": 0.2026754837776734,
+        "Deviation filled": 0.020808465054222396,
+        "Improvement": 0.18186701872345098
+    }
+}

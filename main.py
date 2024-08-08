@@ -80,11 +80,6 @@ def run(j):
         else:
             time_column = ''
 
-        if 'datetime_format' in parameters:
-            datetime_format = parameters['datetime_format']
-        else:
-            datetime_format = ''
-
         if 'spatial_x_column' in parameters:
             spatial_x_column = parameters['spatial_x_column']
         else:
@@ -97,13 +92,11 @@ def run(j):
 
         header = parameters['header']
         sep = parameters['sep']
-        
+
         if 'dimension_column' in parameters:
             dimension_column = parameters['dimension_column']
         else:
             dimension_column = ''
-            
-        
 
         if 'is_multivariate' in parameters:
             is_multivariate = parameters['is_multivariate']
@@ -148,7 +141,6 @@ def run(j):
                                              train_params=train_params,
                                              dimension_column=dimension_column,
                                              time_column=time_column,
-                                             datetime_format=datetime_format,
                                              spatial_x_column=spatial_x_column,
                                              spatial_y_column=spatial_y_column,
                                              preprocessing=preprocessing,
@@ -199,7 +191,6 @@ def run(j):
                                                      algorithms=algorithms, params=params,
                                                      dimension_column=dimension_column,
                                                      time_column=time_column,
-                                                     datetime_format=datetime_format,
                                                      spatial_x_column=spatial_x_column,
                                                      spatial_y_column=spatial_y_column,
                                                      is_multivariate=is_multivariate,
@@ -239,7 +230,6 @@ def run(j):
                                                 params=params, train_params=train_params,
                                                 dimension_column=dimension_column,
                                                 time_column=time_column,
-                                                datetime_format=datetime_format,
                                                 spatial_x_column=spatial_x_column,
                                                 spatial_y_column=spatial_y_column,
                                                 is_multivariate=is_multivariate,
@@ -277,7 +267,6 @@ def run(j):
                                                      params=params, model=model,
                                                      dimension_column=dimension_column,
                                                      time_column=time_column,
-                                                     datetime_format=datetime_format,
                                                      spatial_x_column=spatial_x_column,
                                                      spatial_y_column=spatial_y_column,
                                                      is_multivariate=is_multivariate,

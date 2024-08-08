@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 48,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 64,
+        "d_ffn": 256,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 64,
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008610459441905952,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.9150102810143934,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.2232828826922948,
+        "Mean square error": 0.14521219998752688,
+        "Root mean square error": 0.3810671856609106,
+        "Mean relative error": 0.19087754755949876,
+        "Euclidean Distance": 5.2802218132958485,
+        "r2 score": 0.77581257636855,
+        "Execution Time": 14.32172179222107
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.8014319014319,
+            "Tmin_aug_sep": 16.973333333333336,
+            "prec_jun_sep": 141.0,
+            "vintage_score": -7.0827954987421435
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.89172109995936,
+            "Tmin_aug_sep": 17.110499123018514,
+            "prec_jun_sep": 140.92375564579174,
+            "vintage_score": -7.673738557922178
+        },
+        "Deviation missing": 6.086821777836726,
+        "Deviation filled": 1.7486918757455217,
+        "Improvement": 4.338129902091205
+    }
+}

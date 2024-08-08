@@ -1,0 +1,61 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 24,
+        "seed": 2024
+    },
+    "algorithm": "TimesNet",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 256,
+        "d_ffn": 32,
+        "n_heads": 3,
+        "top_k": 1,
+        "n_kernels": 5,
+        "dropout": 0.1,
+        "epochs": 100,
+        "batch_size": 32,
+        "attn_dropout": 0.5,
+        "apply_nonstationary_norm": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.00506298674405962,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.39067854694996573,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.13568174024983518,
+        "Mean square error": 0.026066003424236175,
+        "Root mean square error": 0.1614496931686034,
+        "Mean relative error": 0.13143544968436197,
+        "Euclidean Distance": 1.5818774695679494,
+        "r2 score": 0.944126972692779,
+        "Execution Time": 6.998203277587891
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.89825819672131,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.049939529675811
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.915893504997246,
+            "Tmin_aug_sep": 18.274549166136104,
+            "prec_jun_sep": 121.58610280684556,
+            "vintage_score": -8.161153326722541
+        },
+        "Deviation missing": 0.8884256158452968,
+        "Deviation filled": 0.4808485852722346,
+        "Improvement": 0.40757703057306216
+    }
+}

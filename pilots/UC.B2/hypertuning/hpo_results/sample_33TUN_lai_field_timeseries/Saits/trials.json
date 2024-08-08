@@ -1,0 +1,1753 @@
+{
+    "0": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 16,
+                "d_v": 64,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0036608568553097194,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5683323342776879,
+                "Mean square error": 0.6892812996305997,
+                "Root mean square error": 0.8302296667974469,
+                "Mean relative error": 0.7383193505222286,
+                "Euclidean Distance": 45.36732260886651,
+                "r2 score": 0.291290259950179,
+                "Execution Time": 68.93217539787292
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 48,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 32,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002707534045940291,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5971102866283344,
+                "Mean square error": 0.7156222482440289,
+                "Root mean square error": 0.8459445893461515,
+                "Mean relative error": 0.7757047284206952,
+                "Euclidean Distance": 46.226053619757224,
+                "r2 score": 0.2642068516892937,
+                "Execution Time": 39.50445890426636
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 64,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008610459441905952,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6565434072764071,
+                "Mean square error": 0.8360360731405937,
+                "Root mean square error": 0.914350082375779,
+                "Mean relative error": 0.8529141715402102,
+                "Euclidean Distance": 49.96402420139728,
+                "r2 score": 0.14039898023451358,
+                "Execution Time": 79.7610514163971
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0016572614568328553,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6690784577822024,
+                "Mean square error": 0.8627085774965934,
+                "Root mean square error": 0.9288210686114917,
+                "Mean relative error": 0.8691984295174805,
+                "Euclidean Distance": 50.7547811777849,
+                "r2 score": 0.11297467082883428,
+                "Execution Time": 48.82555651664734
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 32,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0014492869634879434,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6515184249468302,
+                "Mean square error": 0.841655277828626,
+                "Root mean square error": 0.9174177226479909,
+                "Mean relative error": 0.8463862274726355,
+                "Euclidean Distance": 50.131653270127416,
+                "r2 score": 0.13462138972701487,
+                "Execution Time": 82.29833889007568
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 192,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002376780237457148,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6058207999123263,
+                "Mean square error": 0.7450321612000764,
+                "Root mean square error": 0.8631524553635218,
+                "Mean relative error": 0.7870205380670453,
+                "Euclidean Distance": 47.16636548795581,
+                "r2 score": 0.2339679756641665,
+                "Execution Time": 81.88999962806702
+            }
+        }
+    },
+    "6": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 48,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015200137689637295,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6359425493707197,
+                "Mean square error": 0.7808470100823773,
+                "Root mean square error": 0.883655481555101,
+                "Mean relative error": 0.8261516399864516,
+                "Euclidean Distance": 48.2867390916593,
+                "r2 score": 0.19714363086487763,
+                "Execution Time": 67.41797184944153
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 16,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 9.835950176986391e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5807179987551043,
+                "Mean square error": 0.6737772507625067,
+                "Root mean square error": 0.820839357464362,
+                "Mean relative error": 0.7544095414214926,
+                "Euclidean Distance": 44.85419568754796,
+                "r2 score": 0.30723131398561343,
+                "Execution Time": 67.66417241096497
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0022511528688296573,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.7394769098733267,
+                "Mean square error": 1.0631283924115202,
+                "Root mean square error": 1.0310811764412733,
+                "Mean relative error": 0.9606529118526229,
+                "Euclidean Distance": 56.34271363486853,
+                "r2 score": -0.09309428099868922,
+                "Execution Time": 33.99224877357483
+            }
+        }
+    },
+    "9": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 192,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0064427794572199755,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.7386764086970949,
+                "Mean square error": 1.0414163386356554,
+                "Root mean square error": 1.0204980836021473,
+                "Mean relative error": 0.959612982443576,
+                "Euclidean Distance": 55.76440788859924,
+                "r2 score": -0.07077024000746102,
+                "Execution Time": 68.08480429649353
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "d_k": 32,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 8.879194878379999e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.577287568684108,
+                "Mean square error": 0.6960909610979197,
+                "Root mean square error": 0.8343206584389,
+                "Mean relative error": 0.7499530768684968,
+                "Euclidean Distance": 45.59087200129417,
+                "r2 score": 0.2842886578308147,
+                "Execution Time": 82.76935458183289
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 16,
+                "d_v": 16,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.000416399497165311,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5844377332788192,
+                "Mean square error": 0.7150137900773017,
+                "Root mean square error": 0.8455848804687213,
+                "Mean relative error": 0.7592418407858332,
+                "Euclidean Distance": 46.20639757837461,
+                "r2 score": 0.26483246017367235,
+                "Execution Time": 109.41511130332947
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "d_k": 32,
+                "d_v": 64,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 5.566182211680534e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5973588512791174,
+                "Mean square error": 0.7381932109256512,
+                "Root mean square error": 0.8591817100739815,
+                "Mean relative error": 0.7760276382402853,
+                "Euclidean Distance": 46.94938687378137,
+                "r2 score": 0.2409996921401526,
+                "Execution Time": 142.76031947135925
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002484996299442625,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5487921851114298,
+                "Mean square error": 0.6555375151288089,
+                "Root mean square error": 0.8096527126668625,
+                "Mean relative error": 0.7129347834803503,
+                "Euclidean Distance": 44.24290926436262,
+                "r2 score": 0.32598516427353375,
+                "Execution Time": 154.30209350585938
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00017772660707042766,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5224135432557122,
+                "Mean square error": 0.6033318389571932,
+                "Root mean square error": 0.7767443845675315,
+                "Mean relative error": 0.6786663448434314,
+                "Euclidean Distance": 42.44465656741941,
+                "r2 score": 0.3796623367262598,
+                "Execution Time": 176.6088044643402
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00023941060616850405,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.4892269494785572,
+                "Mean square error": 0.5607152414439113,
+                "Root mean square error": 0.7488092156510303,
+                "Mean relative error": 0.6355537100595334,
+                "Euclidean Distance": 40.918158694539514,
+                "r2 score": 0.42348014777326237,
+                "Execution Time": 183.41479897499084
+            }
+        }
+    },
+    "16": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.000697530711779761,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6268758321178285,
+                "Mean square error": 0.7836591527976052,
+                "Root mean square error": 0.8852452500847464,
+                "Mean relative error": 0.8143730865067678,
+                "Euclidean Distance": 48.37361088706992,
+                "r2 score": 0.19425222363569528,
+                "Execution Time": 79.78310084342957
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00016937714306671436,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5303163559244645,
+                "Mean square error": 0.605366589509292,
+                "Root mean square error": 0.7780530762803345,
+                "Mean relative error": 0.6889328723045296,
+                "Euclidean Distance": 42.51616911569935,
+                "r2 score": 0.3775702336391501,
+                "Execution Time": 182.92816019058228
+            }
+        }
+    },
+    "18": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005964229266452386,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6363314688556204,
+                "Mean square error": 0.8162338883241411,
+                "Root mean square error": 0.9034566333389451,
+                "Mean relative error": 0.826656884478413,
+                "Euclidean Distance": 49.36875925659754,
+                "r2 score": 0.1607593197086986,
+                "Execution Time": 94.56689095497131
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0003499307374915858,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.529914738733501,
+                "Mean square error": 0.5916720555061595,
+                "Root mean square error": 0.7692022201646064,
+                "Mean relative error": 0.6884111322490961,
+                "Euclidean Distance": 42.032520240183,
+                "r2 score": 0.3916507688845785,
+                "Execution Time": 182.28132581710815
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0004020080218038499,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5635279492807876,
+                "Mean square error": 0.7542170892198176,
+                "Root mean square error": 0.8684567284671226,
+                "Mean relative error": 0.7320779839896023,
+                "Euclidean Distance": 47.45621380188663,
+                "r2 score": 0.224524156496672,
+                "Execution Time": 183.45748472213745
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00015229410187564,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5144648827911968,
+                "Mean square error": 0.5687787450199897,
+                "Root mean square error": 0.7541742139718048,
+                "Mean relative error": 0.668340256606447,
+                "Euclidean Distance": 41.21132529572048,
+                "r2 score": 0.4151893621007713,
+                "Execution Time": 181.60240387916565
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0001195725015402461,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5292761394136216,
+                "Mean square error": 0.6264604424545944,
+                "Root mean square error": 0.7914925409974465,
+                "Mean relative error": 0.6875815292040811,
+                "Euclidean Distance": 43.2505593162611,
+                "r2 score": 0.3558818184079141,
+                "Execution Time": 181.06162071228027
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0003508605644314647,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.47790103647119947,
+                "Mean square error": 0.5374464882976868,
+                "Root mean square error": 0.7331074193443188,
+                "Mean relative error": 0.6208402400855062,
+                "Euclidean Distance": 40.06014495801149,
+                "r2 score": 0.44740476607116475,
+                "Execution Time": 182.4873242378235
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.000925992711419921,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6436060269837948,
+                "Mean square error": 0.866543917350633,
+                "Root mean square error": 0.9308834069584832,
+                "Mean relative error": 0.8361072477757185,
+                "Euclidean Distance": 50.8674762221303,
+                "r2 score": 0.10903122609528992,
+                "Execution Time": 84.06051301956177
+            }
+        }
+    },
+    "25": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "d_k": 32,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 6.964940180998745e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5715621570464953,
+                "Mean square error": 0.6830580222159841,
+                "Root mean square error": 0.8264732434967172,
+                "Mean relative error": 0.7425152065472046,
+                "Euclidean Distance": 45.16205547068167,
+                "r2 score": 0.2976889498916204,
+                "Execution Time": 190.83347630500793
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 32,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00015238005236330865,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5410060432050637,
+                "Mean square error": 0.6201453521494101,
+                "Root mean square error": 0.7874930806993863,
+                "Mean relative error": 0.7028198227634165,
+                "Euclidean Distance": 43.03201159042114,
+                "r2 score": 0.3623749091257049,
+                "Execution Time": 175.25604343414307
+            }
+        }
+    },
+    "27": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002715464245368599,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5421507057307013,
+                "Mean square error": 0.6092074548247374,
+                "Root mean square error": 0.7805174276239688,
+                "Mean relative error": 0.7043068514639215,
+                "Euclidean Distance": 42.650831880593685,
+                "r2 score": 0.3736211077006769,
+                "Execution Time": 179.95622062683105
+            }
+        }
+    },
+    "28": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 128,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005193230484969976,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.599569358735783,
+                "Mean square error": 0.7564372526757978,
+                "Root mean square error": 0.8697340126014377,
+                "Mean relative error": 0.7788993038684676,
+                "Euclidean Distance": 47.52601010488818,
+                "r2 score": 0.2222414143613506,
+                "Execution Time": 131.31766724586487
+            }
+        }
+    },
+    "29": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 64,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.000999813341557805,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6725909587942277,
+                "Mean square error": 0.8446828901940897,
+                "Root mean square error": 0.9190663143615316,
+                "Mean relative error": 0.8737615122588542,
+                "Euclidean Distance": 50.221739417502775,
+                "r2 score": 0.13150843950821534,
+                "Execution Time": 41.81110858917236
+            }
+        }
+    },
+    "30": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "d_k": 32,
+                "d_v": 16,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00012780521614882745,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5889993559668282,
+                "Mean square error": 0.7237916978451192,
+                "Root mean square error": 0.850759482959267,
+                "Mean relative error": 0.7651678353091232,
+                "Euclidean Distance": 46.489160131857915,
+                "r2 score": 0.2558071337421485,
+                "Execution Time": 209.7056028842926
+            }
+        }
+    },
+    "31": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00032377783202889264,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5129539489129411,
+                "Mean square error": 0.5975204219006177,
+                "Root mean square error": 0.7729944514035128,
+                "Mean relative error": 0.666377405555409,
+                "Euclidean Distance": 42.2397440782404,
+                "r2 score": 0.3856375573998718,
+                "Execution Time": 183.44162440299988
+            }
+        }
+    },
+    "32": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00020420883120867252,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5157601093728628,
+                "Mean square error": 0.5891943281379406,
+                "Root mean square error": 0.7675899479135593,
+                "Mean relative error": 0.6700228827582215,
+                "Euclidean Distance": 41.94441874457067,
+                "r2 score": 0.39419833476223387,
+                "Execution Time": 181.40483474731445
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "d_k": 16,
+                "d_v": 16,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00019337658394289722,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5873250652040712,
+                "Mean square error": 0.6926334176434025,
+                "Root mean square error": 0.8322460078867321,
+                "Mean relative error": 0.7629927676700189,
+                "Euclidean Distance": 45.47750416506166,
+                "r2 score": 0.28784365739945994,
+                "Execution Time": 167.32267904281616
+            }
+        }
+    },
+    "34": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00023802725822932313,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6463253534434769,
+                "Mean square error": 0.8508013301544112,
+                "Root mean square error": 0.9223889256460157,
+                "Mean relative error": 0.8396399191098634,
+                "Euclidean Distance": 50.40330119983286,
+                "r2 score": 0.12521754202396085,
+                "Execution Time": 180.61706805229187
+            }
+        }
+    },
+    "35": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 512,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00045199197657966707,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.521770471824789,
+                "Mean square error": 0.6177590291363781,
+                "Root mean square error": 0.7859764812870537,
+                "Mean relative error": 0.6778309320882833,
+                "Euclidean Distance": 42.9491380705274,
+                "r2 score": 0.3648284942775831,
+                "Execution Time": 178.27114248275757
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 128,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 9.642675292744264e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5720654761366597,
+                "Mean square error": 0.6741657647595167,
+                "Root mean square error": 0.8210759798943803,
+                "Mean relative error": 0.743169067327848,
+                "Euclidean Distance": 44.86712575563447,
+                "r2 score": 0.3068318491314612,
+                "Execution Time": 112.91890072822571
+            }
+        }
+    },
+    "37": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 48,
+                "d_ffn": 128,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 64,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0008955223863758555,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6624637977596988,
+                "Mean square error": 0.7998452309535896,
+                "Root mean square error": 0.8943406682878676,
+                "Mean relative error": 0.8606053384734047,
+                "Euclidean Distance": 48.87062368772694,
+                "r2 score": 0.1776099162809167,
+                "Execution Time": 209.14025712013245
+            }
+        }
+    },
+    "38": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 512,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00013728103740953614,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6021034167637925,
+                "Mean square error": 0.7766050193261758,
+                "Root mean square error": 0.8812519613176335,
+                "Mean relative error": 0.7821912933693,
+                "Euclidean Distance": 48.15540040024548,
+                "r2 score": 0.20150518857394706,
+                "Execution Time": 86.0167076587677
+            }
+        }
+    },
+    "39": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0003045584879110023,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.49821970566432694,
+                "Mean square error": 0.5446164436835446,
+                "Root mean square error": 0.7379813301727521,
+                "Mean relative error": 0.6472361808711241,
+                "Euclidean Distance": 40.32647642478902,
+                "r2 score": 0.44003271460189775,
+                "Execution Time": 193.53965854644775
+            }
+        }
+    },
+    "40": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00031145668953266306,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6315401954262766,
+                "Mean square error": 0.8115086783712077,
+                "Root mean square error": 0.9008377647341432,
+                "Mean relative error": 0.8204325511558623,
+                "Euclidean Distance": 49.225653003453665,
+                "r2 score": 0.16561771688154958,
+                "Execution Time": 79.12068939208984
+            }
+        }
+    },
+    "41": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00023769642968515684,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.555575384548982,
+                "Mean square error": 0.6270453341249013,
+                "Root mean square error": 0.7918619413287277,
+                "Mean relative error": 0.7217468237271214,
+                "Euclidean Distance": 43.270744940397734,
+                "r2 score": 0.355280440677454,
+                "Execution Time": 164.97827744483948
+            }
+        }
+    },
+    "42": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00018391234772382906,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.4966542315712517,
+                "Mean square error": 0.5667857351904394,
+                "Root mean square error": 0.7528517351978671,
+                "Mean relative error": 0.6452024767407272,
+                "Euclidean Distance": 41.13905936307553,
+                "r2 score": 0.4172385479396651,
+                "Execution Time": 171.10255432128906
+            }
+        }
+    },
+    "43": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 7.033750947159932e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5690809273572237,
+                "Mean square error": 0.6532714725874489,
+                "Root mean square error": 0.808252109547169,
+                "Mean relative error": 0.7392918462310831,
+                "Euclidean Distance": 44.16637428118956,
+                "r2 score": 0.3283150786659449,
+                "Execution Time": 172.20545291900635
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00011456401352255982,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5593558546101963,
+                "Mean square error": 0.6443967946356429,
+                "Root mean square error": 0.8027432931115918,
+                "Mean relative error": 0.7266580245015976,
+                "Euclidean Distance": 43.86534883916951,
+                "r2 score": 0.3374399028960827,
+                "Execution Time": 175.99771356582642
+            }
+        }
+    },
+    "45": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00030523202706630304,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6455520996844317,
+                "Mean square error": 0.7868862168430801,
+                "Root mean square error": 0.8870660724225,
+                "Mean relative error": 0.8386353867636743,
+                "Euclidean Distance": 48.473108457096494,
+                "r2 score": 0.19093419988832472,
+                "Execution Time": 76.94948267936707
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 16,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 16,
+                "d_v": 32,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.003669964527388599,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6008193648898896,
+                "Mean square error": 0.7741030308395197,
+                "Root mean square error": 0.8798312513428468,
+                "Mean relative error": 0.7805231842570818,
+                "Euclidean Distance": 48.07776669196279,
+                "r2 score": 0.20407769940651432,
+                "Execution Time": 106.08520030975342
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 192,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 32,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00052631101124788,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6226759419889539,
+                "Mean square error": 0.7943675839311581,
+                "Root mean square error": 0.8912730131285016,
+                "Mean relative error": 0.808917017996859,
+                "Euclidean Distance": 48.70299380549865,
+                "r2 score": 0.18324195910498942,
+                "Execution Time": 50.05049443244934
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "d_k": 32,
+                "d_v": 128,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00018686531427211832,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5885609231444008,
+                "Mean square error": 0.707113217530201,
+                "Root mean square error": 0.8409002423178393,
+                "Mean relative error": 0.7645982681436133,
+                "Euclidean Distance": 45.95040878539799,
+                "r2 score": 0.2729557223586484,
+                "Execution Time": 172.66916728019714
+            }
+        }
+    },
+    "49": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0007013848803652272,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.5408222438440647,
+                "Mean square error": 0.6017034171615142,
+                "Root mean square error": 0.7756954409828088,
+                "Mean relative error": 0.702581049396753,
+                "Euclidean Distance": 42.38733777490964,
+                "r2 score": 0.38133665806375405,
+                "Execution Time": 140.96013736724854
+            }
+        }
+    },
+    "best_trial": 23
+}

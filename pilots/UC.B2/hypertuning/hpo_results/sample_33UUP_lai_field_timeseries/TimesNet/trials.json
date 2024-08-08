@@ -1,0 +1,1653 @@
+{
+    "0": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 4,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005431095176981607,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6258013932909322,
+                "Mean square error": 0.6861539607011786,
+                "Root mean square error": 0.8283441076637044,
+                "Mean relative error": 0.7973308273154401,
+                "Euclidean Distance": 90.91807721551918,
+                "r2 score": 0.29337832594933677,
+                "Execution Time": 1727.595191001892
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 3,
+                "n_kernels": 4,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 8.126824698312336e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6741646393852941,
+                "Mean square error": 0.7962719790372694,
+                "Root mean square error": 0.8923407303475895,
+                "Mean relative error": 0.8589502283482385,
+                "Euclidean Distance": 97.94227142282331,
+                "r2 score": 0.17997552873998368,
+                "Execution Time": 1306.0205192565918
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00018048332240311763,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6431567001187786,
+                "Mean square error": 0.7452305519859744,
+                "Root mean square error": 0.8632673699300666,
+                "Mean relative error": 0.8194431480927877,
+                "Euclidean Distance": 94.75121350027678,
+                "r2 score": 0.2325395022716158,
+                "Execution Time": 470.5666928291321
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0010271876245468612,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6151880415061434,
+                "Mean square error": 0.6726295064216139,
+                "Root mean square error": 0.8201399310005665,
+                "Mean relative error": 0.7838084020701813,
+                "Euclidean Distance": 90.01759641237477,
+                "r2 score": 0.307306209589157,
+                "Execution Time": 280.2139754295349
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.006742733784436902,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.651082769435771,
+                "Mean square error": 0.7554862056988166,
+                "Root mean square error": 0.8691870947608556,
+                "Mean relative error": 0.829541718459727,
+                "Euclidean Distance": 95.40095555105118,
+                "r2 score": 0.2219779262841406,
+                "Execution Time": 292.24338006973267
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001104418389019666,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5823538873191847,
+                "Mean square error": 0.6275736107259231,
+                "Root mean square error": 0.7921954372034233,
+                "Mean relative error": 0.7419745493450889,
+                "Euclidean Distance": 86.95044156538366,
+                "r2 score": 0.3537061056267846,
+                "Execution Time": 972.5756907463074
+            }
+        }
+    },
+    "6": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00031105779836337796,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5832487932141306,
+                "Mean square error": 0.6552024401833608,
+                "Root mean square error": 0.8094457611127264,
+                "Mean relative error": 0.7431147450449328,
+                "Euclidean Distance": 88.84381687483346,
+                "r2 score": 0.32525311862759276,
+                "Execution Time": 2862.895859003067
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005333930877722995,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.588983773125298,
+                "Mean square error": 0.6462088637532772,
+                "Root mean square error": 0.8038711736051226,
+                "Mean relative error": 0.7504216579508981,
+                "Euclidean Distance": 88.23195669164168,
+                "r2 score": 0.3345149700439042,
+                "Execution Time": 3053.2112822532654
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002962507346672304,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5787965556131728,
+                "Mean square error": 0.6342624436537929,
+                "Root mean square error": 0.79640595405471,
+                "Mean relative error": 0.737442168524915,
+                "Euclidean Distance": 87.41258295404181,
+                "r2 score": 0.34681774734039306,
+                "Execution Time": 1085.830576658249
+            }
+        }
+    },
+    "9": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005024642732106495,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6307932180729037,
+                "Mean square error": 0.7242782017209008,
+                "Root mean square error": 0.8510453582041916,
+                "Mean relative error": 0.80369088951072,
+                "Euclidean Distance": 93.40973983547804,
+                "r2 score": 0.25411685322718336,
+                "Execution Time": 349.6440978050232
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001575718825718914,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5870615766607308,
+                "Mean square error": 0.6416552528864915,
+                "Root mean square error": 0.8010338650060255,
+                "Mean relative error": 0.7479725958142728,
+                "Euclidean Distance": 87.92053702931737,
+                "r2 score": 0.3392044134020322,
+                "Execution Time": 1059.0913503170013
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002141219348332769,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5213781418479219,
+                "Mean square error": 0.5354992119226067,
+                "Root mean square error": 0.7317781165917759,
+                "Mean relative error": 0.6642856178342326,
+                "Euclidean Distance": 80.31910735330443,
+                "r2 score": 0.4485270489514017,
+                "Execution Time": 1268.2807149887085
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0019669148783012925,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5278605015044501,
+                "Mean square error": 0.5362037588185863,
+                "Root mean square error": 0.732259352155086,
+                "Mean relative error": 0.6725447640159238,
+                "Euclidean Distance": 80.37192720401514,
+                "r2 score": 0.4478014856877638,
+                "Execution Time": 1048.8212897777557
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00258236178463597,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5233679959633005,
+                "Mean square error": 0.5368243775265995,
+                "Root mean square error": 0.7326829993432354,
+                "Mean relative error": 0.6668208822888362,
+                "Euclidean Distance": 80.4184262222468,
+                "r2 score": 0.4471623541582226,
+                "Execution Time": 1156.1317324638367
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 16,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002688512592165792,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5226448452401042,
+                "Mean square error": 0.5386902462090306,
+                "Root mean square error": 0.7339552072225053,
+                "Mean relative error": 0.6658995191046353,
+                "Euclidean Distance": 80.55806226617041,
+                "r2 score": 0.44524082731810866,
+                "Execution Time": 2113.385256290436
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002555999084348454,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5559816614864567,
+                "Mean square error": 0.5923470295690376,
+                "Root mean square error": 0.7696408445301208,
+                "Mean relative error": 0.7083738113684908,
+                "Euclidean Distance": 84.4748759408275,
+                "r2 score": 0.38998348238742175,
+                "Execution Time": 194.2645583152771
+            }
+        }
+    },
+    "16": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005962058179974252,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5481450411313343,
+                "Mean square error": 0.5735056869524865,
+                "Root mean square error": 0.757301582563041,
+                "Mean relative error": 0.698389207533961,
+                "Euclidean Distance": 83.12053302714442,
+                "r2 score": 0.40938685513406325,
+                "Execution Time": 733.6873512268066
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.009921388259770328,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5717380124086219,
+                "Mean square error": 0.6154796929231032,
+                "Root mean square error": 0.7845251384902228,
+                "Mean relative error": 0.7284489093962797,
+                "Euclidean Distance": 86.10855857953162,
+                "r2 score": 0.36616078042735944,
+                "Execution Time": 3799.691812992096
+            }
+        }
+    },
+    "18": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "top_k": 2,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015419354155232982,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6032932903771454,
+                "Mean square error": 0.6909400797999873,
+                "Root mean square error": 0.8312280552291214,
+                "Mean relative error": 0.7686533515061024,
+                "Euclidean Distance": 91.23461591605701,
+                "r2 score": 0.2884494387264902,
+                "Execution Time": 1049.7336943149567
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 3,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0033597560814235795,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6413691966281538,
+                "Mean square error": 0.7281479362964719,
+                "Root mean square error": 0.8533158479112362,
+                "Mean relative error": 0.817165697687134,
+                "Euclidean Distance": 93.65894612135884,
+                "r2 score": 0.2501316859315995,
+                "Execution Time": 149.9024841785431
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015332042385510737,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5291832038209252,
+                "Mean square error": 0.5339448135943476,
+                "Root mean square error": 0.7307152753257233,
+                "Mean relative error": 0.674230013271668,
+                "Euclidean Distance": 80.20245114316087,
+                "r2 score": 0.4501278143943839,
+                "Execution Time": 2585.8212909698486
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0016329807956725992,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5217400286115268,
+                "Mean square error": 0.5329827138149661,
+                "Root mean square error": 0.730056651099739,
+                "Mean relative error": 0.6647466961822724,
+                "Euclidean Distance": 80.13016132099635,
+                "r2 score": 0.45111861324660574,
+                "Execution Time": 2611.896747112274
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0008072487301139403,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5329484028187048,
+                "Mean square error": 0.5493381205100288,
+                "Root mean square error": 0.741173475314672,
+                "Mean relative error": 0.6790272369021868,
+                "Euclidean Distance": 81.35033090150478,
+                "r2 score": 0.43427533095055304,
+                "Execution Time": 2608.1412024497986
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0038923187148856724,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5252505889122155,
+                "Mean square error": 0.5332416077411789,
+                "Root mean square error": 0.7302339404199033,
+                "Mean relative error": 0.6692194857588013,
+                "Euclidean Distance": 80.14962038873284,
+                "r2 score": 0.45085199661241093,
+                "Execution Time": 1986.5515041351318
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004282251227637804,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5232754900450122,
+                "Mean square error": 0.5392357182621764,
+                "Root mean square error": 0.7343267108461848,
+                "Mean relative error": 0.6667030209015795,
+                "Euclidean Distance": 80.59883806795507,
+                "r2 score": 0.44467908403975165,
+                "Execution Time": 2579.551518201828
+            }
+        }
+    },
+    "25": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0012767841977309375,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5698544369491413,
+                "Mean square error": 0.6149900863439044,
+                "Root mean square error": 0.7842130363261659,
+                "Mean relative error": 0.7260490541138859,
+                "Euclidean Distance": 86.07430261224904,
+                "r2 score": 0.3666649917857929,
+                "Execution Time": 2928.334463119507
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008301104478748935,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5442802780290278,
+                "Mean square error": 0.5906045439948842,
+                "Root mean square error": 0.7685079986538098,
+                "Mean relative error": 0.6934651297118656,
+                "Euclidean Distance": 84.35053610681067,
+                "r2 score": 0.391777945647765,
+                "Execution Time": 1702.794748544693
+            }
+        }
+    },
+    "27": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.003757253917794712,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5669246703720802,
+                "Mean square error": 0.6127132437735,
+                "Root mean square error": 0.7827600167187259,
+                "Mean relative error": 0.7223162512889435,
+                "Euclidean Distance": 85.91482088521951,
+                "r2 score": 0.3690097517096522,
+                "Execution Time": 6443.962154388428
+            }
+        }
+    },
+    "28": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00040963479723788197,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6053942099688083,
+                "Mean square error": 0.674642888668757,
+                "Root mean square error": 0.8213664764700085,
+                "Mean relative error": 0.7713301239999039,
+                "Euclidean Distance": 90.15222060377944,
+                "r2 score": 0.30523276891044093,
+                "Execution Time": 1021.1853783130646
+            }
+        }
+    },
+    "29": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0055689930613736765,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6239799062762406,
+                "Mean square error": 0.7082350879710452,
+                "Root mean square error": 0.841567043063739,
+                "Mean relative error": 0.7950100786499075,
+                "Euclidean Distance": 92.36941108823409,
+                "r2 score": 0.27063852699748947,
+                "Execution Time": 962.9712722301483
+            }
+        }
+    },
+    "30": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0008406658598719943,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.550543585774285,
+                "Mean square error": 0.5787868234879278,
+                "Root mean square error": 0.7607804042481167,
+                "Mean relative error": 0.7014451828082566,
+                "Euclidean Distance": 83.50236441298574,
+                "r2 score": 0.40394818429151635,
+                "Execution Time": 1366.724633693695
+            }
+        }
+    },
+    "31": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002006958493298023,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5309393629621181,
+                "Mean square error": 0.5401857698380056,
+                "Root mean square error": 0.7349733123304584,
+                "Mean relative error": 0.6764675279783409,
+                "Euclidean Distance": 80.66980828809783,
+                "r2 score": 0.4437006927844408,
+                "Execution Time": 1418.8741767406464
+            }
+        }
+    },
+    "32": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 5.8818826250965154e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6363451578315479,
+                "Mean square error": 0.7133805607434196,
+                "Root mean square error": 0.844618588916571,
+                "Mean relative error": 0.8107645917562298,
+                "Euclidean Distance": 92.70434518012614,
+                "r2 score": 0.26533956671679415,
+                "Execution Time": 946.604024887085
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002056488028659888,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5362579173017119,
+                "Mean square error": 0.5488815358743278,
+                "Root mean square error": 0.740865396596661,
+                "Mean relative error": 0.6832438748787689,
+                "Euclidean Distance": 81.31651654293871,
+                "r2 score": 0.43474553533339366,
+                "Execution Time": 760.9015910625458
+            }
+        }
+    },
+    "34": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.003272390248135365,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5191772203470016,
+                "Mean square error": 0.5289733442699976,
+                "Root mean square error": 0.7273055370819046,
+                "Mean relative error": 0.661481433343756,
+                "Euclidean Distance": 79.82820227476415,
+                "r2 score": 0.4552475807699564,
+                "Execution Time": 2618.36732673645
+            }
+        }
+    },
+    "35": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0034384979239459007,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5434862962192877,
+                "Mean square error": 0.5920577478205611,
+                "Root mean square error": 0.7694528886296815,
+                "Mean relative error": 0.6924535209490529,
+                "Euclidean Distance": 84.45424612175698,
+                "r2 score": 0.3902813933011352,
+                "Execution Time": 4085.1517016887665
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0062586263702710705,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.611267587363832,
+                "Mean square error": 0.6939412515078189,
+                "Root mean square error": 0.8330313628596578,
+                "Mean relative error": 0.7788133685367739,
+                "Euclidean Distance": 91.43254484544708,
+                "r2 score": 0.28535874320075993,
+                "Execution Time": 375.0602240562439
+            }
+        }
+    },
+    "37": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00015428360191160664,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5962446879583082,
+                "Mean square error": 0.6692254730214622,
+                "Root mean square error": 0.8180620227228875,
+                "Mean relative error": 0.7596727578892128,
+                "Euclidean Distance": 89.78952763819152,
+                "r2 score": 0.3108117840192478,
+                "Execution Time": 4295.246611595154
+            }
+        }
+    },
+    "38": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0013151140512636184,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6360208165210577,
+                "Mean square error": 0.7292331329688125,
+                "Root mean square error": 0.8539514816245783,
+                "Mean relative error": 0.8103513499063423,
+                "Euclidean Distance": 93.72871253183459,
+                "r2 score": 0.24901411825261954,
+                "Execution Time": 351.7507359981537
+            }
+        }
+    },
+    "39": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0009374875169022169,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5797939870221109,
+                "Mean square error": 0.6291818251222991,
+                "Root mean square error": 0.7932098241463599,
+                "Mean relative error": 0.7387129915352265,
+                "Euclidean Distance": 87.06177948588197,
+                "r2 score": 0.35204991880271064,
+                "Execution Time": 2411.3294463157654
+            }
+        }
+    },
+    "40": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004865557835621582,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5582147769075924,
+                "Mean square error": 0.6056466578902154,
+                "Root mean square error": 0.7782330357227296,
+                "Mean relative error": 0.7112190139923802,
+                "Euclidean Distance": 85.41794476340101,
+                "r2 score": 0.3762871311793653,
+                "Execution Time": 5198.717008829117
+            }
+        }
+    },
+    "41": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002963428941513939,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5200333774836973,
+                "Mean square error": 0.528169019632503,
+                "Root mean square error": 0.726752378484242,
+                "Mean relative error": 0.6625722594196197,
+                "Euclidean Distance": 79.7674882362029,
+                "r2 score": 0.4560758981074322,
+                "Execution Time": 2622.9175510406494
+            }
+        }
+    },
+    "42": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002811364602014755,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5267350039252225,
+                "Mean square error": 0.5392589751831607,
+                "Root mean square error": 0.7343425462161107,
+                "Mean relative error": 0.6711107724562889,
+                "Euclidean Distance": 80.60057613957571,
+                "r2 score": 0.4446551333736032,
+                "Execution Time": 1866.4669947624207
+            }
+        }
+    },
+    "43": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0016568025318685097,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5293577993827528,
+                "Mean square error": 0.534032970528801,
+                "Root mean square error": 0.7307755951923963,
+                "Mean relative error": 0.6744524647159282,
+                "Euclidean Distance": 80.209071780943,
+                "r2 score": 0.45003702777189036,
+                "Execution Time": 2074.820426464081
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007427982458040213,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5269996790593223,
+                "Mean square error": 0.5312786267615733,
+                "Root mean square error": 0.7288886243875489,
+                "Mean relative error": 0.671447993890923,
+                "Euclidean Distance": 80.00196007971729,
+                "r2 score": 0.45287353257282503,
+                "Execution Time": 2614.4733185768127
+            }
+        }
+    },
+    "45": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.006639648292208608,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5958483938008595,
+                "Mean square error": 0.6482673489828709,
+                "Root mean square error": 0.8051505132475982,
+                "Mean relative error": 0.759167841230659,
+                "Euclidean Distance": 88.37237550952585,
+                "r2 score": 0.33239508097781534,
+                "Execution Time": 1369.1681520938873
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008304625351670076,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.611433205720293,
+                "Mean square error": 0.6831947001439089,
+                "Root mean square error": 0.8265559268094984,
+                "Mean relative error": 0.7790243821628082,
+                "Euclidean Distance": 90.72180858334822,
+                "r2 score": 0.2964258601307227,
+                "Execution Time": 1816.0810840129852
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004451137877276221,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5324799130474932,
+                "Mean square error": 0.5560786685987408,
+                "Root mean square error": 0.7457068248304697,
+                "Mean relative error": 0.6784303361268392,
+                "Euclidean Distance": 81.84790602458335,
+                "r2 score": 0.4273337148596147,
+                "Execution Time": 369.16669368743896
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0032179266488235347,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.5561213454361998,
+                "Mean square error": 0.5910736741211878,
+                "Root mean square error": 0.768813159435495,
+                "Mean relative error": 0.7085517820799744,
+                "Euclidean Distance": 84.38403019610972,
+                "r2 score": 0.3912948215470782,
+                "Execution Time": 338.599152803421
+            }
+        }
+    },
+    "49": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004074460810007007,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.558748812132124,
+                "Mean square error": 0.5948305626827725,
+                "Root mean square error": 0.7712525933069998,
+                "Mean relative error": 0.7118994259440893,
+                "Euclidean Distance": 84.6517795952298,
+                "r2 score": 0.38742586641943333,
+                "Execution Time": 3442.5132262706757
+            }
+        }
+    },
+    "best_trial": 41
+}

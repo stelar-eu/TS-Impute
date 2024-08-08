@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 24,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "d_k": 64,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0022511528688296573,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.7272104180945853,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.12514327825157578,
+        "Mean square error": 0.02801581626220323,
+        "Root mean square error": 0.16737925875747936,
+        "Mean relative error": 0.26670183748904025,
+        "Euclidean Distance": 1.639975109924397,
+        "r2 score": 0.9115844222690688,
+        "Execution Time": 12.721394538879395
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.36559068237633,
+            "Tmin_aug_sep": 16.270491803278688,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.256030355559972
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.31655634086827,
+            "Tmin_aug_sep": 16.207739550813898,
+            "prec_jun_sep": 125.08402807727336,
+            "vintage_score": -3.9738564935216516
+        },
+        "Deviation missing": 2.636375466933086,
+        "Deviation filled": 4.168393303873558,
+        "Improvement": -1.5320178369404722
+    }
+}

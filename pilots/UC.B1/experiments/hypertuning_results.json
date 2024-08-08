@@ -1,0 +1,47 @@
+{
+    "UCB1_lai_field_timeseries": {
+        "SoftImpute": {
+            "max_rank": 2
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 2,
+            "eps": 0.001456345164619781
+        },
+        "Saits": {
+            "n_layers": 2,
+            "d_model": 32,
+            "d_ffn": 128,
+            "n_heads": 2,
+            "d_k": 16,
+            "d_v": 128,
+            "dropout": 0,
+            "epochs": 200,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.3,
+            "diagonal_attention_mask": true,
+            "num_workers": 0,
+            "patience": 20,
+            "lr": 0.001224014111277117,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 1,
+            "d_model": 128,
+            "d_ffn": 32,
+            "n_heads": 1,
+            "top_k": 2,
+            "n_kernels": 3,
+            "dropout": 0.3,
+            "epochs": 200,
+            "batch_size": 32,
+            "attn_dropout": 0.4,
+            "apply_nonstationary_norm": true,
+            "num_workers": 0,
+            "patience": 20,
+            "lr": 0.0015351577260316839,
+            "device": "cuda"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 12,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 32,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "d_k": 16,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0007963406280958749,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.531185743660041,
+        "Missing value percentage between 4 and 9": 0.273224043715847,
+        "Mean absolute error": 0.09906570078167731,
+        "Mean square error": 0.01711108261462182,
+        "Root mean square error": 0.13080933687861054,
+        "Mean relative error": 0.0979027000490373,
+        "Euclidean Distance": 0.9062736703125963,
+        "r2 score": 0.9589673057380169,
+        "Execution Time": 12.420273303985596
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.299132129255078,
+            "Tmin_aug_sep": 18.447540983606554,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.714280858445449
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.28147143328017,
+            "Tmin_aug_sep": 18.386524309957675,
+            "prec_jun_sep": 132.41072992232174,
+            "vintage_score": -10.574733445322181
+        },
+        "Deviation missing": 1.1434012115380623,
+        "Deviation filled": 0.17393405155926517,
+        "Improvement": 0.9694671599787972
+    }
+}

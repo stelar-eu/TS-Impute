@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 48,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "d_k": 64,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0022511528688296573,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 2.0562028786840303,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.14423674647743245,
+        "Mean square error": 0.036216986504527905,
+        "Root mean square error": 0.19030761021180395,
+        "Mean relative error": 0.1181045525509974,
+        "Euclidean Distance": 2.636979599630872,
+        "r2 score": 0.9518435350535509,
+        "Execution Time": 12.460906505584717
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.275245942535907,
+            "Tmin_aug_sep": 16.081666666666663,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -3.7076603686328724
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.315356279417323,
+            "Tmin_aug_sep": 16.20938012121943,
+            "prec_jun_sep": 124.81025763010078,
+            "vintage_score": -3.966382176301721
+        },
+        "Deviation missing": 10.587850671285272,
+        "Deviation filled": 4.348640333254255,
+        "Improvement": 6.239210338031017
+    }
+}

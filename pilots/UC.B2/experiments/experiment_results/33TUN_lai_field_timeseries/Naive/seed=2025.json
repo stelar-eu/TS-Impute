@@ -1,0 +1,19 @@
+{
+    "dataset": "33TUN_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2025
+    },
+    "algorithm": "Naive",
+    "algorithm_parameters": {},
+    "metrics": {
+        "Missing value percentage": 51.36800171996029,
+        "Mean absolute error": 0.8393846601360174,
+        "Mean square error": 1.2654935128909748,
+        "Root mean square error": 1.124941559766984,
+        "Mean relative error": 1.066616359244441,
+        "Euclidean Distance": 194.41971540083202,
+        "r2 score": -0.27258356371432435,
+        "Execution Time": 4.255926609039307
+    }
+}

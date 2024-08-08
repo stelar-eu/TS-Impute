@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "d_k": 64,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0022511528688296573,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.4804660726525016,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.08100838161011419,
+        "Mean square error": 0.011980379499734345,
+        "Root mean square error": 0.10945491994302653,
+        "Mean relative error": 0.10850645015665154,
+        "Euclidean Distance": 0.536217407395206,
+        "r2 score": 0.9529688444511173,
+        "Execution Time": 12.81408143043518
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.347952552443118,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.1149108870538385
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.302813124367987,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 124.98705453839426,
+            "vintage_score": -3.8791091098274535
+        },
+        "Deviation missing": 0.7667935768139831,
+        "Deviation filled": 6.453275514509911,
+        "Improvement": -5.686481937695928
+    }
+}

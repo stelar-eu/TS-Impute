@@ -1,0 +1,45 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 24,
+        "seed": 2025
+    },
+    "algorithm": "Naive",
+    "algorithm_parameters": {},
+    "metrics": {
+        "Missing value percentage": 5.6956819739547635,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.3515664217263244,
+        "Mean square error": 0.2204058315014814,
+        "Root mean square error": 0.4694739944890254,
+        "Mean relative error": 0.2668877508324789,
+        "Euclidean Distance": 4.599886936017279,
+        "r2 score": 0.7254186137214029,
+        "Execution Time": 0.2693963050842285
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.27610324557046,
+            "Tmin_aug_sep": 18.447540983606554,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.563934838011932
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.282377049180326,
+            "Tmin_aug_sep": 18.447540983606554,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.604822521842237
+        },
+        "Deviation missing": 0.2758734991186867,
+        "Deviation filled": 0.11010848743707444,
+        "Improvement": 0.16576501168161226
+    }
+}

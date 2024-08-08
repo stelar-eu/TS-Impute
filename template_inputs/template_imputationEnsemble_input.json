@@ -2,10 +2,9 @@
     "input": ["s3://XXXXXXXX-bucket/missing.csv", "s3://XXXXXXXX-bucket/out_imputation_model.json"],
     "parameters": {
 		"imp_type": "imputation_ensemble",
-		"_comment": "dimension_column, time_column, datetime_format, spatial_x_column and spatial_y_column are optional based on the input dataset",
+		"_comment": "dimension_column, time_column, spatial_x_column and spatial_y_column are optional based on the input dataset",
         "dimension_column" : "dimension_column",
 		"time_column" : "datetime_column",
-		"datetime_format" : "%Y-%m-%d %H:%M:%S",
 		"spatial_x_column": "x_col",
 		"spatial_y_column" : "y_col",
 		"sep" : ",",

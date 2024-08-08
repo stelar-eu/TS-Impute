@@ -1,0 +1,21 @@
+{
+    "dataset": "UCB1_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2023
+    },
+    "algorithm": "SoftImpute",
+    "algorithm_parameters": {
+        "max_rank": 2
+    },
+    "metrics": {
+        "Missing value percentage": 14.015151515151516,
+        "Mean absolute error": 0.1873743950743081,
+        "Mean square error": 0.04637179315319177,
+        "Root mean square error": 0.21534110883245627,
+        "Mean relative error": 0.2232908716722618,
+        "Euclidean Distance": 0.48151735769960075,
+        "r2 score": 0.9633890476648073,
+        "Execution Time": 0.14992570877075195
+    }
+}

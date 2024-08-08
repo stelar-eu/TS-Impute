@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 24,
+        "seed": 2025
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 256,
+        "n_heads": 4,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            128,
+            128
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.003947660496431522,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.7272104180945853,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.18866702351341097,
+        "Mean square error": 0.06455098002021019,
+        "Root mean square error": 0.25406884897643434,
+        "Mean relative error": 0.14901639898901375,
+        "Euclidean Distance": 2.4893561581140298,
+        "r2 score": 0.9254386452646582,
+        "Execution Time": 13.36947226524353
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.353955891848095,
+            "Tmin_aug_sep": 16.277049180327868,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.197412933990904
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.312971004332088,
+            "Tmin_aug_sep": 16.206528587185048,
+            "prec_jun_sep": 124.7878250342296,
+            "vintage_score": -3.952641740440413
+        },
+        "Deviation missing": 1.2227859982379665,
+        "Deviation filled": 4.679998057782278,
+        "Improvement": -3.4572120595443114
+    }
+}

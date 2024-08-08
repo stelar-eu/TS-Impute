@@ -1,0 +1,19 @@
+{
+    "dataset": "UCB1_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2025
+    },
+    "algorithm": "Naive",
+    "algorithm_parameters": {},
+    "metrics": {
+        "Missing value percentage": 14.393939393939394,
+        "Mean absolute error": 0.14055424213019016,
+        "Mean square error": 0.028199932004498246,
+        "Root mean square error": 0.16792835378368431,
+        "Mean relative error": 0.18609877943502434,
+        "Euclidean Distance": 0.41133878011563374,
+        "r2 score": 0.03843459252324355,
+        "Execution Time": 0.17551541328430176
+    }
+}

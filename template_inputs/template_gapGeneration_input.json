@@ -2,10 +2,9 @@
     "input": ["s3://XXXXXXXX-bucket/ground_truth.csv"],
     "parameters": {
 		"imp_type": "gap_generation",
-		"_comment": "dimension_column, time_column, datetime_format, spatial_x_column and spatial_y_column are optional based on the input dataset",
+		"_comment": "dimension_column, time_column, spatial_x_column and spatial_y_column are optional based on the input dataset",
         "dimension_column" : "dimension_column",
 		"time_column" : "datetime_column",
-		"datetime_format" : "%Y-%m-%d %H:%M:%S",
 		"spatial_x_column": "x_col",
 		"spatial_y_column" : "y_col",
 		"sep" : ",",

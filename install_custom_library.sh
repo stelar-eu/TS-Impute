@@ -9,7 +9,7 @@ sudo apt-get update \
 && sudo apt-get update \
 && sudo apt-get install cmake \
 && wget -N http://sourceforge.net/projects/arma/files/armadillo-10.8.2.tar.xz \
-&& rm -rf armadillo-10.8.2 \
+&& sudo rm -rf armadillo-10.8.2 \
 && tar -xvf armadillo-10.8.2.tar.xz \
 && cd armadillo-10.8.2 \
 && ./configure \
@@ -20,7 +20,7 @@ sudo apt-get update \
 && PYTHONENVLIB=$(python3 -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])') \
 && PYTHONENVEXE=$(which python3) \
 && cd AlgoCollection \
-&& rm -rf build \
+&& sudo rm -rf build \
 && mkdir build \
 && cd build \
 && cmake .. -DPYTHON_LIBRARY_DIR=$PYTHONENVLIB -DPYTHON_EXECUTABLE=$PYTHONENVEXE -Dpybind11_DIR=$PYTHONENVLIB"/pybind11/share/cmake/pybind11" \

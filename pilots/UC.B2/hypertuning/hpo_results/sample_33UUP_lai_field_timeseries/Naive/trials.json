@@ -1,0 +1,14 @@
+{
+    "result": {
+        "metrics": {
+            "Missing value percentage": 44.27720400394406,
+            "Mean absolute error": 0.8558488609597015,
+            "Mean square error": 1.3357287651556768,
+            "Root mean square error": 1.155737325327722,
+            "Mean relative error": 1.09043330309227,
+            "Euclidean Distance": 126.85237259834929,
+            "r2 score": -0.3755730494471048,
+            "Execution Time": 1.5531716346740723
+        }
+    }
+}

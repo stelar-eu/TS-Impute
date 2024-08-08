@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "d_k": 64,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0022511528688296573,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.4804660726525016,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.20446345371140479,
+        "Mean square error": 0.056616195291952595,
+        "Root mean square error": 0.2379415795777455,
+        "Mean relative error": 0.22388022555882856,
+        "Euclidean Distance": 1.1656709171146542,
+        "r2 score": 0.8268082774756828,
+        "Execution Time": 13.421570301055908
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.360622558514763,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.181569341076795
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.312192339391043,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.04995189175725,
+            "vintage_score": -3.928293535829539
+        },
+        "Deviation missing": 0.8407095525299564,
+        "Deviation filled": 5.267167617586453,
+        "Improvement": -4.426458065056496
+    }
+}

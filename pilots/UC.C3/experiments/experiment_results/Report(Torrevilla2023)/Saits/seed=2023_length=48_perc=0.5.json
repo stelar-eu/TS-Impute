@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 48,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 64,
+        "d_ffn": 256,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 64,
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008610459441905952,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.9150102810143934,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.09560564207482578,
+        "Mean square error": 0.01788551341989183,
+        "Root mean square error": 0.13373673175269324,
+        "Mean relative error": 0.2144634203489777,
+        "Euclidean Distance": 1.853110513871002,
+        "r2 score": 0.9310812431365133,
+        "Execution Time": 14.415201663970947
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.882315323565322,
+            "Tmin_aug_sep": 17.175,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.67133109084682
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.88051422822704,
+            "Tmin_aug_sep": 17.067315398662565,
+            "prec_jun_sep": 144.88246921392937,
+            "vintage_score": -7.616412502309203
+        },
+        "Deviation missing": 1.7167704565047408,
+        "Deviation filled": 0.9885863385305763,
+        "Improvement": 0.7281841179741645
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 3,
+        "seed": 2024
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 64,
+        "d_ffn": 256,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 64,
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008610459441905952,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.2981494174091844,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.2819220969858291,
+        "Mean square error": 0.1091017607116714,
+        "Root mean square error": 0.33030555658612737,
+        "Mean relative error": 0.24712931469201804,
+        "Euclidean Distance": 1.1442120120590265,
+        "r2 score": 0.7713980320195872,
+        "Execution Time": 14.820908546447754
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.86843937028363,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.535050174578799
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.8717912661606,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.8955637010584,
+            "vintage_score": -7.555002202371526
+        },
+        "Deviation missing": 0.09022425060367173,
+        "Deviation filled": 0.174326426078244,
+        "Improvement": -0.08410217547457227
+    }
+}

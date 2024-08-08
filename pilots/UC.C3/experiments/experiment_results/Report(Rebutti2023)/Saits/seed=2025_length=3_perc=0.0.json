@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 3,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 64,
+        "d_ffn": 128,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 32,
+        "dropout": 0.5,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.5,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0014492869634879434,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.10281014393420151,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.10528996740894733,
+        "Mean square error": 0.01722530938476506,
+        "Root mean square error": 0.1312452261408584,
+        "Mean relative error": 0.08573333980403453,
+        "Euclidean Distance": 0.4546467998536864,
+        "r2 score": 0.9686685469280835,
+        "Execution Time": 6.6366002559661865
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.911426362700418,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.129064086950137
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.909598801234203,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.26534465222205,
+            "vintage_score": -8.117828861396418
+        },
+        "Deviation missing": 0.08576299948502669,
+        "Deviation filled": 0.05256610088711153,
+        "Improvement": 0.033196898597915164
+    }
+}

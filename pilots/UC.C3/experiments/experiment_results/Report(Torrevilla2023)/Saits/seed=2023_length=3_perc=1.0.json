@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 3,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 64,
+        "d_ffn": 256,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 64,
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008610459441905952,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.2981494174091844,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.03753315578279027,
+        "Mean square error": 0.002118632170026008,
+        "Root mean square error": 0.046028601651864336,
+        "Mean relative error": 0.04317119650248659,
+        "Euclidean Distance": 0.15944775332476221,
+        "r2 score": 0.9924588208778974,
+        "Execution Time": 14.114607095718384
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.865781941191777,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.519218444377856
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.869746618238963,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.901613782528,
+            "vintage_score": -7.542852834966823
+        },
+        "Deviation missing": 0.30014250960048616,
+        "Deviation filled": 0.013233859369653876,
+        "Improvement": 0.2869086502308323
+    }
+}

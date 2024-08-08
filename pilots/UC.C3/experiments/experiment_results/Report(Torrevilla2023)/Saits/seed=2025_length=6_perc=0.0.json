@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 6,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 64,
+        "d_ffn": 256,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 64,
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008610459441905952,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.339273474982865,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.2973445318285381,
+        "Mean square error": 0.12353984913107335,
+        "Root mean square error": 0.351482359630001,
+        "Mean relative error": 0.3046216804147845,
+        "Euclidean Distance": 1.7219048693658672,
+        "r2 score": 0.6835788411207492,
+        "Execution Time": 12.91629409790039
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.874607136943204,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.571831827318164
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.87423251025477,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.93662230141865,
+            "vintage_score": -7.569849609826832
+        },
+        "Deviation missing": 0.39747610861622884,
+        "Deviation filled": 0.3711932172675279,
+        "Improvement": 0.026282891348700932
+    }
+}

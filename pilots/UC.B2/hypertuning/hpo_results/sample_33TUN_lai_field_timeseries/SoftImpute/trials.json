@@ -1,0 +1,79 @@
+{
+    "0": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 2
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6183183378457022,
+                "Mean square error": 0.7336164649213084,
+                "Root mean square error": 0.8565141358560923,
+                "Mean relative error": 0.803256063539697,
+                "Euclidean Distance": 46.80361913629145,
+                "r2 score": 0.24570544068251132,
+                "Execution Time": 0.5172629356384277
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 4
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6102156979663632,
+                "Mean square error": 0.72808336092542,
+                "Root mean square error": 0.8532780091654888,
+                "Mean relative error": 0.792729940965953,
+                "Euclidean Distance": 46.62678324443265,
+                "r2 score": 0.25139450361907456,
+                "Execution Time": 0.5515971183776855
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 1
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.617557893020521,
+                "Mean square error": 0.716071673236506,
+                "Root mean square error": 0.84621018265943,
+                "Mean relative error": 0.8022681712527847,
+                "Euclidean Distance": 46.24056678160647,
+                "r2 score": 0.26374475897074623,
+                "Execution Time": 0.42822766304016113
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 3
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 25.82735496574375,
+                "Mean absolute error": 0.6124611072779361,
+                "Mean square error": 0.7247547919662956,
+                "Root mean square error": 0.851325315003786,
+                "Mean relative error": 0.795646947521077,
+                "Euclidean Distance": 46.520079630320495,
+                "r2 score": 0.2548168933502676,
+                "Execution Time": 0.5333747863769531
+            }
+        }
+    },
+    "best_trial": 3
+}

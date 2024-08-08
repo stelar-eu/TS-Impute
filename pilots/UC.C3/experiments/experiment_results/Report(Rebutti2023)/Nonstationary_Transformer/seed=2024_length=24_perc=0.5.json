@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 24,
+        "seed": 2024
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 256,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            32,
+            32
+        ],
+        "dropout": 0.4,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008561435614770999,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.39067854694996573,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.18210193253401152,
+        "Mean square error": 0.16296420882695933,
+        "Root mean square error": 0.4036882569842221,
+        "Mean relative error": 0.16104100743949967,
+        "Euclidean Distance": 3.955320979059507,
+        "r2 score": 0.7996260259038005,
+        "Execution Time": 13.860963821411133
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.89825819672131,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 115.5,
+            "vintage_score": -8.0167331296758
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.917665498481735,
+            "Tmin_aug_sep": 18.27363377120888,
+            "prec_jun_sep": 118.26562023330482,
+            "vintage_score": -8.148484160227497
+        },
+        "Deviation missing": 1.2972657781221044,
+        "Deviation filled": 0.3248646759733053,
+        "Improvement": 0.972401102148799
+    }
+}

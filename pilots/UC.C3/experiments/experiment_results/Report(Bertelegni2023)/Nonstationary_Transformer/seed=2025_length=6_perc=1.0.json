@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2025
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 256,
+        "n_heads": 4,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            128,
+            128
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.003947660496431522,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.4804660726525016,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.52302660848588,
+        "Mean square error": 0.35389361038660705,
+        "Root mean square error": 0.5948895783139986,
+        "Mean relative error": 0.5726955744686048,
+        "Euclidean Distance": 2.91435184033756,
+        "r2 score": -0.08257793829388693,
+        "Execution Time": 13.219589233398438
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.360622558514763,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.181569341076795
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.32021872950777,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 124.8943567991739,
+            "vintage_score": -3.9690298627672007
+        },
+        "Deviation missing": 0.8407095525299564,
+        "Deviation filled": 4.284790003372402,
+        "Improvement": -3.4440804508424456
+    }
+}

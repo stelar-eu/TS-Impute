@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 3,
+        "seed": 2025
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 32,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "d_k": 16,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0007963406280958749,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.407813570938999,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.23093274905058533,
+        "Mean square error": 0.06778008429006793,
+        "Root mean square error": 0.26034608560542627,
+        "Mean relative error": 0.18282234337515882,
+        "Euclidean Distance": 0.9018652956405869,
+        "r2 score": 0.8826688708945288,
+        "Execution Time": 12.562560319900513
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.28511963901308,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.595900226311073
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.28289282607549,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.39192687331342,
+            "vintage_score": -10.582009160363157
+        },
+        "Deviation missing": 0.02588152637835743,
+        "Deviation filled": 0.10525090098549934,
+        "Improvement": -0.07936937460714191
+    }
+}

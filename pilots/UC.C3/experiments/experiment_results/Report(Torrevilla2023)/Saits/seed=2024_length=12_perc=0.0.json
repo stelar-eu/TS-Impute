@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 12,
+        "seed": 2024
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 64,
+        "d_ffn": 256,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 64,
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": true,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008610459441905952,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.42152159013022616,
+        "Missing value percentage between 4 and 9": 0.273224043715847,
+        "Mean absolute error": 0.10553793060865348,
+        "Mean square error": 0.021374668911412213,
+        "Root mean square error": 0.14620078286867075,
+        "Mean relative error": 0.08959541922250452,
+        "Euclidean Distance": 1.0129087361395437,
+        "r2 score": 0.9615962860466145,
+        "Execution Time": 10.955223798751831
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.85922131147541,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.480174318273072
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.872631856112893,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 145.00996921651222,
+            "vintage_score": -7.56080732764832
+        },
+        "Deviation missing": 0.8178417674794396,
+        "Deviation filled": 0.2512985432060574,
+        "Improvement": 0.5665432242733822
+    }
+}

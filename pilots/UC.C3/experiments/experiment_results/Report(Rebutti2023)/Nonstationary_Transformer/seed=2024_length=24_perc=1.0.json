@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 24,
+        "seed": 2024
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 256,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            32,
+            32
+        ],
+        "dropout": 0.4,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008561435614770999,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.39067854694996573,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.22665209711864814,
+        "Mean square error": 0.08801662958696611,
+        "Root mean square error": 0.29667596732287926,
+        "Mean relative error": 0.2195588017358835,
+        "Euclidean Distance": 2.9068189555506954,
+        "r2 score": 0.8113345007915718,
+        "Execution Time": 14.029984474182129
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.89825819672131,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.049939529675811
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.905035561182586,
+            "Tmin_aug_sep": 18.21520845377815,
+            "prec_jun_sep": 120.13917685326166,
+            "vintage_score": -8.061553224869982
+        },
+        "Deviation missing": 0.8884256158452968,
+        "Deviation filled": 0.7454367634609167,
+        "Improvement": 0.14298885238438008
+    }
+}

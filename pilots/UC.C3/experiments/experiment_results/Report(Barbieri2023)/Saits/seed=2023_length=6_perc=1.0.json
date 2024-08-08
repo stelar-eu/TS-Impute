@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 32,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "d_k": 16,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0007963406280958749,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.44893762851268,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.13652556476566172,
+        "Mean square error": 0.026028939224307646,
+        "Root mean square error": 0.16133486673471314,
+        "Mean relative error": 0.19584174056547535,
+        "Euclidean Distance": 0.7903762024399582,
+        "r2 score": 0.8756446384707463,
+        "Execution Time": 12.636054277420044
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.27895415907711,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.55569509398424
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.28305257859404,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.26929343284814,
+            "vintage_score": -10.582202732388282
+        },
+        "Deviation missing": 0.35365713640463436,
+        "Deviation filled": 0.10342357041061029,
+        "Improvement": 0.2502335659940241
+    }
+}

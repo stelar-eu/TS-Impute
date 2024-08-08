@@ -1,0 +1,22 @@
+{
+    "dataset": "33UUP_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2023
+    },
+    "algorithm": "CDMissingValueRecovery",
+    "algorithm_parameters": {
+        "truncation": 1,
+        "eps": 0.00037158179921503286
+    },
+    "metrics": {
+        "Missing value percentage": 63.69390448159041,
+        "Mean absolute error": 0.7371562428418333,
+        "Mean square error": 1.0191117594810695,
+        "Root mean square error": 1.0095106534757667,
+        "Mean relative error": 0.9270575317058023,
+        "Euclidean Distance": 350.38891772526756,
+        "r2 score": -0.016992621200035085,
+        "Execution Time": 64.87420678138733
+    }
+}

@@ -1,0 +1,175 @@
+{
+    "0": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 2
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10950130396000043,
+                "Mean square error": 0.021958470754107853,
+                "Root mean square error": 0.1481839085532159,
+                "Mean relative error": 0.23487599096489356,
+                "Euclidean Distance": 1.4518998561864989,
+                "r2 score": 0.9111694643173105,
+                "Execution Time": 0.2836034297943115
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90417442772396,
+                    "Tmin_aug_sep": 18.256414867760565,
+                    "prec_jun_sep": 120.35636329557416,
+                    "vintage_score": -8.074730942940818
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5831915217449674,
+                "Improvement": 0.8099504533190777
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 4
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11152979277856497,
+                "Mean square error": 0.02199247034137724,
+                "Root mean square error": 0.14829858509566854,
+                "Mean relative error": 0.23922701971241958,
+                "Euclidean Distance": 1.4530234522444008,
+                "r2 score": 0.9110319227924952,
+                "Execution Time": 0.14911580085754395
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90417808112172,
+                    "Tmin_aug_sep": 18.25644397623226,
+                    "prec_jun_sep": 120.22610263778726,
+                    "vintage_score": -8.073863651308102
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5938696937798968,
+                "Improvement": 0.7992722812841482
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 1
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11582314259965658,
+                "Mean square error": 0.02212185672896543,
+                "Root mean square error": 0.14873418144113823,
+                "Mean relative error": 0.24843608624697153,
+                "Euclidean Distance": 1.4572914073652885,
+                "r2 score": 0.9105085046433804,
+                "Execution Time": 0.10685563087463379
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.904209528315647,
+                    "Tmin_aug_sep": 18.256725260195164,
+                    "prec_jun_sep": 120.54253958028053,
+                    "vintage_score": -8.076356710533759
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5631749259525258,
+                "Improvement": 0.8299670491115192
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "SoftImpute": {
+                "max_rank": 3
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1097326675090137,
+                "Mean square error": 0.021943976806892578,
+                "Root mean square error": 0.14813499521346257,
+                "Mean relative error": 0.23537225667938672,
+                "Euclidean Distance": 1.4514206052904546,
+                "r2 score": 0.911228097958501,
+                "Execution Time": 0.19456100463867188
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.904177099635056,
+                    "Tmin_aug_sep": 18.256445199482968,
+                    "prec_jun_sep": 120.36933927982724,
+                    "vintage_score": -8.074849165937621
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5817359496504892,
+                "Improvement": 0.8114060254135558
+            }
+        }
+    },
+    "best_trial": 4
+}

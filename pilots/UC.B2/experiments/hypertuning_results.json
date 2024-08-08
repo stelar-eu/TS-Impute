@@ -1,0 +1,137 @@
+{
+    "33UVP_lai_field_timeseries": {
+        "SoftImpute": {
+            "max_rank": 4
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 4,
+            "eps": 0.006045438877570083
+        },
+        "Saits": {
+            "n_layers": 2,
+            "d_model": 128,
+            "d_ffn": 32,
+            "n_heads": 4,
+            "d_k": 32,
+            "d_v": 128,
+            "dropout": 0,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.2,
+            "diagonal_attention_mask": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.00044607767692763967,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 1,
+            "d_model": 16,
+            "d_ffn": 256,
+            "n_heads": 2,
+            "top_k": 3,
+            "n_kernels": 5,
+            "dropout": 0,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0,
+            "apply_nonstationary_norm": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0003991738386145159,
+            "device": "cuda"
+        }
+    },
+    "33UUP_lai_field_timeseries": {
+        "SoftImpute": {
+            "max_rank": 2
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 1,
+            "eps": 0.00037158179921503286
+        },
+        "Saits": {
+            "n_layers": 3,
+            "d_model": 128,
+            "d_ffn": 32,
+            "n_heads": 4,
+            "d_k": 32,
+            "d_v": 32,
+            "dropout": 0.1,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.1,
+            "diagonal_attention_mask": true,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0004915535565886545,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 1,
+            "d_model": 16,
+            "d_ffn": 256,
+            "n_heads": 2,
+            "top_k": 3,
+            "n_kernels": 5,
+            "dropout": 0.2,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0.5,
+            "apply_nonstationary_norm": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.002963428941513939,
+            "device": "cuda"
+        }
+    },
+    "33TUN_lai_field_timeseries": {
+        "SoftImpute": {
+            "max_rank": 1
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 4,
+            "eps": 0.0022128592856724607
+        },
+        "Saits": {
+            "n_layers": 3,
+            "d_model": 512,
+            "d_ffn": 128,
+            "n_heads": 4,
+            "d_k": 128,
+            "d_v": 16,
+            "dropout": 0.1,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0,
+            "diagonal_attention_mask": true,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0003508605644314647,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 1,
+            "d_model": 16,
+            "d_ffn": 64,
+            "n_heads": 2,
+            "top_k": 3,
+            "n_kernels": 5,
+            "dropout": 0,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0.2,
+            "apply_nonstationary_norm": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0034092651690683443,
+            "device": "cuda"
+        }
+    }
+}

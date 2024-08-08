@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 3,
+        "seed": 2024
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            64,
+            64
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0060002798206847075,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.407813570938999,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.15900943593686126,
+        "Mean square error": 0.031542648818394116,
+        "Root mean square error": 0.17760250228640956,
+        "Mean relative error": 0.14195642548102433,
+        "Euclidean Distance": 0.6152331150228837,
+        "r2 score": 0.9321165099942064,
+        "Execution Time": 10.75037169456482
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.283944834764508,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.588235339606854
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.28568720377233,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.231158566655,
+            "vintage_score": -10.599127669294461
+        },
+        "Deviation missing": 0.046475426123477485,
+        "Deviation filled": 0.05634876583837474,
+        "Improvement": -0.009873339714897254
+    }
+}

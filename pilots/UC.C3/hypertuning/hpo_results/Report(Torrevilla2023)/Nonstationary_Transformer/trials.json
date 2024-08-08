@@ -1,0 +1,3003 @@
+{
+    "0": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005568922753865375,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1164797972871173,
+                "Mean square error": 0.02070034607601437,
+                "Root mean square error": 0.14387614839164403,
+                "Mean relative error": 0.28109192279200096,
+                "Euclidean Distance": 1.4096925988659372,
+                "r2 score": 0.9144385297914064,
+                "Execution Time": 13.658153295516968
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.867153698051148,
+                    "Tmin_aug_sep": 17.07403629224158,
+                    "prec_jun_sep": 146.1562294581897,
+                    "vintage_score": -7.548254720947625
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.08485929044993905,
+                "Improvement": 1.4634297384411084
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 256,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00039841007497896935,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.23632680336064732,
+                "Mean square error": 0.08924662246893435,
+                "Root mean square error": 0.29874173205117216,
+                "Mean relative error": 0.5703096769664331,
+                "Euclidean Distance": 2.9270592336025225,
+                "r2 score": 0.6311137890375034,
+                "Execution Time": 15.258255958557129
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87885997064289,
+                    "Tmin_aug_sep": 17.0885148445222,
+                    "prec_jun_sep": 144.47420394675933,
+                    "vintage_score": -7.612373024292822
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.9350255348981328,
+                "Improvement": 0.6132634939929146
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004167466354391951,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10627836216033823,
+                "Mean square error": 0.016332601621014315,
+                "Root mean square error": 0.12779906737145744,
+                "Mean relative error": 0.25647356766252016,
+                "Euclidean Distance": 1.2521700186545717,
+                "r2 score": 0.9324918819282704,
+                "Execution Time": 7.641018867492676
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.873911605530086,
+                    "Tmin_aug_sep": 17.032199285789666,
+                    "prec_jun_sep": 143.8918564441188,
+                    "vintage_score": -7.555774519889951
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.18456684495873513,
+                "Improvement": 1.3637221839323121
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00019647664815409204,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2122630194516447,
+                "Mean square error": 0.07880260503375172,
+                "Root mean square error": 0.2807180169382644,
+                "Mean relative error": 0.5122383594832863,
+                "Euclidean Distance": 2.750463612418867,
+                "r2 score": 0.6742824144970475,
+                "Execution Time": 7.336328029632568
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87543418950695,
+                    "Tmin_aug_sep": 17.129426462293573,
+                    "prec_jun_sep": 144.88034100646155,
+                    "vintage_score": -7.611455534044865
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.922860221754643,
+                "Improvement": 0.6254288071364044
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0054557166368699945,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11552271547511322,
+                "Mean square error": 0.019087656670293655,
+                "Root mean square error": 0.1381580857941136,
+                "Mean relative error": 0.2787822693321625,
+                "Euclidean Distance": 1.3536672561409655,
+                "r2 score": 0.9211043157660269,
+                "Execution Time": 11.184525728225708
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.866261682087497,
+                    "Tmin_aug_sep": 16.991043861227123,
+                    "prec_jun_sep": 142.82852842863645,
+                    "vintage_score": -7.485984350861628
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.7408045826471861,
+                "Improvement": 0.8074844462438613
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0030497799862539325,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.32408564894504144,
+                "Mean square error": 0.14790249576966,
+                "Root mean square error": 0.3845809352654653,
+                "Mean relative error": 0.7820914899663083,
+                "Euclidean Distance": 3.768108224810894,
+                "r2 score": 0.3886694000620814,
+                "Execution Time": 3.8801310062408447
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.84434331321771,
+                    "Tmin_aug_sep": 16.952624932567204,
+                    "prec_jun_sep": 144.99771379724132,
+                    "vintage_score": -7.3550532693174375
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 2.4768640238754216,
+                "Improvement": -0.9285749949843742
+            }
+        }
+    },
+    "6": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0017597216454587137,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.28184672506101277,
+                "Mean square error": 0.1517325029820881,
+                "Root mean square error": 0.3895285650399571,
+                "Mean relative error": 0.6801594759367838,
+                "Euclidean Distance": 3.81658489834572,
+                "r2 score": 0.3728386962273963,
+                "Execution Time": 4.741392135620117
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.89006562601547,
+                    "Tmin_aug_sep": 16.99812823921115,
+                    "prec_jun_sep": 145.31157877205587,
+                    "vintage_score": -7.648229051151617
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.4104527078733675,
+                "Improvement": 0.13783632101767984
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0007628085460249638,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13454730232372566,
+                "Mean square error": 0.035683247293309024,
+                "Root mean square error": 0.18890009871175034,
+                "Mean relative error": 0.32469287204739694,
+                "Euclidean Distance": 1.8508354168206587,
+                "r2 score": 0.8525091759808789,
+                "Execution Time": 6.224145889282227
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.86762979182237,
+                    "Tmin_aug_sep": 16.981600963261428,
+                    "prec_jun_sep": 145.08817590807215,
+                    "vintage_score": -7.505905648112275
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.47666137260406344,
+                "Improvement": 1.071627656286984
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 32,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0014153057729058254,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.32419399326079895,
+                "Mean square error": 0.15708109043706905,
+                "Root mean square error": 0.3963345688141132,
+                "Mean relative error": 0.7823529491442016,
+                "Euclidean Distance": 3.8832698440822755,
+                "r2 score": 0.3507311911399491,
+                "Execution Time": 15.083822965621948
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.891812177243818,
+                    "Tmin_aug_sep": 17.079370517418635,
+                    "prec_jun_sep": 145.01231001901868,
+                    "vintage_score": -7.689840335996763
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.9621907907263068,
+                "Improvement": -0.4139017618352594
+            }
+        }
+    },
+    "9": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 8.734123462455777e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.6127825043032094,
+                "Mean square error": 0.5719432110113082,
+                "Root mean square error": 0.7562692714974661,
+                "Mean relative error": 1.478781869471346,
+                "Euclidean Distance": 7.409895293260638,
+                "r2 score": -1.3640330374309166,
+                "Execution Time": 7.376416444778442
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.84026598299229,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 147.57480905627207,
+                    "vintage_score": -7.426418312500772
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.5306108078254723,
+                "Improvement": 0.01767822106557504
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008870076674035748,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15341963504170833,
+                "Mean square error": 0.04331360612763573,
+                "Root mean square error": 0.20811921133724232,
+                "Mean relative error": 0.37023605133532017,
+                "Euclidean Distance": 2.039143493786809,
+                "r2 score": 0.8209703448093266,
+                "Execution Time": 7.4674973487854
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.859839760692438,
+                    "Tmin_aug_sep": 17.048174484075435,
+                    "prec_jun_sep": 144.6838649307463,
+                    "vintage_score": -7.4839568573912345
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.767687803497364,
+                "Improvement": 0.7806012253936834
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00803929256473266,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.31333344732982016,
+                "Mean square error": 0.14116137245153923,
+                "Root mean square error": 0.3757144826214971,
+                "Mean relative error": 0.7561440115480565,
+                "Euclidean Distance": 3.6812350855858016,
+                "r2 score": 0.41653272272527897,
+                "Execution Time": 7.492175102233887
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.88448385338278,
+                    "Tmin_aug_sep": 17.13542618820468,
+                    "prec_jun_sep": 142.8874191332671,
+                    "vintage_score": -7.6541933884921605
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.4895358715393308,
+                "Improvement": 0.0587531573517166
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0038194416381957387,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2558330927577425,
+                "Mean square error": 0.10586356376140989,
+                "Root mean square error": 0.3253668141673485,
+                "Mean relative error": 0.6173827361652847,
+                "Euclidean Distance": 3.187930695779859,
+                "r2 score": 0.5624303997775764,
+                "Execution Time": 9.58165693283081
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.88039485355241,
+                    "Tmin_aug_sep": 17.076306909017443,
+                    "prec_jun_sep": 145.27633372701166,
+                    "vintage_score": -7.6221005434529445
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.0640059975849845,
+                "Improvement": 0.48428303130606287
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0038462662301814725,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13193543747617129,
+                "Mean square error": 0.02678754840380154,
+                "Root mean square error": 0.16366902090438964,
+                "Mean relative error": 0.31838985530826064,
+                "Euclidean Distance": 1.6036223516666803,
+                "r2 score": 0.8892780818109675,
+                "Execution Time": 7.3920207023620605
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87133817035633,
+                    "Tmin_aug_sep": 17.07524128199576,
+                    "prec_jun_sep": 145.2654369495227,
+                    "vintage_score": -7.56752621796258
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.34038657965302205,
+                "Improvement": 1.2079024492380253
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005788833103495851,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0836470413654014,
+                "Mean square error": 0.01186240133578476,
+                "Root mean square error": 0.10891465161209836,
+                "Mean relative error": 0.20185910553488928,
+                "Euclidean Distance": 1.0671412878505584,
+                "r2 score": 0.9509687183602126,
+                "Execution Time": 10.48257327079773
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.866671403651026,
+                    "Tmin_aug_sep": 17.01394257213971,
+                    "prec_jun_sep": 144.58052073110488,
+                    "vintage_score": -7.509908489192128
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.42358635048970683,
+                "Improvement": 1.1247026784013405
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015093025782460128,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1175973090370495,
+                "Mean square error": 0.026561743139898713,
+                "Root mean square error": 0.16297773817272931,
+                "Mean relative error": 0.2837887297391902,
+                "Euclidean Distance": 1.5968491918244199,
+                "r2 score": 0.8902114106688241,
+                "Execution Time": 7.848851919174194
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87720903352627,
+                    "Tmin_aug_sep": 17.0721252541307,
+                    "prec_jun_sep": 145.02739074709189,
+                    "vintage_score": -7.599638258349614
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.7661709712086432,
+                "Improvement": 0.7821180576824042
+            }
+        }
+    },
+    "16": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0019844306931154666,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.3072335320128858,
+                "Mean square error": 0.1504565185620562,
+                "Root mean square error": 0.3878872498059922,
+                "Mean relative error": 0.7414235452934754,
+                "Euclidean Distance": 3.800503359024636,
+                "r2 score": 0.37811276761442947,
+                "Execution Time": 5.021393060684204
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.88332362544031,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.70570317261053,
+                    "vintage_score": -7.662776474653242
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.6033419104804512,
+                "Improvement": -0.0550528815894038
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.009559894962576391,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.19298249353056196,
+                "Mean square error": 0.055689265190648846,
+                "Root mean square error": 0.2359857309047495,
+                "Mean relative error": 0.46571011827902753,
+                "Euclidean Distance": 2.3121785091775124,
+                "r2 score": 0.7698175969111337,
+                "Execution Time": 9.619549751281738
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.881366263422333,
+                    "Tmin_aug_sep": 17.086875083042877,
+                    "prec_jun_sep": 145.29774375586382,
+                    "vintage_score": -7.632375358831155
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.2002432457146308,
+                "Improvement": 0.34804578317641655
+            }
+        }
+    },
+    "18": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0007937459829639318,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10789531990411959,
+                "Mean square error": 0.019204794524315963,
+                "Root mean square error": 0.13858136427498455,
+                "Mean relative error": 0.2603756500137846,
+                "Euclidean Distance": 1.3578145213299022,
+                "r2 score": 0.9206201457444039,
+                "Execution Time": 7.297746419906616
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.86853276223915,
+                    "Tmin_aug_sep": 16.999068193071498,
+                    "prec_jun_sep": 145.65741133982064,
+                    "vintage_score": -7.522366638316186
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.2583995426517998,
+                "Improvement": 1.2898894862392476
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005168174322524361,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08724304994026447,
+                "Mean square error": 0.014150684316668832,
+                "Root mean square error": 0.1189566488964313,
+                "Mean relative error": 0.2105370822160573,
+                "Euclidean Distance": 1.1655323652306795,
+                "r2 score": 0.9415104776439085,
+                "Execution Time": 15.025217294692993
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.86982898278853,
+                    "Tmin_aug_sep": 17.021605014194712,
+                    "prec_jun_sep": 144.8012878016952,
+                    "vintage_score": -7.533385206909571
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.1123006193880219,
+                "Improvement": 1.4359884095030255
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 32,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 5.760274585590557e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.6716821443220652,
+                "Mean square error": 0.6870601730306358,
+                "Root mean square error": 0.8288909295140319,
+                "Mean relative error": 1.6209199350437524,
+                "Euclidean Distance": 8.121439318922583,
+                "r2 score": -1.8398500348932574,
+                "Execution Time": 3.0360686779022217
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.839394892392704,
+                    "Tmin_aug_sep": 16.78883565154795,
+                    "prec_jun_sep": 139.77346981500835,
+                    "vintage_score": -7.222627738004945
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 4.232738879435403,
+                "Improvement": -2.6844498505443557
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005586896164021362,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11274772014694287,
+                "Mean square error": 0.018881201898656892,
+                "Root mean square error": 0.13740888580676613,
+                "Mean relative error": 0.2720855820893826,
+                "Euclidean Distance": 1.3463266254037616,
+                "r2 score": 0.9219576625520156,
+                "Execution Time": 15.021378755569458
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87534019380289,
+                    "Tmin_aug_sep": 17.048322178565677,
+                    "prec_jun_sep": 144.02557477638388,
+                    "vintage_score": -7.571817680364575
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.3972885293794793,
+                "Improvement": 1.1510004995115681
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002300895913126925,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11149169371043842,
+                "Mean square error": 0.02085466557241787,
+                "Root mean square error": 0.14441144543427945,
+                "Mean relative error": 0.2690545080805195,
+                "Euclidean Distance": 1.414937417327048,
+                "r2 score": 0.9138006755765229,
+                "Execution Time": 15.019572973251343
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.864629256841894,
+                    "Tmin_aug_sep": 16.993720591649392,
+                    "prec_jun_sep": 144.40962722320734,
+                    "vintage_score": -7.488295366223213
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.7101620492625644,
+                "Improvement": 0.8381269796284829
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004912980647389077,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08524077080159403,
+                "Mean square error": 0.012569178781572363,
+                "Root mean square error": 0.1121123489254077,
+                "Mean relative error": 0.20570513276075525,
+                "Euclidean Distance": 1.0984721949284648,
+                "r2 score": 0.9480473702267177,
+                "Execution Time": 15.060113906860352
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.864090636460173,
+                    "Tmin_aug_sep": 17.012627395608607,
+                    "prec_jun_sep": 144.51111766977314,
+                    "vintage_score": -7.493521630807834
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.6408652416025263,
+                "Improvement": 0.907423787288521
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005965524485307454,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15023724233483285,
+                "Mean square error": 0.04327921078185927,
+                "Root mean square error": 0.20803656116620287,
+                "Mean relative error": 0.36255622267928417,
+                "Euclidean Distance": 2.0383336908020073,
+                "r2 score": 0.8211125123046022,
+                "Execution Time": 15.044884204864502
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.863510423003188,
+                    "Tmin_aug_sep": 17.002764846433436,
+                    "prec_jun_sep": 144.29040287914225,
+                    "vintage_score": -7.4845078949610695
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.7603814102078484,
+                "Improvement": 0.7879076186831989
+            }
+        }
+    },
+    "25": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0010690945756498278,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2429610309482365,
+                "Mean square error": 0.09473206285180835,
+                "Root mean square error": 0.30778574179420387,
+                "Mean relative error": 0.5863195587851529,
+                "Euclidean Distance": 3.0156720699992725,
+                "r2 score": 0.6084406249185652,
+                "Execution Time": 15.177219867706299
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.88179276171014,
+                    "Tmin_aug_sep": 17.085577536113224,
+                    "prec_jun_sep": 144.81372215669305,
+                    "vintage_score": -7.6310455896275755
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.1826113866227999,
+                "Improvement": 0.3656776422682475
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002648707803867132,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.5341313453448252,
+                "Mean square error": 0.39383573348037826,
+                "Root mean square error": 0.6275633302547069,
+                "Mean relative error": 1.2889789507133762,
+                "Euclidean Distance": 6.148839761623059,
+                "r2 score": -0.6278551215289163,
+                "Execution Time": 15.076504230499268
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.902204201903903,
+                    "Tmin_aug_sep": 17.110021373083768,
+                    "prec_jun_sep": 144.67384721104128,
+                    "vintage_score": -7.762364774053168
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 2.923816815064153,
+                "Improvement": -1.3755277861731057
+            }
+        }
+    },
+    "27": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.006489075508740716,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1343916389249371,
+                "Mean square error": 0.025900612519219463,
+                "Root mean square error": 0.16093667238768006,
+                "Mean relative error": 0.3243172212899874,
+                "Euclidean Distance": 1.5768509130051243,
+                "r2 score": 0.8929440851708597,
+                "Execution Time": 9.692415952682495
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.875278775945787,
+                    "Tmin_aug_sep": 17.033293385476462,
+                    "prec_jun_sep": 147.71902767005105,
+                    "vintage_score": -7.59085713105037
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.6497390379145285,
+                "Improvement": 0.8985499909765189
+            }
+        }
+    },
+    "28": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0003142467431749638,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1445872568976476,
+                "Mean square error": 0.032494724690470995,
+                "Root mean square error": 0.18026293210327796,
+                "Mean relative error": 0.34892153831963973,
+                "Euclidean Distance": 1.7662088127640083,
+                "r2 score": 0.8656884088637661,
+                "Execution Time": 15.06998324394226
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.877125582604048,
+                    "Tmin_aug_sep": 17.06809279600114,
+                    "prec_jun_sep": 143.9522768250604,
+                    "vintage_score": -7.590053446528202
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.6390827133350346,
+                "Improvement": 0.9092063155560127
+            }
+        }
+    },
+    "29": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0031322648384330943,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1856487458148154,
+                "Mean square error": 0.06409682972162598,
+                "Root mean square error": 0.25317351702266566,
+                "Mean relative error": 0.4480121372153308,
+                "Euclidean Distance": 2.4805837323654605,
+                "r2 score": 0.7350663140339089,
+                "Execution Time": 11.512078046798706
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.85558666242468,
+                    "Tmin_aug_sep": 16.913767262758668,
+                    "prec_jun_sep": 144.52250614826988,
+                    "vintage_score": -7.4025977542337955
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.8464556369293572,
+                "Improvement": -0.29816660803830985
+            }
+        }
+    },
+    "30": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0011369725274231624,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08876283912596056,
+                "Mean square error": 0.015157889187668755,
+                "Root mean square error": 0.12311737971411167,
+                "Mean relative error": 0.2142046750037815,
+                "Euclidean Distance": 1.2062990350722393,
+                "r2 score": 0.9373473622424774,
+                "Execution Time": 3.7516510486602783
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.86473906488073,
+                    "Tmin_aug_sep": 16.99472723057751,
+                    "prec_jun_sep": 144.97146155228296,
+                    "vintage_score": -7.493247574306395
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.6444990493366579,
+                "Improvement": 0.9037899795543894
+            }
+        }
+    },
+    "31": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004524657957489065,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09043479710440164,
+                "Mean square error": 0.012457478680776016,
+                "Root mean square error": 0.11161307576075491,
+                "Mean relative error": 0.2182394852793262,
+                "Euclidean Distance": 1.0935803369458095,
+                "r2 score": 0.9485090641912287,
+                "Execution Time": 3.7379229068756104
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.867755739728427,
+                    "Tmin_aug_sep": 17.023923112317636,
+                    "prec_jun_sep": 144.11919933176142,
+                    "vintage_score": -7.517258233687414
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.32613360534186614,
+                "Improvement": 1.2221554235491812
+            }
+        }
+    },
+    "32": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004727579538341915,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2037565850266231,
+                "Mean square error": 0.0790341666030721,
+                "Root mean square error": 0.28113015954015336,
+                "Mean relative error": 0.4917104218982006,
+                "Euclidean Distance": 2.754501768722431,
+                "r2 score": 0.673325292899075,
+                "Execution Time": 3.851316452026367
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.858767234195824,
+                    "Tmin_aug_sep": 17.019745844229792,
+                    "prec_jun_sep": 144.28273818018315,
+                    "vintage_score": -7.463179147248923
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.0431864813837894,
+                "Improvement": 0.5051025475072579
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.006517009017136694,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.12461460751108187,
+                "Mean square error": 0.026542061702040022,
+                "Root mean square error": 0.16291734622820256,
+                "Mean relative error": 0.3007230476793992,
+                "Euclidean Distance": 1.5962574740297595,
+                "r2 score": 0.8902927606497774,
+                "Execution Time": 3.748156785964966
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.877038781541337,
+                    "Tmin_aug_sep": 17.066037562459226,
+                    "prec_jun_sep": 145.0632627488864,
+                    "vintage_score": -7.596380566272472
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.7229761314468728,
+                "Improvement": 0.8253128974441746
+            }
+        }
+    },
+    "34": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.003545074634207257,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13035034179732521,
+                "Mean square error": 0.02315720705229848,
+                "Root mean square error": 0.1521749225473714,
+                "Mean relative error": 0.31456466327879773,
+                "Euclidean Distance": 1.4910036475544508,
+                "r2 score": 0.9042834997036455,
+                "Execution Time": 3.383056640625
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87542543745207,
+                    "Tmin_aug_sep": 17.05041770419055,
+                    "prec_jun_sep": 146.3819114376348,
+                    "vintage_score": -7.589484477539372
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.631538561303487,
+                "Improvement": 0.9167504675875604
+            }
+        }
+    },
+    "35": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.009829144375601452,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.18179881868602046,
+                "Mean square error": 0.04860275211677178,
+                "Root mean square error": 0.22046031868971744,
+                "Mean relative error": 0.43872139801036353,
+                "Euclidean Distance": 2.1600611572847055,
+                "r2 score": 0.7991085312282128,
+                "Execution Time": 15.23173451423645
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.876863262344294,
+                    "Tmin_aug_sep": 17.045252184870908,
+                    "prec_jun_sep": 143.39953960948978,
+                    "vintage_score": -7.575323781214422
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.44377710497580564,
+                "Improvement": 1.1045119239152417
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 3,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005374983185616869,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.24117798456112896,
+                "Mean square error": 0.09381411352014808,
+                "Root mean square error": 0.306290896894028,
+                "Mean relative error": 0.5820166672189531,
+                "Euclidean Distance": 3.0010256409991416,
+                "r2 score": 0.6122348172526177,
+                "Execution Time": 6.279239654541016
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.876335794925566,
+                    "Tmin_aug_sep": 17.11312115527319,
+                    "prec_jun_sep": 146.0335800884268,
+                    "vintage_score": -7.6181484920798255
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.0116044133499478,
+                "Improvement": 0.5366846155410996
+            }
+        }
+    },
+    "37": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 3,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004800500032224061,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.17350167124660051,
+                "Mean square error": 0.056673883486808,
+                "Root mean square error": 0.23806277215643776,
+                "Mean relative error": 0.41869851694639354,
+                "Euclidean Distance": 2.3325292741429045,
+                "r2 score": 0.765747839395762,
+                "Execution Time": 14.998789072036743
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.8771774726891,
+                    "Tmin_aug_sep": 17.016529400813795,
+                    "prec_jun_sep": 145.29974701875105,
+                    "vintage_score": -7.578600817647242
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.48722843808440786,
+                "Improvement": 1.0610605908066395
+            }
+        }
+    },
+    "38": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    128,
+                    128
+                ],
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002425127372106055,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08925661955418934,
+                "Mean square error": 0.015941663056268554,
+                "Root mean square error": 0.1262602988126852,
+                "Mean relative error": 0.21539627812501422,
+                "Euclidean Distance": 1.2370932274496522,
+                "r2 score": 0.9341077620801312,
+                "Execution Time": 4.123416900634766
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.865812037315216,
+                    "Tmin_aug_sep": 17.009748937243433,
+                    "prec_jun_sep": 144.87347483579344,
+                    "vintage_score": -7.505101676328451
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.48732150608289976,
+                "Improvement": 1.0609675228081477
+            }
+        }
+    },
+    "39": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007037859132857435,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0770947416446553,
+                "Mean square error": 0.00968931711466042,
+                "Root mean square error": 0.0984343289440245,
+                "Mean relative error": 0.18604693406729939,
+                "Euclidean Distance": 0.9644555163445383,
+                "r2 score": 0.9599508039815702,
+                "Execution Time": 11.243744850158691
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.869251366940645,
+                    "Tmin_aug_sep": 17.013324291466,
+                    "prec_jun_sep": 144.55768193788413,
+                    "vintage_score": -7.524870880935282
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.22519494378395072,
+                "Improvement": 1.3230940851070967
+            }
+        }
+    },
+    "40": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007478637107556522,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.22860605182600743,
+                "Mean square error": 0.10615845230175393,
+                "Root mean square error": 0.32581966223933434,
+                "Mean relative error": 0.551677768731551,
+                "Euclidean Distance": 3.192367682609333,
+                "r2 score": 0.5612115265777348,
+                "Execution Time": 4.585809230804443
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.88394864021109,
+                    "Tmin_aug_sep": 17.038357423538486,
+                    "prec_jun_sep": 145.2441074501635,
+                    "vintage_score": -7.627604555836797
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.1369855571435679,
+                "Improvement": 0.4113034717474795
+            }
+        }
+    },
+    "41": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004676150654514054,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08961333286650569,
+                "Mean square error": 0.016319614318590393,
+                "Root mean square error": 0.12774824585328126,
+                "Mean relative error": 0.21625710749783109,
+                "Euclidean Distance": 1.251672071504631,
+                "r2 score": 0.9325455628032351,
+                "Execution Time": 11.251733541488647
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.869878846372,
+                    "Tmin_aug_sep": 17.049510138007243,
+                    "prec_jun_sep": 145.0022497869075,
+                    "vintage_score": -7.546483116916363
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.06136899411757048,
+                "Improvement": 1.4869200347734768
+            }
+        }
+    },
+    "42": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002871814516574983,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08382735310342355,
+                "Mean square error": 0.014524679726155551,
+                "Root mean square error": 0.12051837920481485,
+                "Mean relative error": 0.20229423827312443,
+                "Euclidean Distance": 1.1808341347161961,
+                "r2 score": 0.9399646292329958,
+                "Execution Time": 11.259639739990234
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.871854834993552,
+                    "Tmin_aug_sep": 17.069566305077082,
+                    "prec_jun_sep": 144.72002037646004,
+                    "vintage_score": -7.564513723771398
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.3004429014937458,
+                "Improvement": 1.2478461273973016
+            }
+        }
+    },
+    "43": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.006456330924606613,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08577481563072746,
+                "Mean square error": 0.013416518676135636,
+                "Root mean square error": 0.1158296968662857,
+                "Mean relative error": 0.20699390292841108,
+                "Euclidean Distance": 1.1348946175346124,
+                "r2 score": 0.9445450303682922,
+                "Execution Time": 11.22861385345459
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87214462716522,
+                    "Tmin_aug_sep": 17.05995750808838,
+                    "prec_jun_sep": 144.87824395041307,
+                    "vintage_score": -7.563407648776803
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.2857770794870295,
+                "Improvement": 1.2625119494040178
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007327830311865544,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1161870556037805,
+                "Mean square error": 0.02243039265143068,
+                "Root mean square error": 0.14976779577542923,
+                "Mean relative error": 0.28038547133374786,
+                "Euclidean Distance": 1.4674187182046465,
+                "r2 score": 0.9072876672899587,
+                "Execution Time": 11.323181629180908
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.87458015422218,
+                    "Tmin_aug_sep": 17.07384221572461,
+                    "prec_jun_sep": 144.55098167366396,
+                    "vintage_score": -7.581351523352396
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.5237009742702536,
+                "Improvement": 1.0245880546207937
+            }
+        }
+    },
+    "45": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0001868840564739323,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.27955358875785696,
+                "Mean square error": 0.1320506781652843,
+                "Root mean square error": 0.3633877793284803,
+                "Mean relative error": 0.6746256227906512,
+                "Euclidean Distance": 3.5604585524714967,
+                "r2 score": 0.4541902766082184,
+                "Execution Time": 11.18615984916687
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.85855755194305,
+                    "Tmin_aug_sep": 16.956476711335917,
+                    "prec_jun_sep": 145.36105318601238,
+                    "vintage_score": -7.4435213980228525
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.3038352191374594,
+                "Improvement": 0.244453809753588
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004063746514162264,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.228505726484705,
+                "Mean square error": 0.08271252283382186,
+                "Root mean square error": 0.2875978491467241,
+                "Mean relative error": 0.5514356611408077,
+                "Euclidean Distance": 2.817871926125632,
+                "r2 score": 0.658121413413284,
+                "Execution Time": 9.069338321685791
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.884000404313017,
+                    "Tmin_aug_sep": 17.07611345798018,
+                    "prec_jun_sep": 145.2342481087595,
+                    "vintage_score": -7.643284363367314
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 1.3448894221308074,
+                "Improvement": 0.20339960676023994
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    64,
+                    64
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008051686394392481,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09975372933302326,
+                "Mean square error": 0.017123195504278793,
+                "Root mean square error": 0.13085562847764245,
+                "Mean relative error": 0.24072816262527583,
+                "Euclidean Distance": 1.2821180789657327,
+                "r2 score": 0.9292240923588772,
+                "Execution Time": 10.608839511871338
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.870554496237943,
+                    "Tmin_aug_sep": 17.02716530227995,
+                    "prec_jun_sep": 144.35510821834927,
+                    "vintage_score": -7.5368974466689735
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.06573064591606528,
+                "Improvement": 1.482558382974982
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 4,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0034232708944455167,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07277521180572474,
+                "Mean square error": 0.011125012904042237,
+                "Root mean square error": 0.10547517671965398,
+                "Mean relative error": 0.1756229380073689,
+                "Euclidean Distance": 1.0334414539721473,
+                "r2 score": 0.9540165919611184,
+                "Execution Time": 11.362613677978516
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.871869307290602,
+                    "Tmin_aug_sep": 17.07052399745129,
+                    "prec_jun_sep": 144.82018302122023,
+                    "vintage_score": -7.5656845619756155
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.31596744077509326,
+                "Improvement": 1.2323215881159542
+            }
+        }
+    },
+    "49": {
+        "parameters": {
+            "Nonstationary_Transformer": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "n_projector_hidden_layers": 2,
+                "d_projector_hidden": [
+                    32,
+                    32
+                ],
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0018723210544186735,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.5860178204249485,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15108802197520405,
+                "Mean square error": 0.05255414598975075,
+                "Root mean square error": 0.22924691053480034,
+                "Mean relative error": 0.3646093451138531,
+                "Euclidean Distance": 2.246151823678917,
+                "r2 score": 0.7827760956300924,
+                "Execution Time": 5.718880653381348
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.869581056466302,
+                    "Tmin_aug_sep": 17.044262295081968,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.541854756514482
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.8824043715847,
+                    "Tmin_aug_sep": 17.142622950819668,
+                    "prec_jun_sep": 144.89999999999998,
+                    "vintage_score": -7.658624466284493
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.865437035661323,
+                    "Tmin_aug_sep": 16.953943783481563,
+                    "prec_jun_sep": 144.30694315434283,
+                    "vintage_score": -7.476130353637899
+                },
+                "Deviation missing": 1.5482890288910474,
+                "Deviation filled": 0.871462060706113,
+                "Improvement": 0.6768269681849344
+            }
+        }
+    },
+    "best_trial": 39
+}

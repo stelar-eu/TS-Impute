@@ -1,0 +1,61 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 48,
+        "seed": 2025
+    },
+    "algorithm": "TimesNet",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "top_k": 3,
+        "n_kernels": 5,
+        "dropout": 0.5,
+        "epochs": 100,
+        "batch_size": 32,
+        "attn_dropout": 0.4,
+        "apply_nonstationary_norm": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0026526059709556992,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 2.0562028786840303,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.4778818771113592,
+        "Mean square error": 2.26726720818208,
+        "Root mean square error": 1.5057447353990914,
+        "Mean relative error": 0.3416905459273052,
+        "Euclidean Distance": 20.864211079524708,
+        "r2 score": 0.27932625697023383,
+        "Execution Time": 7.185570240020752
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.275245942535907,
+            "Tmin_aug_sep": 16.081666666666663,
+            "prec_jun_sep": 108.2,
+            "vintage_score": -3.5914379686328743
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.288580887529566,
+            "Tmin_aug_sep": 16.209435365507552,
+            "prec_jun_sep": 112.25050441789219,
+            "vintage_score": -3.7405501454618673
+        },
+        "Deviation missing": 13.390614018234759,
+        "Deviation filled": 9.794696675277129,
+        "Improvement": 3.5959173429576303
+    }
+}

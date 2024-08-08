@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="stelarImputation",
-    version="0.1.0",
+    version="0.2.0",
     description=".",
     author="Panagiotis Betchavas",
     author_email="pbetchavas@athenarc.gr",
@@ -20,7 +20,7 @@ setup(
         "minio==7.2.5",
         "tqdm==4.64.1",
         "torch-geometric==2.4.0",
-        "pypots==0.3.2",
+        "pypots @ git+https://github.com/PanosBet/PyPOTS.git",
         "notebook==6.5.2",
         "traitlets==5.9.0"
     ],

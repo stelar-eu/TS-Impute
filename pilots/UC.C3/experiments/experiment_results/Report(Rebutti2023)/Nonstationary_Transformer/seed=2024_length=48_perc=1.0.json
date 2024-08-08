@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 48,
+        "seed": 2024
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 256,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            32,
+            32
+        ],
+        "dropout": 0.4,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008561435614770999,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.7196710075394106,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.43746209853888846,
+        "Mean square error": 6.381882944696183,
+        "Root mean square error": 2.526238893037668,
+        "Mean relative error": 0.38086260400171806,
+        "Euclidean Distance": 35.004592918382485,
+        "r2 score": 0.14610233575557763,
+        "Execution Time": 14.727524518966675
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.883550824175824,
+            "Tmin_aug_sep": 18.281666666666673,
+            "prec_jun_sep": 81.0,
+            "vintage_score": -7.689173977554759
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.89929451384174,
+            "Tmin_aug_sep": 18.212398521251842,
+            "prec_jun_sep": 90.81749402017539,
+            "vintage_score": -7.823081047898
+        },
+        "Deviation missing": 5.330203311500389,
+        "Deviation filled": 3.6815275029477164,
+        "Improvement": 1.6486758085526727
+    }
+}

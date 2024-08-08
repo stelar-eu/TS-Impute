@@ -2,25 +2,28 @@ import algorithms as alg
 import numpy as np
 import pandas as pd
 from scipy.signal import savgol_filter
-import random
 import math
 from typing import Union
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from pypots.imputation import SAITS, BRITS, CSDI, MRNN, USGAN, GPVAE, TimesNet
+from pypots.imputation import SAITS, BRITS, CSDI, MRNN, USGAN, GPVAE, TimesNet, NonstationaryTransformer, Autoformer
 from sklearn.cluster import KMeans
 import datetime as dt
+from pypots.optim import Adam
+from sklearn.preprocessing import StandardScaler
+from pypots.utils.metrics import calc_mae, calc_mre, calc_rmse, calc_mse
 
 __all__ = ['run_gap_generation', 'run_imputation', 'train_ensemble', 'run_imputation_ensemble',
            'fill_missing_values', 'fill_missing_values_ml', 'dataframe_preproc',
            'dataframe_reverse_preproc', 'z_normalize',
            'smooth_data', 'generate_custom_gaps',
            'fill_missing_with_lm', 'ensemble_model_run_imputation',
-           'find_clusters']
+           'find_clusters', 'dataframe_scaler', 'dataframe_inverse_scaler',
+           'compute_metrics']
 
 
 def run_gap_generation(ground_truth: Union[str, pd.DataFrame], train_params: dict,
-                       dimension_column: str = '', time_column: str = '', datetime_format: str = '',
+                       dimension_column: str = '', time_column: str = '',
                        spatial_x_column: str = '', spatial_y_column: str = '',
                        header: int = 0, sep: str = ',', preprocessing: bool = True, index: bool = False):
     """
@@ -29,7 +32,6 @@ def run_gap_generation(ground_truth: Union[str, pd.DataFrame], train_params: dic
     :param train_params: dictionary with additional parameters for gap generation
     :param dimension_column: (optional) the name of the dimension column
     :param time_column: (optional) the name of the datetime column
-    :param datetime_format: (optional) the format of the timestamp
     :param spatial_x_column: (optional) the name of the Spatial_X column
     :param spatial_y_column: (optional) the name of the Spatial_Y column
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
@@ -40,24 +42,48 @@ def run_gap_generation(ground_truth: Union[str, pd.DataFrame], train_params: dic
     """
     if preprocessing:
         df, spatial_x, spatial_y = dataframe_preproc(df_input=ground_truth, dimension_column=dimension_column,
-                                                     time_column=time_column, datetime_format=datetime_format,
+                                                     time_column=time_column,
                                                      spatial_x_column=spatial_x_column,
                                                      spatial_y_column=spatial_y_column,
                                                      header=header, sep=sep)
     else:
-        df = min_preproc(df_input=ground_truth, time_column=time_column,
-                         datetime_format=datetime_format, header=header, sep=sep, index=index)
+        df = min_preproc(df_input=ground_truth, time_column=time_column, header=header, sep=sep, index=index)
 
-    gap_type = train_params['gap_type']
-    miss_perc = train_params['miss_perc']
-    gap_length = train_params['gap_length']
-    max_gap_length = train_params['max_gap_length']
-    max_gap_count = train_params['max_gap_count']
+    if 'gap_type' in train_params:
+        gap_type = train_params['gap_type']
+    else:
+        gap_type = 'random'
+
+    if 'miss_perc' in train_params:
+        miss_perc = train_params['miss_perc']
+    else:
+        miss_perc = 0.1
+
+    if 'gap_length' in train_params:
+        gap_length = train_params['gap_length']
+    else:
+        gap_length = 10
+
+    if 'max_gap_length' in train_params:
+        max_gap_length = train_params['max_gap_length']
+    else:
+        max_gap_length = 10
+
+    if 'max_gap_count' in train_params:
+        max_gap_count = train_params['max_gap_count']
+    else:
+        max_gap_count = 5
+
+    if 'random_seed' in train_params:
+        random_seed = train_params['random_seed']
+    else:
+        random_seed = 18931
 
     data_gaps = generate_custom_gaps(data=df, gap_type=gap_type,
                                      miss_perc=miss_perc, gap_length=gap_length,
                                      max_gap_length=max_gap_length,
-                                     max_gap_count=max_gap_count)
+                                     max_gap_count=max_gap_count,
+                                     random_seed=random_seed)
     if preprocessing:
         data_gaps = dataframe_reverse_preproc(df=data_gaps, dimension_column=dimension_column,
                                               spatial_x_column=spatial_x_column, spatial_y_column=spatial_y_column,
@@ -69,10 +95,10 @@ def run_gap_generation(ground_truth: Union[str, pd.DataFrame], train_params: dic
 
 
 def run_imputation(missing: Union[str, pd.DataFrame], algorithms, params,
-                   dimension_column: str = '', time_column: str = '', datetime_format: str = '',
+                   dimension_column: str = '', time_column: str = '',
                    spatial_x_column: str = '', spatial_y_column: str = '',
                    header: int = 0, sep: str = ',', is_multivariate: bool = False,
-                   areaVStime: int = 0, preprocessing: bool = True, index: bool = False) -> (dict, pd.DataFrame):
+                   areaVStime: int = 0, preprocessing: bool = True, index: bool = False) -> dict:
     """
     Run imputation for each algorithm and return a list containing a dataframe with the results of each algorithm.
     :param missing: dataframe or a path to the .csv file with the missing values
@@ -80,7 +106,6 @@ def run_imputation(missing: Union[str, pd.DataFrame], algorithms, params,
     :param params: dictionary with the parameters for each algorithm
     :param dimension_column: (optional) the name of the dimension column
     :param time_column: (optional) the name of the datetime column
-    :param datetime_format: (optional) the format of the timestamp
     :param spatial_x_column: (optional) the name of the Spatial_X column
     :param spatial_y_column: (optional) the name of the Spatial_Y column
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
@@ -94,7 +119,8 @@ def run_imputation(missing: Union[str, pd.DataFrame], algorithms, params,
     :param index: if true the datetime exists in the index of the dataframe. Don't change if you give a path.
     :return: list of dataframes with the results
     """
-    ml_algorithms = ['saits', 'brits', 'csdi', 'usgan', 'mrnn', 'gpvae', 'timesnet']
+    ml_algorithms = ['saits', 'brits', 'csdi', 'usgan', 'mrnn', 'gpvae', 'timesnet', 'nonstationary_transformer',
+                     'autoformer']
 
     if preprocessing:
         clusters_dict = find_clusters(df_input=missing, dimension_column=dimension_column,
@@ -102,13 +128,12 @@ def run_imputation(missing: Union[str, pd.DataFrame], algorithms, params,
                                       header=header, sep=sep, areaVStime=areaVStime)
 
         df, spatial_x, spatial_y = dataframe_preproc(df_input=missing, dimension_column=dimension_column,
-                                                     time_column=time_column, datetime_format=datetime_format,
+                                                     time_column=time_column,
                                                      spatial_x_column=spatial_x_column,
                                                      spatial_y_column=spatial_y_column,
                                                      header=header, sep=sep)
     else:
-        df = min_preproc(df_input=missing, time_column=time_column,
-                         datetime_format=datetime_format, header=header, sep=sep, index=index)
+        df = min_preproc(df_input=missing, time_column=time_column, header=header, sep=sep, index=index)
 
         df_trans = dataframe_reverse_preproc(df=df, dimension_column='TimeSeries')
 
@@ -119,16 +144,20 @@ def run_imputation(missing: Union[str, pd.DataFrame], algorithms, params,
     dict_imputed_dfs = dict()
     for alg in algorithms:
         new_alg_df = df.copy()
-        for cluster in clusters_dict:
-            df_cl = df[clusters_dict[cluster]]
-
-            new_cluster_alg_df = pd.DataFrame()
-            if alg.lower() in ml_algorithms:
-                new_cluster_alg_df = fill_missing_values_ml(df_cl, alg.lower(), params[str(alg)], is_multivariate)
-            else:
-                new_cluster_alg_df = fill_missing_values(df_cl, alg, params[str(alg)])
-
-            new_alg_df[clusters_dict[cluster]] = new_cluster_alg_df.values
+        if alg.lower() in ml_algorithms:
+            new_alg_df.loc[:, :] = fill_missing_values_ml(new_alg_df, alg.lower(), params[str(alg)], is_multivariate)
+        else:
+            for cluster in clusters_dict:
+                df_cl = new_alg_df[clusters_dict[cluster]].copy()
+                if df_cl.isnull().any().any():
+                    new_cluster_alg_df = pd.DataFrame()
+                    if alg.lower() in ['linearimpute', 'meanimpute', 'zeroimpute']:
+                        new_cluster_alg_df = fill_missing_values(df_cl, alg, dict())
+                    elif alg.lower() == 'naive':
+                        new_cluster_alg_df = df_cl.interpolate(method='linear', axis=0, limit_direction='both')
+                    else:
+                        new_cluster_alg_df = fill_missing_values(df_cl, alg, params[str(alg)])
+                    new_alg_df.loc[:, clusters_dict[cluster]] = new_cluster_alg_df
 
         if preprocessing:
             new_alg_df = dataframe_reverse_preproc(df=new_alg_df, dimension_column=dimension_column,
@@ -144,8 +173,8 @@ def run_imputation(missing: Union[str, pd.DataFrame], algorithms, params,
 
 def train_ensemble(ground_truth: Union[str, pd.DataFrame], algorithms, params,
                    train_params, dimension_column: str = '', time_column: str = '',
-                   datetime_format: str = '', spatial_x_column: str = '',
-                   spatial_y_column: str = '', header: int = 0, sep: str = ',',
+                   spatial_x_column: str = '', spatial_y_column: str = '',
+                   header: int = 0, sep: str = ',',
                    is_multivariate: bool = False, areaVStime: int = 0,
                    preprocessing: bool = True, index: bool = False) -> (
         XGBRegressor, dict):
@@ -163,7 +192,6 @@ def train_ensemble(ground_truth: Union[str, pd.DataFrame], algorithms, params,
                          used for normalization, smoothing and gap generation
     :param dimension_column: (optional) the name of the dimension column
     :param time_column: (optional) the name of the datetime column
-    :param datetime_format: (optional) the format of the timestamp
     :param spatial_x_column: (optional) the name of the Spatial_X column
     :param spatial_y_column: (optional) the name of the Spatial_Y column
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
@@ -184,13 +212,12 @@ def train_ensemble(ground_truth: Union[str, pd.DataFrame], algorithms, params,
                                       header=header, sep=sep, areaVStime=areaVStime)
 
         df, spatial_x, spatial_y = dataframe_preproc(df_input=ground_truth, dimension_column=dimension_column,
-                                                     time_column=time_column, datetime_format=datetime_format,
+                                                     time_column=time_column,
                                                      spatial_x_column=spatial_x_column,
                                                      spatial_y_column=spatial_y_column,
                                                      header=header, sep=sep)
     else:
-        df = min_preproc(df_input=ground_truth, time_column=time_column,
-                         datetime_format=datetime_format, header=header, sep=sep, index=index)
+        df = min_preproc(df_input=ground_truth, time_column=time_column, header=header, sep=sep, index=index)
 
         df_trans = dataframe_reverse_preproc(df=df, dimension_column='TimeSeries')
 
@@ -198,15 +225,55 @@ def train_ensemble(ground_truth: Union[str, pd.DataFrame], algorithms, params,
                                       spatial_x_column=spatial_x_column, spatial_y_column=spatial_y_column,
                                       header=header, sep=sep, areaVStime=areaVStime)
 
-    smooth = train_params['smooth']
-    window = train_params['window']
-    order = train_params['order']
-    normalize = train_params['normalize']
-    gap_type = train_params['gap_type']
-    miss_perc = train_params['miss_perc']
-    gap_length = train_params['gap_length']
-    max_gap_length = train_params['max_gap_length']
-    max_gap_count = train_params['max_gap_count']
+    if 'smooth' in train_params:
+        smooth = train_params['smooth']
+    else:
+        smooth = False
+
+    if 'window' in train_params:
+        window = train_params['window']
+    else:
+        window = 2
+
+    if 'order' in train_params:
+        order = train_params['order']
+    else:
+        order = 1
+
+    if 'normalize' in train_params:
+        normalize = train_params['normalize']
+    else:
+        normalize = False
+
+    if 'gap_type' in train_params:
+        gap_type = train_params['gap_type']
+    else:
+        gap_type = 'random'
+
+    if 'miss_perc' in train_params:
+        miss_perc = train_params['miss_perc']
+    else:
+        miss_perc = 0.1
+
+    if 'gap_length' in train_params:
+        gap_length = train_params['gap_length']
+    else:
+        gap_length = 10
+
+    if 'max_gap_length' in train_params:
+        max_gap_length = train_params['max_gap_length']
+    else:
+        max_gap_length = 10
+
+    if 'max_gap_count' in train_params:
+        max_gap_count = train_params['max_gap_count']
+    else:
+        max_gap_count = 5
+
+    if 'random_seed' in train_params:
+        random_seed = train_params['random_seed']
+    else:
+        random_seed = 18931
 
     if normalize:
         df = z_normalize(df)
@@ -219,7 +286,8 @@ def train_ensemble(ground_truth: Union[str, pd.DataFrame], algorithms, params,
     data_gaps = generate_custom_gaps(data=df, gap_type=gap_type,
                                      miss_perc=miss_perc, gap_length=gap_length,
                                      max_gap_length=max_gap_length,
-                                     max_gap_count=max_gap_count)
+                                     max_gap_count=max_gap_count,
+                                     random_seed=random_seed)
     # clustering
 
     # Train Ensemble Model
@@ -269,9 +337,8 @@ def train_ensemble(ground_truth: Union[str, pd.DataFrame], algorithms, params,
 
 def run_imputation_ensemble(missing: Union[str, pd.DataFrame], algorithms: dict,
                             params: dict, model: XGBRegressor, dimension_column: str = '',
-                            time_column: str = '', datetime_format: str = '',
-                            spatial_x_column: str = '', spatial_y_column: str = '',
-                            header: int = 0, sep: str = ',',
+                            time_column: str = '', spatial_x_column: str = '',
+                            spatial_y_column: str = '', header: int = 0, sep: str = ',',
                             is_multivariate: bool = False, areaVStime: int = 0,
                             preprocessing: bool = True,
                             index: bool = False) -> pd.DataFrame:
@@ -285,7 +352,6 @@ def run_imputation_ensemble(missing: Union[str, pd.DataFrame], algorithms: dict,
     :param model: the ensemble model
     :param dimension_column: the name of the dimension column
     :param time_column: the name of the datetime column
-    :param datetime_format: the format of the timestamp
     :param spatial_x_column: (optional) the name of the Spatial_X column
     :param spatial_y_column: (optional) the name of the Spatial_Y column
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
@@ -306,13 +372,12 @@ def run_imputation_ensemble(missing: Union[str, pd.DataFrame], algorithms: dict,
                                       header=header, sep=sep, areaVStime=areaVStime)
 
         df, spatial_x, spatial_y = dataframe_preproc(df_input=missing, dimension_column=dimension_column,
-                                                     time_column=time_column, datetime_format=datetime_format,
+                                                     time_column=time_column,
                                                      spatial_x_column=spatial_x_column,
                                                      spatial_y_column=spatial_y_column,
                                                      header=header, sep=sep)
     else:
-        df = min_preproc(df_input=missing, time_column=time_column,
-                         datetime_format=datetime_format, header=header, sep=sep, index=index)
+        df = min_preproc(df_input=missing, time_column=time_column, header=header, sep=sep, index=index)
 
         df_trans = dataframe_reverse_preproc(df=df, dimension_column='TimeSeries')
 
@@ -334,7 +399,7 @@ def run_imputation_ensemble(missing: Union[str, pd.DataFrame], algorithms: dict,
     return model_pred_df
 
 
-def fill_missing_values(time_series: pd.DataFrame, algorithm, var_dict):
+def fill_missing_values(time_series: pd.DataFrame, algorithm, var_dict=None):
     """
     This is a missing value imputation method that uses a specific algorithm and its parameters to fill the missing
     values of a pandas Dataframe that has time series as columns.
@@ -372,6 +437,8 @@ def fill_missing_values(time_series: pd.DataFrame, algorithm, var_dict):
         -c_timeseries (pandas.DataFrame) - A pandas DataFrame with no missing values containing the loaded time series
         as columns.
     """
+    if var_dict is None:
+        var_dict = {}
     c_timeseries = time_series.copy()
     lists = c_timeseries.values.tolist()
     m_ndarray = np.array(lists)
@@ -398,7 +465,6 @@ def fill_missing_values(time_series: pd.DataFrame, algorithm, var_dict):
         svd: np.ndarray = alg.PCA_MME.doPCA_MME(m_ndarray, var_dict['truncation'], var_dict['single_block'])
     elif algorithm == 'linearimpute':
         svd: np.ndarray = alg.LinearImpute.doLinearImpute(m_ndarray)
-
     elif algorithm == 'meanimpute':
         svd: np.ndarray = alg.MeanImpute.doMeanImpute(m_ndarray)
     elif algorithm == 'nmfmissingvaluerecovery':
@@ -438,6 +504,8 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
     MRNN
     GPVAE
     TIMESNET
+    NONSTATIONARY TRANSFORMER
+    AUTOFORMER
 
     :param time_series: A pandas DataFrame with missing values containing the loaded time series as columns.
     :type time_series: pandas.DataFrame
@@ -464,10 +532,24 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
         num_features = num_columns
         dataset = {"X": np.array([time_series.values])}
     algorithm = algorithm.lower()
+
+    num_workers = var_dict['num_workers']
+    patience = var_dict['patience']
+
+    if 'lr' in var_dict:
+        lr = var_dict['lr']
+    else:
+        lr = 0.001
+
+    if 'device' in var_dict:
+        device = var_dict['device']
+    else:
+        device = None
+
     if algorithm == 'saits':
         n_layers = var_dict['n_layers']
         d_model = var_dict['d_model']
-        d_inner = var_dict['d_inner']
+        d_ffn = var_dict['d_ffn']
         n_heads = var_dict['n_heads']
         d_k = var_dict['d_k']
         d_v = var_dict['d_v']
@@ -478,25 +560,26 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
         MIT_weight = var_dict['MIT_weight']
         attn_dropout = var_dict['attn_dropout']
         diagonal_attention_mask = var_dict['diagonal_attention_mask']
-        num_workers = var_dict['num_workers']
 
         model = SAITS(n_steps=num_timestamps, n_features=num_features, n_layers=n_layers,
-                      d_model=d_model, d_inner=d_inner, n_heads=n_heads,
+                      d_model=d_model, d_ffn=d_ffn, n_heads=n_heads,
                       d_k=d_k, d_v=d_v, dropout=dropout, epochs=epochs, batch_size=batch_size,
                       ORT_weight=ORT_weight, MIT_weight=MIT_weight,
                       attn_dropout=attn_dropout,
                       diagonal_attention_mask=diagonal_attention_mask,
-                      num_workers=num_workers)
+                      num_workers=num_workers, patience=patience, optimizer=Adam(lr=lr),
+                      device=device)
 
     elif algorithm == 'brits':
         rnn_hidden_size = var_dict['rnn_hidden_size']
         epochs = var_dict['epochs']
         batch_size = var_dict['batch_size']
-        num_workers = var_dict['num_workers']
 
         model = BRITS(n_steps=num_timestamps, n_features=num_features,
                       rnn_hidden_size=rnn_hidden_size, epochs=epochs,
-                      batch_size=batch_size, num_workers=num_workers)
+                      batch_size=batch_size, num_workers=num_workers,
+                      patience=patience, optimizer=Adam(lr=lr),
+                      device=device)
 
     elif algorithm == 'csdi':
         n_layers = var_dict['n_layers']
@@ -511,9 +594,8 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
         n_diffusion_steps = var_dict['n_diffusion_steps']
         epochs = var_dict['epochs']
         batch_size = var_dict['batch_size']
-        num_workers = var_dict['num_workers']
 
-        model = CSDI(n_features=num_features, n_layers=n_layers,
+        model = CSDI(n_features=num_features, n_layers=n_layers, n_steps=1,
                      n_channels=n_channels, n_heads=n_heads,
                      d_time_embedding=d_time_embedding,
                      d_feature_embedding=d_feature_embedding,
@@ -522,7 +604,8 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
                      target_strategy='random',
                      beta_start=beta_start, beta_end=beta_end, epochs=epochs,
                      batch_size=batch_size, n_diffusion_steps=n_diffusion_steps,
-                     num_workers=num_workers)
+                     num_workers=num_workers, patience=patience, optimizer=Adam(lr=lr),
+                     device=device)
 
     elif algorithm == 'usgan':
         rnn_hidden_size = var_dict['rnn_hidden_size']
@@ -533,23 +616,24 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
         D_steps = var_dict['D_steps']
         epochs = var_dict['epochs']
         batch_size = var_dict['batch_size']
-        num_workers = var_dict['num_workers']
 
         model = USGAN(n_steps=num_timestamps, n_features=num_features,
                       rnn_hidden_size=rnn_hidden_size, lambda_mse=lambda_mse,
                       hint_rate=hint_rate, dropout=dropout,
                       G_steps=G_steps, D_steps=D_steps, epochs=epochs,
-                      batch_size=batch_size, num_workers=num_workers)
+                      batch_size=batch_size, num_workers=num_workers,
+                      patience=patience, device=device)
 
     elif algorithm == 'mrnn':
         rnn_hidden_size = var_dict['rnn_hidden_size']
         epochs = var_dict['epochs']
         batch_size = var_dict['batch_size']
-        num_workers = var_dict['num_workers']
 
         model = MRNN(n_steps=num_timestamps, n_features=num_features,
                      rnn_hidden_size=rnn_hidden_size, epochs=epochs,
-                     batch_size=batch_size, num_workers=num_workers)
+                     batch_size=batch_size, num_workers=num_workers,
+                     patience=patience, optimizer=Adam(lr=lr),
+                     device=device)
 
     elif algorithm == 'gpvae':
         latent_size = var_dict['latent_size']
@@ -565,7 +649,6 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
         window_size = var_dict['window_size']
         epochs = var_dict['epochs']
         batch_size = var_dict['batch_size']
-        num_workers = var_dict['num_workers']
 
         model = GPVAE(n_steps=num_timestamps, n_features=num_features,
                       latent_size=latent_size, encoder_sizes=encoder_sizes,
@@ -574,7 +657,9 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
                       M=M, K=K, sigma=sigma,
                       length_scale=length_scale, kernel_scales=kernel_scales,
                       window_size=window_size, epochs=epochs,
-                      batch_size=batch_size, num_workers=num_workers)
+                      batch_size=batch_size, num_workers=num_workers,
+                      patience=patience, optimizer=Adam(lr=lr),
+                      device=device)
 
     elif algorithm == 'timesnet':
         n_layers = var_dict['n_layers']
@@ -586,28 +671,81 @@ def fill_missing_values_ml(time_series: pd.DataFrame, algorithm, var_dict, is_mu
         epochs = var_dict['epochs']
         apply_nonstationary_norm = var_dict['apply_nonstationary_norm']
         batch_size = var_dict['batch_size']
-        num_workers = var_dict['num_workers']
 
         model = TimesNet(n_steps=num_timestamps, n_features=num_features,
                          n_layers=n_layers, top_k=top_k, d_model=d_model,
                          d_ffn=d_ffn, n_kernels=n_kernels, dropout=dropout,
                          epochs=epochs, apply_nonstationary_norm=apply_nonstationary_norm,
-                         batch_size=batch_size, num_workers=num_workers)
+                         batch_size=batch_size, num_workers=num_workers,
+                         patience=patience, optimizer=Adam(lr=lr),
+                         device=device)
+
+    elif algorithm == 'nonstationary_transformer':
+        n_layers = var_dict['n_layers']
+        d_model = var_dict['d_model']
+        n_heads = var_dict['n_heads']
+        d_ffn = var_dict['d_ffn']
+        d_projector_hidden = var_dict['d_projector_hidden']
+        n_projector_hidden_layers = var_dict['n_projector_hidden_layers']
+        dropout = var_dict['dropout']
+        ORT_weight = var_dict['ORT_weight']
+        MIT_weight = var_dict['MIT_weight']
+        epochs = var_dict['epochs']
+        batch_size = var_dict['batch_size']
+
+        model = NonstationaryTransformer(n_steps=num_timestamps, n_features=num_features,
+                                         n_layers=n_layers, d_model=d_model,
+                                         n_heads=n_heads, d_ffn=d_ffn,
+                                         d_projector_hidden=d_projector_hidden,
+                                         n_projector_hidden_layers=n_projector_hidden_layers,
+                                         ORT_weight=ORT_weight, MIT_weight=MIT_weight,
+                                         dropout=dropout, epochs=epochs,
+                                         batch_size=batch_size, num_workers=num_workers,
+                                         patience=patience, optimizer=Adam(lr=lr),
+                                         device=device)
+
+    elif algorithm == 'autoformer':
+        n_layers = var_dict['n_layers']
+        d_model = var_dict['d_model']
+        n_heads = var_dict['n_heads']
+        d_ffn = var_dict['d_ffn']
+        factor = var_dict['factor']
+        moving_avg_window_size = var_dict['moving_avg_window_size']
+        dropout = var_dict['dropout']
+        ORT_weight = var_dict['ORT_weight']
+        MIT_weight = var_dict['MIT_weight']
+        epochs = var_dict['epochs']
+        batch_size = var_dict['batch_size']
+
+        model = Autoformer(n_steps=num_timestamps, n_features=num_features,
+                           n_layers=n_layers, d_model=d_model,
+                           n_heads=n_heads, d_ffn=d_ffn,
+                           factor=factor, moving_avg_window_size=moving_avg_window_size,
+                           ORT_weight=ORT_weight, MIT_weight=MIT_weight,
+                           dropout=dropout, epochs=epochs,
+                           batch_size=batch_size, num_workers=num_workers,
+                           patience=patience, optimizer=Adam(lr=lr),
+                           device=device)
 
     model.fit(train_set=dataset)
     imputation = model.predict(dataset)
     imputed_time_series = time_series.copy()
     if not is_multivariate:
-        imputed_time_series[:] = imputation['imputation'].T.reshape(num_timestamps, num_columns)
+        df_imputed = imputation['imputation'].T.reshape(num_timestamps, num_columns)
+        imputed_time_series.fillna(pd.DataFrame(df_imputed, index=imputed_time_series.index,
+                                                columns=imputed_time_series.columns), inplace=True)
+        # imputed_time_series[:] = imputation['imputation'].T.reshape(num_timestamps, num_columns)
     else:
-        imputed_time_series[:] = imputation['imputation'].reshape(num_timestamps, num_columns)
+        df_imputed = imputation['imputation'].reshape(num_timestamps, num_columns)
+        imputed_time_series.fillna(pd.DataFrame(df_imputed, index=imputed_time_series.index,
+                                                columns=imputed_time_series.columns), inplace=True)
+        # imputed_time_series[:] = imputation['imputation'].reshape(num_timestamps, num_columns)
     return imputed_time_series
 
 
 # -------- Other functions --------
 def dataframe_preproc(df_input: Union[str, pd.DataFrame], dimension_column: str,
-                      time_column: str = '', datetime_format: str = '',
-                      spatial_x_column: str = '', spatial_y_column: str = '',
+                      time_column: str = '', spatial_x_column: str = '', spatial_y_column: str = '',
                       header: int = 0, sep: str = ',') -> [pd.DataFrame, Union[None, pd.Series],
                                                            Union[None, pd.Series]]:
     """
@@ -615,7 +753,6 @@ def dataframe_preproc(df_input: Union[str, pd.DataFrame], dimension_column: str,
     :param df_input: dataframe or a path to the .csv file that needs preprocessing
     :param dimension_column: the name of the dimension column
     :param time_column: (optional) the name of the datetime column that will be inserted
-    :param datetime_format: (optional) the format of the timestamp
     :param spatial_x_column: (optional) the name of the Spatial_X column
     :param spatial_y_column: (optional) the name of the Spatial_Y column
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
@@ -648,8 +785,6 @@ def dataframe_preproc(df_input: Union[str, pd.DataFrame], dimension_column: str,
         time_column = 'Time'
     df = df.rename(columns={'index': time_column})
 
-    if datetime_format != '':
-        df[time_column] = pd.to_datetime(df[time_column], format=datetime_format)
     df = df.set_index(time_column)
 
     return df, spatial_x, spatial_y
@@ -707,8 +842,9 @@ def generate_custom_gaps(data: pd.DataFrame,
                          gap_type: str = 'random',
                          miss_perc: float = 0.1,
                          gap_length: int = 10,
-                         max_gap_length: int = 0,
-                         max_gap_count: int = 0):
+                         max_gap_length: int = 10,
+                         max_gap_count: int = 5,
+                         random_seed: int = 18931):
     """
     Generate custom gaps for the data.
     :param data: dataframe with the data
@@ -717,6 +853,7 @@ def generate_custom_gaps(data: pd.DataFrame,
     :param gap_length: int between 0 and 100 that determines the size of the gap
     :param max_gap_length: maximum length of the gap
     :param max_gap_count: maximum number of gaps
+    :param random_seed: Number for the RandomState
     :return: dataframe with the data with gaps
 
     Args:
@@ -724,46 +861,39 @@ def generate_custom_gaps(data: pd.DataFrame,
     """
 
     data_gaps = data.copy()
-    random.seed(18931)
+    rng = np.random.RandomState(random_seed)
+
+    N, M = data_gaps.shape
 
     if gap_type == 'random':
         """
         Needs max_gap_length and max_gap_count.
         """
+        col_indices = {col: i for i, col in enumerate(data_gaps.columns)}
+        mask = np.zeros((len(data_gaps), len(data_gaps.columns)), dtype=bool)
+
         for col in data_gaps.columns:
-            num_missing = random.randint(1, max_gap_count)
-            for i in range(num_missing):
-                start = random.randint(0, len(data_gaps) - max_gap_length)
-                end = start + random.randint(1, max_gap_length)
-                if start == 0:
-                    start = 1
-                if end == len(data_gaps):
-                    end = len(data_gaps) - 1
-                data_gaps[col][start:end] = np.nan
+            num_missing = rng.randint(1, max_gap_count + 1)
+            starts = rng.randint(0, len(data_gaps) - max_gap_length, size=num_missing)
+            ends = starts + rng.randint(1, max_gap_length + 1, size=num_missing)
+            starts = np.clip(starts, 1, None)
+            ends = np.clip(ends, None, len(data_gaps) - 1)
+            for start, end in zip(starts, ends):
+                mask[start:end, col_indices[col]] = True
+
+        data_gaps[mask] = np.nan
 
     if gap_type == 'single':
         """
         This method introduces missing values, on a pandas DataFrame, on the 1st time series column where the position
         of the first missing value is at 5% of 1st series from the top and the size of a single block varies based on the
         given miss_perc value.
-        
+
         Needs miss_perc.
         """
-
-        # N = length of time series, M = number of time series
-        N, M = data_gaps.shape
-
-        # choose starting pos at 5% of the above chosen time series from the top
-        top_five_perc = (5 * N) // 100
-
-        # name of the chosen time series in the dataframe
-        col = data_gaps.columns[0]
-
-        # maximum NaN pos in the chosen time series with starting point
-        # the top_five_perc value to cover miss_perc of the series
+        top_five_perc = N // 20
         max_pos = int(miss_perc * N + top_five_perc)
-
-        data_gaps.iloc[top_five_perc:max_pos].loc[:, col] = np.nan
+        data_gaps.values[top_five_perc:max_pos, 0] = np.nan
 
     if gap_type == 'no_overlap':
         """
@@ -772,35 +902,31 @@ def generate_custom_gaps(data: pd.DataFrame,
         value in each time series is at column_index*(length of time series/number of time series).
         """
 
-        # N = length of time series, M = number of time series
-        N, M = data_gaps.shape
-
+        if M > N:
+            M = N
         miss_size = N // M
         incr = 0
-        for i in range(len(data_gaps.columns)):
-            col = data_gaps.columns[i]
-            data_gaps.iloc[incr:((i + 1) * miss_size)].loc[:, col] = np.nan
-            incr = ((i + 1) * miss_size)
+
+        # Create a list of column indices
+        col_indices = np.arange(M)
+
+        for i in col_indices:
+            # Set NaN values in chunks
+            data_gaps.iloc[incr:incr + miss_size, i] = np.nan
+            incr = (incr + miss_size) % N
 
     if gap_type == 'blackout':
         """
         This method introduces missing values, on a pandas DataFrame, on all the columns (time series).
         We introduce missing blocks of size = m_rows on all the columns (time series) where the position
         of the first missing value is at 5% of all series from the top.
-        
+
         Needs gap_length.
         """
 
-        # N = length of time series, M = number of time series
-        N, M = data_gaps.shape
-
-        # choose starting pos at 5% of the time series from the top
-        top_five_perc = (5 * N) // 100
-
-        # maximum NaN pos in the time series with starting point the top_five_perc value to cover m_rows of the series
-        max_pos = int(gap_length + top_five_perc)
-
-        data_gaps.iloc[top_five_perc:max_pos - 1].loc[:, data_gaps.columns] = np.nan
+        top_five_perc = N // 20
+        max_pos = top_five_perc + gap_length
+        data_gaps.values[top_five_perc:max_pos, :] = np.nan
 
     return data_gaps
 
@@ -812,18 +938,9 @@ def fill_missing_with_lm(df: pd.DataFrame, lm_pred):
     :param lm_pred: linear regression prediction
     :return: dataframe with the missing values filled
     """
+
     new_df = df.copy()
-
-    def is_nan(value):
-        return math.isnan(float(value))
-
-    i = 0
-    for index, row in new_df.iterrows():
-        for j in range(len(row)):
-            if is_nan(row.iloc[j]):
-                row.iloc[j] = lm_pred[i]
-                i = i + 1
-        new_df.loc[index] = row
+    new_df = new_df.replace({np.nan: lm_pred})
     return new_df
 
 
@@ -844,7 +961,8 @@ def ensemble_model_run_imputation(missing: pd.DataFrame, algorithms,
     if clusters_dict is None:
         clusters_dict = dict()
 
-    ml_algorithms = ['saits', 'brits', 'csdi', 'usgan', 'mrnn', 'gpvae', 'timesnet']
+    ml_algorithms = ['saits', 'brits', 'csdi', 'usgan', 'mrnn', 'gpvae', 'timesnet', 'nonstationary_transformer',
+                     'autoformer']
     pred_ms_ts = pd.DataFrame()
     new_np = missing.to_numpy().flatten()
 
@@ -859,10 +977,15 @@ def ensemble_model_run_imputation(missing: pd.DataFrame, algorithms,
             new_cluster_alg_df = pd.DataFrame()
             if alg.lower() in ml_algorithms:
                 new_cluster_alg_df = fill_missing_values_ml(df_cl, alg.lower(), params[str(alg)], is_multivariate)
+            elif alg.lower() in ['linearimpute', 'meanimpute', 'zeroimpute']:
+                new_cluster_alg_df = fill_missing_values(df_cl, alg, dict())
+            elif alg.lower() == 'naive':
+                new_cluster_alg_df = df_cl.interpolate(method='linear', axis=0, limit_direction='both')
             else:
                 new_cluster_alg_df = fill_missing_values(df_cl, alg, params[str(alg)])
 
-            new_alg_df[clusters_dict[cluster]] = new_cluster_alg_df
+            new_alg_df.loc[:, clusters_dict[cluster]] = new_cluster_alg_df
+
         ts_np = new_alg_df.to_numpy().flatten()
         pred_ms_ts[str(alg)] = pd.Series(ts_np[np.isnan(new_np)])
 
@@ -871,7 +994,7 @@ def ensemble_model_run_imputation(missing: pd.DataFrame, algorithms,
 
 def find_clusters(df_input: Union[str, pd.DataFrame], dimension_column: str, spatial_x_column: str = '',
                   spatial_y_column: str = '',
-                  header: int = 0, sep: str = ',', areaVStime: int = 0) -> [dict]:
+                  header: int = 0, sep: str = ',', areaVStime: int = 0, cluster_size: int = 100) -> [dict]:
     """
     :param df_input: dataframe or a path to the .csv file that needs preprocessing
     :param dimension_column: the name of the dimension column
@@ -880,6 +1003,7 @@ def find_clusters(df_input: Union[str, pd.DataFrame], dimension_column: str, spa
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
     :param sep: separator character to use for the csv
     :param areaVStime: Determines how the K-means clusters are produced. If 0 we use the columns with names spatial_x_column and spatial_y_column (if they exist or else we set areaVStime to 1 if they do not) else we use the interpolated values in the columns that correspond to the timestamps.
+    :param cluster_size: The size of each cluster
     :return: dictionary with a cluster as key and a list with timeseries ids as value
     """
     if isinstance(df_input, str):
@@ -903,12 +1027,13 @@ def find_clusters(df_input: Union[str, pd.DataFrame], dimension_column: str, spa
         areaVStime = 1
 
     if areaVStime == 0:
-        no_clusters = max(1, math.floor(len(df) / 100))
+        no_clusters = max(1, math.floor(len(df) / cluster_size))
         kmeans = KMeans(n_clusters=no_clusters, random_state=0, n_init='auto').fit(
             df[[spatial_x_column, spatial_y_column]])
         df['cluster'] = kmeans.labels_
     else:
-        no_clusters = max(1, math.floor(len(df) / 100))
+        no_clusters = max(1, math.floor(len(df) / cluster_size))
+        # check with george about axis = 1
         df_interp = df[columns].interpolate(method='linear', axis=1, limit_direction='both')
         kmeans = KMeans(n_clusters=no_clusters, random_state=0, n_init='auto').fit(df_interp)
         df['cluster'] = kmeans.labels_
@@ -919,13 +1044,12 @@ def find_clusters(df_input: Union[str, pd.DataFrame], dimension_column: str, spa
 
 
 def min_preproc(df_input: Union[str, pd.DataFrame],
-                time_column: str = '', datetime_format: str = '',
-                header: int = 0, sep: str = ',', index: bool = False):
+                time_column: str = '', header: int = 0,
+                sep: str = ',', index: bool = False):
     """
     Preprocess the dataframe to be used in the imputation
     :param df_input: dataframe or a path to the .csv file
     :param time_column: the name of the datetime column
-    :param datetime_format: (optional) the format of the timestamp
     :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
     :param sep: separator character to use for the csv
     :param index: if true the datetime exists in the index of the dataframe
@@ -937,12 +1061,7 @@ def min_preproc(df_input: Union[str, pd.DataFrame],
     else:
         df = df_input
 
-    if index:
-        if datetime_format != '':
-            df.index = pd.to_datetime(df.index, format=datetime_format)
-    else:
-        if datetime_format != '':
-            df[time_column] = pd.to_datetime(df[time_column], format=datetime_format)
+    if not index:
         df = df.set_index(time_column)
 
     return df
@@ -961,3 +1080,187 @@ def reverse_min_preproc(df: pd.DataFrame,
     df.columns.name = ''
 
     return df
+
+
+def dataframe_scaler(df_input: Union[str, pd.DataFrame], dimension_column: str = '',
+                     time_column: str = '', spatial_x_column: str = '', spatial_y_column: str = '',
+                     header: int = 0, sep: str = ',', preprocessing: bool = True, index: bool = False) -> [pd.DataFrame,
+                                                                                                           StandardScaler]:
+    """
+    Use sklearn StandardScaler on the input dataframe to help to improve model performance
+    and ensure that the data is on the same scale.
+    :param df_input: dataframe or a path to the .csv file
+    :param dimension_column: (optional) the name of the dimension column
+    :param time_column: (optional) the name of the datetime column
+    :param spatial_x_column: (optional) the name of the Spatial_X column
+    :param spatial_y_column: (optional) the name of the Spatial_Y column
+    :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
+    :param sep: separator character to use for the csv
+    :param preprocessing: if true it activates preprocessing function where DateTime in columns
+    :param index: if true the datetime exists in the index of the dataframe. Don't change if you give a path.
+    :return: scaled dataframe, scaler(to be used in the inverse process)
+    """
+    if isinstance(df_input, str):
+        df = pd.read_csv(df_input, header=header, sep=sep)
+    else:
+        df = df_input.copy()
+
+    columns = df.columns.values.tolist()
+
+    if preprocessing:
+        if not index and dimension_column in columns:
+            df = df.set_index(dimension_column)
+            columns.remove(dimension_column)
+
+        if spatial_x_column in columns:
+            columns.remove(spatial_x_column)
+
+        if spatial_y_column in columns:
+            columns.remove(spatial_y_column)
+
+        # scale
+        chosen_df = df.loc[:, columns]
+
+        chosen_df = chosen_df.T
+        columns_transpose = chosen_df.columns
+        features = chosen_df[columns_transpose]
+
+        scaler = StandardScaler().fit(features.values)
+        features = scaler.transform(features.values)
+
+        df.loc[:, columns] = features.T
+
+        if not index:
+            df.reset_index(inplace=True, names=[dimension_column])
+        return df, scaler
+    else:
+        if not index and time_column in columns:
+            df = df.set_index(time_column)
+            columns.remove(time_column)
+
+        # scale
+        features = df.loc[:, columns]
+        scaler = StandardScaler().fit(features.values)
+        features = scaler.transform(features.values)
+        df.loc[:, columns] = features
+        if not index:
+            df.reset_index(inplace=True, names=[time_column])
+        return df, scaler
+
+
+def dataframe_inverse_scaler(df_input: Union[str, pd.DataFrame], scaler: StandardScaler, dimension_column: str = '',
+                             time_column: str = '', spatial_x_column: str = '', spatial_y_column: str = '',
+                             header: int = 0, sep: str = ',', preprocessing: bool = True,
+                             index: bool = False) -> pd.DataFrame:
+    """
+    Scale back the data to the original representation.
+    :param df_input: dataframe or a path to the .csv file
+    :param scaler: the scaler produced in the dataframe_scaler function
+    :param dimension_column: (optional) the name of the dimension column
+    :param time_column: (optional) the name of the datetime column
+    :param spatial_x_column: (optional) the name of the Spatial_X column
+    :param spatial_y_column: (optional) the name of the Spatial_Y column
+    :param header: row to use to parse column labels. Defaults to the first row. Prior rows will be discarded.
+    :param sep: separator character to use for the csv
+    :param preprocessing: if true it activates preprocessing function where DateTime in columns
+    :param index: if true the datetime exists in the index of the dataframe. Don't change if you give a path.
+    :return: Transformed dataframe
+    """
+    if isinstance(df_input, str):
+        df = pd.read_csv(df_input, header=header, sep=sep)
+    else:
+        df = df_input.copy()
+
+    columns = df.columns.values.tolist()
+
+    if preprocessing:
+        if not index and dimension_column in columns:
+            df = df.set_index(dimension_column)
+            columns.remove(dimension_column)
+
+        if spatial_x_column in columns:
+            columns.remove(spatial_x_column)
+
+        if spatial_y_column in columns:
+            columns.remove(spatial_y_column)
+
+        # scale
+        chosen_df = df.loc[:, columns]
+
+        chosen_df = chosen_df.T
+        columns_transpose = chosen_df.columns
+        features = chosen_df[columns_transpose]
+
+        features = scaler.inverse_transform(features.values)
+
+        df.loc[:, columns] = features.T
+
+        if not index:
+            df.reset_index(inplace=True, names=[dimension_column])
+        return df
+    else:
+        if not index and time_column in columns:
+            df = df.set_index(time_column)
+            columns.remove(time_column)
+
+        # scale
+        features = df.loc[:, columns]
+        features = scaler.inverse_transform(features.values)
+        df.loc[:, columns] = features
+        if not index:
+            df.reset_index(inplace=True, names=[time_column])
+        return df
+
+
+def compute_metrics(original_df: pd.DataFrame, missing_df: pd.DataFrame, imputed_df: pd.DataFrame) -> dict:
+    """
+    Scale back the data to the original representation.
+    :param original_df: original/ground truth dataframe.
+    :param missing_df:  dataframe with the missing values.
+    :param imputed_df: dataframe with the imputed values.
+    :return: dictionary with the calculated metrics
+    """
+    mask = np.isnan(missing_df) ^ np.isnan(original_df)
+
+    metrics = dict()
+    original_df_np = np.nan_to_num(original_df.to_numpy())
+    imputed_df_np = imputed_df.to_numpy()
+    mask_np = mask.to_numpy()
+
+    metrics['Missing value percentage'] = (missing_df.isna().sum().sum() * 100) / (
+            missing_df.shape[0] * missing_df.shape[1])
+
+    metrics['Mean absolute error'] = calc_mae(
+        imputed_df_np,
+        original_df_np,
+        mask_np
+    )
+
+    metrics['Mean square error'] = calc_mse(
+        imputed_df_np,
+        original_df_np,
+        mask_np
+    )
+
+    metrics['Root mean square error'] = calc_rmse(
+        imputed_df_np,
+        original_df_np,
+        mask_np
+    )
+
+    metrics['Mean relative error'] = calc_mre(
+        imputed_df_np,
+        original_df_np,
+        mask_np
+    )
+
+    metrics['Euclidean Distance'] = np.linalg.norm((imputed_df_np - original_df_np)[mask_np])
+
+    # Flatten the arrays and apply the mask
+    imputed_df_np_flat = imputed_df_np[mask_np].flatten()
+    original_df_np_flat = original_df_np[mask_np].flatten()
+
+    # Calculate the R-squared score
+    metrics['r2 score'] = r2_score(original_df_np_flat, imputed_df_np_flat)
+
+    return metrics

@@ -1,0 +1,22 @@
+{
+    "dataset": "UCB1_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2023
+    },
+    "algorithm": "CDMissingValueRecovery",
+    "algorithm_parameters": {
+        "truncation": 2,
+        "eps": 0.001456345164619781
+    },
+    "metrics": {
+        "Missing value percentage": 14.015151515151516,
+        "Mean absolute error": 0.18000147059702676,
+        "Mean square error": 0.03900911676607003,
+        "Root mean square error": 0.19750725750227516,
+        "Mean relative error": 0.2145046832890891,
+        "Euclidean Distance": 0.4416396538246868,
+        "r2 score": 0.9692019476184035,
+        "Execution Time": 0.20346283912658691
+    }
+}

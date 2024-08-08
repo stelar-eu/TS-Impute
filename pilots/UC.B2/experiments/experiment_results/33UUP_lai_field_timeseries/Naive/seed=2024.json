@@ -1,0 +1,19 @@
+{
+    "dataset": "33UUP_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2024
+    },
+    "algorithm": "Naive",
+    "algorithm_parameters": {},
+    "metrics": {
+        "Missing value percentage": 63.69390448159041,
+        "Mean absolute error": 0.885958816061006,
+        "Mean square error": 1.4037728371383127,
+        "Root mean square error": 1.184809198621581,
+        "Mean relative error": 1.1111833299835638,
+        "Euclidean Distance": 411.23291902527984,
+        "r2 score": -0.3974301580355164,
+        "Execution Time": 37.72006273269653
+    }
+}

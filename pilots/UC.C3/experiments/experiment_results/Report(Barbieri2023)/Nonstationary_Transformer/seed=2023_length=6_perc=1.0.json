@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2023
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            64,
+            64
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0060002798206847075,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.44893762851268,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.06401733768238853,
+        "Mean square error": 0.006291712535518166,
+        "Root mean square error": 0.07932031603264177,
+        "Mean relative error": 0.09183090990765182,
+        "Euclidean Distance": 0.38858860103256015,
+        "r2 score": 0.9699408346898044,
+        "Execution Time": 11.443745851516724
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.27895415907711,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.55569509398424
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.284399156565843,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.37626427093377,
+            "vintage_score": -10.591726888363553
+        },
+        "Deviation missing": 0.35365713640463436,
+        "Deviation filled": 0.013515013622240985,
+        "Improvement": 0.34014212278239336
+    }
+}

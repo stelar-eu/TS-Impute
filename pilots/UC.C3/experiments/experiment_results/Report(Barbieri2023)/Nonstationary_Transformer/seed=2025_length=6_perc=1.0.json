@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2025
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            64,
+            64
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0060002798206847075,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.44893762851268,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.08219717024842899,
+        "Mean square error": 0.010506761447684506,
+        "Root mean square error": 0.10250249483639169,
+        "Mean relative error": 0.07228304508624174,
+        "Euclidean Distance": 0.5021576194228647,
+        "r2 score": 0.978664804797514,
+        "Execution Time": 10.391052961349487
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.287715267428382,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.612841775918639
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.28362795999526,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.4009540181675,
+            "vintage_score": -10.586866644361493
+        },
+        "Deviation missing": 0.18581068744309906,
+        "Deviation filled": 0.059395984597428814,
+        "Improvement": 0.12641470284567025
+    }
+}

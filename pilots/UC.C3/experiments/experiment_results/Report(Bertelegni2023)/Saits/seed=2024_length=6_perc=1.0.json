@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2024
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "d_k": 64,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0022511528688296573,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.4804660726525016,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.18227583026739755,
+        "Mean square error": 0.04589171136285295,
+        "Root mean square error": 0.21422350796038456,
+        "Mean relative error": 0.12610240544878262,
+        "Euclidean Distance": 1.0494765708240068,
+        "r2 score": 0.9424822087574045,
+        "Execution Time": 11.783872365951538
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.347588253718165,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.112997490985549
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.311096086770227,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 124.96626916092266,
+            "vintage_score": -3.922010582983603
+        },
+        "Deviation missing": 0.8129361136089441,
+        "Deviation filled": 5.418684278292151,
+        "Improvement": -4.605748164683207
+    }
+}

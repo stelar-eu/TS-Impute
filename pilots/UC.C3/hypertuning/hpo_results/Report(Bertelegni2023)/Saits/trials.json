@@ -1,0 +1,2953 @@
+{
+    "0": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 16,
+                "d_v": 64,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0036608568553097194,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.14829139609060246,
+                "Mean square error": 0.035754240265530736,
+                "Root mean square error": 0.1890879167623641,
+                "Mean relative error": 0.3160344556554779,
+                "Euclidean Distance": 1.8526756503746105,
+                "r2 score": 0.8871626020166219,
+                "Execution Time": 10.231149911880493
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.308347339075176,
+                    "Tmin_aug_sep": 16.209808280272327,
+                    "prec_jun_sep": 124.93532024529983,
+                    "vintage_score": -3.9309514493882034
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.203070656057654,
+                "Improvement": -2.5666951891245677
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 48,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 32,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002707534045940291,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15173052301859363,
+                "Mean square error": 0.03797795310254334,
+                "Root mean square error": 0.19487932959281068,
+                "Mean relative error": 0.3233638263086055,
+                "Euclidean Distance": 1.9094196756722177,
+                "r2 score": 0.8801447499093674,
+                "Execution Time": 4.921915054321289
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.32167564420276,
+                    "Tmin_aug_sep": 16.224799142396282,
+                    "prec_jun_sep": 125.14463080933876,
+                    "vintage_score": -4.007940178983802
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.346447583063536,
+                "Improvement": -0.71007211613045
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 64,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008610459441905952,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15951335015505094,
+                "Mean square error": 0.04133159047876292,
+                "Root mean square error": 0.20330172276388345,
+                "Mean relative error": 0.33995036876740187,
+                "Euclidean Distance": 1.9919419384011376,
+                "r2 score": 0.8695609502676439,
+                "Execution Time": 6.53716516494751
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.318910776568867,
+                    "Tmin_aug_sep": 16.21412530548675,
+                    "prec_jun_sep": 124.78785005030373,
+                    "vintage_score": -3.9866887686973485
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.8589363444542597,
+                "Improvement": -1.2225608775211736
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0016572614568328553,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.21563738614500744,
+                "Mean square error": 0.07938241439858974,
+                "Root mean square error": 0.2817488498620531,
+                "Mean relative error": 0.459560336917121,
+                "Euclidean Distance": 2.7605636711122417,
+                "r2 score": 0.7494757259599638,
+                "Execution Time": 8.817132949829102
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.335742569227065,
+                    "Tmin_aug_sep": 16.213218753142414,
+                    "prec_jun_sep": 124.63434424141309,
+                    "vintage_score": -4.073193988952738
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 1.7728181722980927,
+                "Improvement": 0.8635572946349934
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 32,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0014492869634879434,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.18400006617396464,
+                "Mean square error": 0.04976857758196084,
+                "Root mean square error": 0.22308872132396304,
+                "Mean relative error": 0.3921357697538457,
+                "Euclidean Distance": 2.1858141384546603,
+                "r2 score": 0.8429345231788836,
+                "Execution Time": 1.8464980125427246
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.3061567788808,
+                    "Tmin_aug_sep": 16.206218908757798,
+                    "prec_jun_sep": 124.50650867735715,
+                    "vintage_score": -3.915132351711179
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.584556386441625,
+                "Improvement": -2.9481809195085393
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 192,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002376780237457148,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.18129275649213306,
+                "Mean square error": 0.04984032006138683,
+                "Root mean square error": 0.2232494570237223,
+                "Mean relative error": 0.38636602744819165,
+                "Euclidean Distance": 2.1873890202460977,
+                "r2 score": 0.8427081099019357,
+                "Execution Time": 12.191793203353882
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.328472485669806,
+                    "Tmin_aug_sep": 16.216297233779844,
+                    "prec_jun_sep": 124.6304534656953,
+                    "vintage_score": -4.036396041508766
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.6602197260342093,
+                "Improvement": -0.0238442591011232
+            }
+        }
+    },
+    "6": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 48,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015200137689637295,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.16325054535653252,
+                "Mean square error": 0.04021258516604038,
+                "Root mean square error": 0.200530758653231,
+                "Mean relative error": 0.3479149741478575,
+                "Euclidean Distance": 1.9647921457344835,
+                "r2 score": 0.8730924376347218,
+                "Execution Time": 4.829538106918335
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.321837428725637,
+                    "Tmin_aug_sep": 16.218377780100457,
+                    "prec_jun_sep": 124.75384902908092,
+                    "vintage_score": -4.003455076603814
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.4546081489952853,
+                "Improvement": -0.8182326820621992
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 16,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 9.835950176986391e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.32596814466174884,
+                "Mean square error": 0.18095091584095313,
+                "Root mean square error": 0.42538325759361184,
+                "Mean relative error": 0.6946941486494662,
+                "Euclidean Distance": 4.167887704909009,
+                "r2 score": 0.4289340130130912,
+                "Execution Time": 7.684949636459351
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.333864767178977,
+                    "Tmin_aug_sep": 16.174038659637322,
+                    "prec_jun_sep": 126.33658477871981,
+                    "vintage_score": -4.059119687136814
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.11222724717159,
+                "Improvement": 0.524148219761496
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0022511528688296573,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11648091681242523,
+                "Mean square error": 0.022888638161616383,
+                "Root mean square error": 0.15128991427592384,
+                "Mean relative error": 0.2482408562434369,
+                "Euclidean Distance": 1.4823323728216948,
+                "r2 score": 0.9277653684049967,
+                "Execution Time": 7.747509717941284
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.318005948428514,
+                    "Tmin_aug_sep": 16.205489496656767,
+                    "prec_jun_sep": 124.81940187823542,
+                    "vintage_score": -3.9786594756821216
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.052566902461972,
+                "Improvement": -1.4161914355288863
+            }
+        }
+    },
+    "9": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 192,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0064427794572199755,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.42391627094120155,
+                "Mean square error": 0.28318762378693507,
+                "Root mean square error": 0.5321537595347186,
+                "Mean relative error": 0.9034384425685018,
+                "Euclidean Distance": 5.214020702255224,
+                "r2 score": 0.10628349611390553,
+                "Execution Time": 3.6363396644592285
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.321560698355203,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.41624589456242,
+                    "vintage_score": -4.0279032965685815
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.865026667151761,
+                "Improvement": -0.2286512002186747
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 32,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.000474106039909118,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.17713023487766774,
+                "Mean square error": 0.050994387732438425,
+                "Root mean square error": 0.2258193697016233,
+                "Mean relative error": 0.3774949783700781,
+                "Euclidean Distance": 2.2125689192235662,
+                "r2 score": 0.8390659686585167,
+                "Execution Time": 16.115681648254395
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.30681555695506,
+                    "Tmin_aug_sep": 16.22621716890825,
+                    "prec_jun_sep": 125.08188842318486,
+                    "vintage_score": -3.9307132654103327
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.208814585997206,
+                "Improvement": -2.5724391190641196
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 16,
+                "d_v": 64,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.003988266747889642,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15974577834880377,
+                "Mean square error": 0.04045839819026675,
+                "Root mean square error": 0.2011427308909441,
+                "Mean relative error": 0.3404457132015913,
+                "Euclidean Distance": 1.9707882246110688,
+                "r2 score": 0.8723166722475079,
+                "Execution Time": 5.398142337799072
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31243598064726,
+                    "Tmin_aug_sep": 16.214891844378457,
+                    "prec_jun_sep": 125.0469902805387,
+                    "vintage_score": -3.955069769741101
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.621444874150823,
+                "Improvement": -1.985069407217737
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 32,
+                "d_v": 16,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0006899471800504853,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13457819255967624,
+                "Mean square error": 0.03015499777615224,
+                "Root mean square error": 0.17365194434889647,
+                "Mean relative error": 0.2868092616965433,
+                "Euclidean Distance": 1.7014346259879174,
+                "r2 score": 0.9048333439618378,
+                "Execution Time": 7.3943610191345215
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31611403325501,
+                    "Tmin_aug_sep": 16.212536496418814,
+                    "prec_jun_sep": 125.09404240055818,
+                    "vintage_score": -3.9735830053637926
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.174988612391297,
+                "Improvement": -1.5386131454582106
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 32,
+                "d_v": 16,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0004981967173578608,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.14709415399886852,
+                "Mean square error": 0.03385237075253083,
+                "Root mean square error": 0.18399013765017633,
+                "Mean relative error": 0.31348292695776575,
+                "Euclidean Distance": 1.8027278197894971,
+                "r2 score": 0.8931647434565482,
+                "Execution Time": 13.68163537979126
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.318986724657464,
+                    "Tmin_aug_sep": 16.225437395252865,
+                    "prec_jun_sep": 124.53910771247556,
+                    "vintage_score": -3.989989410151253
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.7793396669770623,
+                "Improvement": -1.1429642000439761
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 32,
+                "d_v": 16,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0008272789994361588,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.16055692885820025,
+                "Mean square error": 0.04052963170672685,
+                "Root mean square error": 0.20131972508109294,
+                "Mean relative error": 0.34217441437003365,
+                "Euclidean Distance": 1.9725224064242763,
+                "r2 score": 0.8720918652151985,
+                "Execution Time": 7.438934326171875
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.313092007589727,
+                    "Tmin_aug_sep": 16.212465234550436,
+                    "prec_jun_sep": 124.75181114120807,
+                    "vintage_score": -3.9554499251035224
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.612277230771053,
+                "Improvement": -1.9759017638379666
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002103297531028757,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15892358937544143,
+                "Mean square error": 0.03858423336133145,
+                "Root mean square error": 0.19642869790672507,
+                "Mean relative error": 0.3386934871689781,
+                "Euclidean Distance": 1.924600322843124,
+                "r2 score": 0.8782313800169496,
+                "Execution Time": 7.86827278137207
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.324919458989548,
+                    "Tmin_aug_sep": 16.212768456088007,
+                    "prec_jun_sep": 125.05362694424585,
+                    "vintage_score": -4.019320859494343
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.0719965805176606,
+                "Improvement": -0.43562111358457445
+            }
+        }
+    },
+    "16": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 32,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0007937459829639318,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.14840202841755662,
+                "Mean square error": 0.03489512070093476,
+                "Root mean square error": 0.18680235732167505,
+                "Mean relative error": 0.3162702321613885,
+                "Euclidean Distance": 1.830281832748654,
+                "r2 score": 0.8898739116544631,
+                "Execution Time": 14.122636079788208
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.321490533581184,
+                    "Tmin_aug_sep": 16.219385489298027,
+                    "prec_jun_sep": 124.8195751392943,
+                    "vintage_score": -4.002512132706443
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.4773477292636468,
+                "Improvement": -0.8409722623305607
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "d_k": 32,
+                "d_v": 128,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 6.638156998919237e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.29671380293620603,
+                "Mean square error": 0.11854267893149076,
+                "Root mean square error": 0.34430027437033905,
+                "Mean relative error": 0.6323481177499894,
+                "Euclidean Distance": 3.3734399620303352,
+                "r2 score": 0.6258891996789606,
+                "Execution Time": 7.587641716003418
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.326808723163495,
+                    "Tmin_aug_sep": 16.22086983700885,
+                    "prec_jun_sep": 129.21598538943093,
+                    "vintage_score": -4.06129543630135
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.0597579296345443,
+                "Improvement": 0.5766175372985418
+            }
+        }
+    },
+    "18": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 256,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "d_k": 128,
+                "d_v": 16,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.3,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00022769659777376465,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13929470045015221,
+                "Mean square error": 0.03885818443843493,
+                "Root mean square error": 0.1971247940732848,
+                "Mean relative error": 0.29686095075644425,
+                "Euclidean Distance": 1.9314206445230389,
+                "r2 score": 0.8773668132834508,
+                "Execution Time": 16.39259672164917
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.30868515502554,
+                    "Tmin_aug_sep": 16.180296007829657,
+                    "prec_jun_sep": 124.84578810760823,
+                    "vintage_score": -3.9200207911816563
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.466669137756048,
+                "Improvement": -2.830293670822962
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00042621356839227665,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13764929405034657,
+                "Mean square error": 0.028970252100054883,
+                "Root mean square error": 0.1702064984072432,
+                "Mean relative error": 0.2933543068809162,
+                "Euclidean Distance": 1.6676762880143428,
+                "r2 score": 0.908572302428584,
+                "Execution Time": 7.672760009765625
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.309498810536905,
+                    "Tmin_aug_sep": 16.19817419307582,
+                    "prec_jun_sep": 124.3997486822175,
+                    "vintage_score": -3.9284762831171633
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.262760572133013,
+                "Improvement": -2.626385105199927
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 4,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00013161975554052172,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.17608401514648514,
+                "Mean square error": 0.04787204361617834,
+                "Root mean square error": 0.21879680897165374,
+                "Mean relative error": 0.3752653042827272,
+                "Euclidean Distance": 2.143762157319036,
+                "r2 score": 0.8489198260771331,
+                "Execution Time": 14.50860047340393
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.312501927680866,
+                    "Tmin_aug_sep": 16.218630293618265,
+                    "prec_jun_sep": 125.43050765776752,
+                    "vintage_score": -3.959594805163647
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.512321302223553,
+                "Improvement": -1.8759458352904668
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00042814430156525496,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.14610057867075701,
+                "Mean square error": 0.033703676577332295,
+                "Root mean square error": 0.1835856110302011,
+                "Mean relative error": 0.3113654471426821,
+                "Euclidean Distance": 1.7987642845642489,
+                "r2 score": 0.8936340098624369,
+                "Execution Time": 7.680001735687256
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31273069673586,
+                    "Tmin_aug_sep": 16.215106899886433,
+                    "prec_jun_sep": 124.71704014046222,
+                    "vintage_score": -3.9544089572670487
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.637380709080071,
+                "Improvement": -2.0010052421469853
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001040526169492217,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.12447147084312818,
+                "Mean square error": 0.027789276685407927,
+                "Root mean square error": 0.16670115982022418,
+                "Mean relative error": 0.26527010042113686,
+                "Euclidean Distance": 1.6333311243588022,
+                "r2 score": 0.9122993622648847,
+                "Execution Time": 7.679006814956665
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.312635226167703,
+                    "Tmin_aug_sep": 16.185917771259614,
+                    "prec_jun_sep": 124.8988774544288,
+                    "vintage_score": -3.9432345847505985
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.906856487538154,
+                "Improvement": -2.270481020605068
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0011640662276231136,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1459749266816144,
+                "Mean square error": 0.03560590090606759,
+                "Root mean square error": 0.18869525936299406,
+                "Mean relative error": 0.3110976611548393,
+                "Euclidean Distance": 1.848828409285871,
+                "r2 score": 0.8876307486536651,
+                "Execution Time": 7.685690641403198
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.313471305157453,
+                    "Tmin_aug_sep": 16.213738959347122,
+                    "prec_jun_sep": 124.88878327624634,
+                    "vintage_score": -3.958892733802486
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.529252116576078,
+                "Improvement": -1.892876649642992
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00225962075996626,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.12487238356004537,
+                "Mean square error": 0.02881611963593427,
+                "Root mean square error": 0.16975311377389893,
+                "Mean relative error": 0.2661245143358786,
+                "Euclidean Distance": 1.6632340439786937,
+                "r2 score": 0.9090587316203939,
+                "Execution Time": 7.700779914855957
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.307935370086593,
+                    "Tmin_aug_sep": 16.192682659578193,
+                    "prec_jun_sep": 124.94249924973246,
+                    "vintage_score": -3.9218568447952293
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.422391754298498,
+                "Improvement": -2.7860162873654115
+            }
+        }
+    },
+    "25": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0026908348549351917,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1377241801455659,
+                "Mean square error": 0.030963428658194465,
+                "Root mean square error": 0.17596428233648573,
+                "Mean relative error": 0.29351390202239247,
+                "Euclidean Distance": 1.7240908187177089,
+                "r2 score": 0.9022820035753104,
+                "Execution Time": 7.740167140960693
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.312745451675777,
+                    "Tmin_aug_sep": 16.21316455169797,
+                    "prec_jun_sep": 125.0265849935804,
+                    "vintage_score": -3.9558329573974333
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.60304020869896,
+                "Improvement": -1.9666647417658742
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0023639323692575447,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1486977956316098,
+                "Mean square error": 0.03385422644880625,
+                "Root mean square error": 0.18399518050428998,
+                "Mean relative error": 0.31690056293551466,
+                "Euclidean Distance": 1.8027772294672002,
+                "r2 score": 0.8931588870339922,
+                "Execution Time": 16.177972316741943
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.311506968580293,
+                    "Tmin_aug_sep": 16.214924259944336,
+                    "prec_jun_sep": 124.81773777523009,
+                    "vintage_score": -3.9486627952450988
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.775952381156663,
+                "Improvement": -2.1395769142235768
+            }
+        }
+    },
+    "27": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005979581421993777,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.23256960920648317,
+                "Mean square error": 0.09691013377468882,
+                "Root mean square error": 0.3113039250871868,
+                "Mean relative error": 0.4956458148298192,
+                "Euclidean Distance": 3.0501430855568437,
+                "r2 score": 0.694159706592925,
+                "Execution Time": 5.020861387252808
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.343468727832075,
+                    "Tmin_aug_sep": 16.26284475652166,
+                    "prec_jun_sep": 125.15744963534686,
+                    "vintage_score": -4.137599127348466
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 0.21965491589693922,
+                "Improvement": 2.4167205510361467
+            }
+        }
+    },
+    "28": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 128,
+                "n_heads": 4,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001980037936944612,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15408567705478443,
+                "Mean square error": 0.0405730268657623,
+                "Root mean square error": 0.2014274729667289,
+                "Mean relative error": 0.32838306439951676,
+                "Euclidean Distance": 1.9735781157869636,
+                "r2 score": 0.871954913715341,
+                "Execution Time": 8.675556182861328
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31240585348903,
+                    "Tmin_aug_sep": 16.21388067631438,
+                    "prec_jun_sep": 124.95856564354355,
+                    "vintage_score": -3.953887791687407
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.649948886852265,
+                "Improvement": -2.0135734199191786
+            }
+        }
+    },
+    "29": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004244921573843439,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.12075847916511019,
+                "Mean square error": 0.023899243094232782,
+                "Root mean square error": 0.1545938003098209,
+                "Mean relative error": 0.25735707690965276,
+                "Euclidean Distance": 1.5147037126271166,
+                "r2 score": 0.9245759835896932,
+                "Execution Time": 7.654754638671875
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.313984908926116,
+                    "Tmin_aug_sep": 16.208901857896606,
+                    "prec_jun_sep": 124.92563576675005,
+                    "vintage_score": -3.9598436317348558
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.506320720635742,
+                "Improvement": -1.8699452537026557
+            }
+        }
+    },
+    "30": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 1,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0039653518670792545,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2033295077263029,
+                "Mean square error": 0.06385129538905326,
+                "Root mean square error": 0.2526881385998426,
+                "Mean relative error": 0.4333301323410405,
+                "Euclidean Distance": 2.4758280144931666,
+                "r2 score": 0.7984906412201207,
+                "Execution Time": 2.892021894454956
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.32428367567423,
+                    "Tmin_aug_sep": 16.2054879232435,
+                    "prec_jun_sep": 125.14489416173328,
+                    "vintage_score": -4.013655933015684
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.208609215410316,
+                "Improvement": -0.5722337484772297
+            }
+        }
+    },
+    "31": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00513483248053658,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.20058535445280282,
+                "Mean square error": 0.06233228367936139,
+                "Root mean square error": 0.249664342026172,
+                "Mean relative error": 0.4274818700083025,
+                "Euclidean Distance": 2.4462009797272906,
+                "r2 score": 0.8032845153887506,
+                "Execution Time": 3.2456448078155518
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.320600990451343,
+                    "Tmin_aug_sep": 16.24664733696689,
+                    "prec_jun_sep": 125.50888499946613,
+                    "vintage_score": -4.013788308527779
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.205416911402366,
+                "Improvement": -0.56904144446928
+            }
+        }
+    },
+    "32": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0033946326453256023,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13553961656358846,
+                "Mean square error": 0.031140180747178503,
+                "Root mean square error": 0.1764658061698597,
+                "Mean relative error": 0.2888582215130984,
+                "Euclidean Distance": 1.7290047286601522,
+                "r2 score": 0.901724188735421,
+                "Execution Time": 7.641233205795288
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.315662783824877,
+                    "Tmin_aug_sep": 16.201007305738575,
+                    "prec_jun_sep": 124.88747338603918,
+                    "vintage_score": -3.965089127193579
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.379822881937693,
+                "Improvement": -1.7434474150046073
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "d_k": 16,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.008805414381448617,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.28947137581467647,
+                "Mean square error": 0.12709195022266256,
+                "Root mean square error": 0.35649957955467854,
+                "Mean relative error": 0.616913260615199,
+                "Euclidean Distance": 3.4929682537028204,
+                "r2 score": 0.5989084130649649,
+                "Execution Time": 7.528496503829956
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.330401190011298,
+                    "Tmin_aug_sep": 16.226326288879218,
+                    "prec_jun_sep": 124.6862345079125,
+                    "vintage_score": -4.050964876681547
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.308884723229065,
+                "Improvement": 0.3274907437040211
+            }
+        }
+    },
+    "34": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0012409210117375012,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15395455059043087,
+                "Mean square error": 0.03947298629206791,
+                "Root mean square error": 0.19867809716238957,
+                "Mean relative error": 0.3281036113639631,
+                "Euclidean Distance": 1.9466398444598216,
+                "r2 score": 0.8754265499489735,
+                "Execution Time": 7.453043699264526
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.328266140107434,
+                    "Tmin_aug_sep": 16.22311316960141,
+                    "prec_jun_sep": 124.81630176854665,
+                    "vintage_score": -4.03939042968355
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.5880085049372106,
+                "Improvement": 0.048366961995875535
+            }
+        }
+    },
+    "35": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0020608906017047022,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15574179312336472,
+                "Mean square error": 0.041207784131700634,
+                "Root mean square error": 0.2029970052284039,
+                "Mean relative error": 0.33191253242014473,
+                "Euclidean Distance": 1.9889563284907241,
+                "r2 score": 0.8699516727652438,
+                "Execution Time": 3.3758034706115723
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.302804438357878,
+                    "Tmin_aug_sep": 16.199571928858397,
+                    "prec_jun_sep": 125.14669906115702,
+                    "vintage_score": -3.8994329096027514
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.963156560840515,
+                "Improvement": -3.326781093907429
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 2,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 32,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0010790596689329262,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1687517996902026,
+                "Mean square error": 0.04115644157418471,
+                "Root mean square error": 0.20287050444602514,
+                "Mean relative error": 0.35963909277239003,
+                "Euclidean Distance": 1.9877168790151614,
+                "r2 score": 0.8701137055913614,
+                "Execution Time": 9.582037448883057
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31599736139124,
+                    "Tmin_aug_sep": 16.2283969830714,
+                    "prec_jun_sep": 124.63755196009825,
+                    "vintage_score": -3.9763025899918034
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.109404421096709,
+                "Improvement": -1.473028954163623
+            }
+        }
+    },
+    "37": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 48,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 128,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0025967671142889987,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.129618851125248,
+                "Mean square error": 0.030209003882591887,
+                "Root mean square error": 0.17380737580031488,
+                "Mean relative error": 0.27624005261254775,
+                "Euclidean Distance": 1.7029575369717387,
+                "r2 score": 0.9046629051976351,
+                "Execution Time": 11.301594495773315
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.316921896444246,
+                    "Tmin_aug_sep": 16.214192041383672,
+                    "prec_jun_sep": 125.04983102203263,
+                    "vintage_score": -3.97816293439044
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.064541252781469,
+                "Improvement": -1.4281657858483827
+            }
+        }
+    },
+    "38": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 2,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.5,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0017041999826056741,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1510712376115118,
+                "Mean square error": 0.03722311964548315,
+                "Root mean square error": 0.19293294079934395,
+                "Mean relative error": 0.3219587757780851,
+                "Euclidean Distance": 1.8903490381319583,
+                "r2 score": 0.882526941296261,
+                "Execution Time": 3.4663169384002686
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31039968169992,
+                    "Tmin_aug_sep": 16.221569078941535,
+                    "prec_jun_sep": 124.79312168055743,
+                    "vintage_score": -3.9454491571601977
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.853450927346742,
+                "Improvement": -2.217075460413656
+            }
+        }
+    },
+    "39": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 1,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.1,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005252116543516473,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.14214991748693231,
+                "Mean square error": 0.03246709795093538,
+                "Root mean square error": 0.18018628680045376,
+                "Mean relative error": 0.3029459090600651,
+                "Euclidean Distance": 1.765457845231607,
+                "r2 score": 0.8975365487939942,
+                "Execution Time": 11.142730951309204
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31599408985189,
+                    "Tmin_aug_sep": 16.210517466827383,
+                    "prec_jun_sep": 124.86283614199556,
+                    "vintage_score": -3.9705331299218187
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.248537937663584,
+                "Improvement": -1.6121624707304978
+            }
+        }
+    },
+    "40": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0032138721964723484,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11328750094463055,
+                "Mean square error": 0.02489896442925109,
+                "Root mean square error": 0.15779405701499372,
+                "Mean relative error": 0.2414351380961518,
+                "Euclidean Distance": 1.5460596965214926,
+                "r2 score": 0.9214209464999892,
+                "Execution Time": 4.599319934844971
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.30235020569425,
+                    "Tmin_aug_sep": 16.200724845531393,
+                    "prec_jun_sep": 125.14871877267655,
+                    "vintage_score": -3.8975604332595424
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 6.008312297280102,
+                "Improvement": -3.371936830347016
+            }
+        }
+    },
+    "41": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0033573448132424278,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.16161237215140228,
+                "Mean square error": 0.0401787627846226,
+                "Root mean square error": 0.20044640875960487,
+                "Mean relative error": 0.34442374545353455,
+                "Euclidean Distance": 1.9639656889375154,
+                "r2 score": 0.8731991782474278,
+                "Execution Time": 2.8509016036987305
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.29717377044947,
+                    "Tmin_aug_sep": 16.18238458841719,
+                    "prec_jun_sep": 124.77733080715016,
+                    "vintage_score": -3.860641273119654
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 6.898636957932772,
+                "Improvement": -4.262261490999686
+            }
+        }
+    },
+    "42": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007047808235850072,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.3131305878288117,
+                "Mean square error": 0.18862022240972953,
+                "Root mean square error": 0.43430429701964673,
+                "Mean relative error": 0.6673351083234532,
+                "Euclidean Distance": 4.255295683185156,
+                "r2 score": 0.4047303216150714,
+                "Execution Time": 2.826272964477539
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.337510118778265,
+                    "Tmin_aug_sep": 16.241636859197367,
+                    "prec_jun_sep": 124.44926043491455,
+                    "vintage_score": -4.0927906446832765
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 1.300234673726895,
+                "Improvement": 1.336140793206191
+            }
+        }
+    },
+    "43": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00465378937668712,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2048499993415267,
+                "Mean square error": 0.06547176263150771,
+                "Root mean square error": 0.2558745056302165,
+                "Mean relative error": 0.43657056133836664,
+                "Euclidean Distance": 2.5070479079237407,
+                "r2 score": 0.7933765818582683,
+                "Execution Time": 2.9236247539520264
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.298494300373275,
+                    "Tmin_aug_sep": 16.229621716068156,
+                    "prec_jun_sep": 124.25948096603159,
+                    "vintage_score": -3.8832202821618296
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 6.354132465220082,
+                "Improvement": -3.717756998286996
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 384,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 32,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0031628066335377043,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13674302700047292,
+                "Mean square error": 0.035359734441814644,
+                "Root mean square error": 0.18804184226340329,
+                "Mean relative error": 0.2914228960146355,
+                "Euclidean Distance": 1.8424262553530444,
+                "r2 score": 0.8884076294681024,
+                "Execution Time": 2.2809793949127197
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.324604191513632,
+                    "Tmin_aug_sep": 16.17769409011516,
+                    "prec_jun_sep": 124.70644509960094,
+                    "vintage_score": -4.000931127381989
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 3.515474491184848,
+                "Improvement": -0.879099024251762
+            }
+        }
+    },
+    "45": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 192,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015215956031375583,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.12001053745933044,
+                "Mean square error": 0.025191986273447712,
+                "Root mean square error": 0.15871983579076596,
+                "Mean relative error": 0.25576308456701063,
+                "Euclidean Distance": 1.5551304389828542,
+                "r2 score": 0.9204961940173217,
+                "Execution Time": 5.011822938919067
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.307538041399564,
+                    "Tmin_aug_sep": 16.19060810516759,
+                    "prec_jun_sep": 125.13011963843809,
+                    "vintage_score": -3.920241240002156
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 5.461352900318391,
+                "Improvement": -2.824977433385305
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 48,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "d_k": 16,
+                "d_v": 32,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.2,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0016455012197610665,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1627205167499802,
+                "Mean square error": 0.04309707599228686,
+                "Root mean square error": 0.20759835257604253,
+                "Mean relative error": 0.3467853920778954,
+                "Euclidean Distance": 2.034040141014818,
+                "r2 score": 0.8639892253465178,
+                "Execution Time": 4.797724008560181
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31095324244588,
+                    "Tmin_aug_sep": 16.213834334688624,
+                    "prec_jun_sep": 124.70554325695434,
+                    "vintage_score": -3.9445601195897098
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.874890528633798,
+                "Improvement": -2.2385150617007117
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 192,
+                "d_ffn": 128,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 64,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001087533490783928,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15213031249069112,
+                "Mean square error": 0.03487116475682756,
+                "Root mean square error": 0.18673822521601613,
+                "Mean relative error": 0.3242158463955559,
+                "Euclidean Distance": 1.8296534690086756,
+                "r2 score": 0.8899495146145376,
+                "Execution Time": 12.2240309715271
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.31923537346435,
+                    "Tmin_aug_sep": 16.192948754590564,
+                    "prec_jun_sep": 124.68049897653216,
+                    "vintage_score": -3.978979243703918
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.044855531065254,
+                "Improvement": -1.408480064132168
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 384,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "d_k": 128,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0.4,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0006383592054207162,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1302594213413054,
+                "Mean square error": 0.027980750260690933,
+                "Root mean square error": 0.1672744758195073,
+                "Mean relative error": 0.2776052178539426,
+                "Euclidean Distance": 1.6389484509972718,
+                "r2 score": 0.9116950876429921,
+                "Execution Time": 5.361697673797607
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.315228828233636,
+                    "Tmin_aug_sep": 16.1828749007862,
+                    "prec_jun_sep": 124.72654787934442,
+                    "vintage_score": -3.9543013005251737
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 4.639976907146702,
+                "Improvement": -2.0036014402136155
+            }
+        }
+    },
+    "49": {
+        "parameters": {
+            "Saits": {
+                "n_layers": 1,
+                "d_model": 192,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "d_k": 64,
+                "d_v": 128,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "ORT_weight": 1,
+                "MIT_weight": 1,
+                "attn_dropout": 0,
+                "diagonal_attention_mask": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00140266402338048,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 1.7272104180945853,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.21160238845154322,
+                "Mean square error": 0.06334647878429843,
+                "Root mean square error": 0.25168726384999784,
+                "Mean relative error": 0.4509610632354169,
+                "Euclidean Distance": 2.4660214847589454,
+                "r2 score": 0.8000838002892634,
+                "Execution Time": 4.444683790206909
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.354001429188713,
+                    "Tmin_aug_sep": 16.15245901639344,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.14670757438347
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.36559068237633,
+                    "Tmin_aug_sep": 16.270491803278688,
+                    "prec_jun_sep": 125.0,
+                    "vintage_score": -4.256030355559972
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.33220865816707,
+                    "Tmin_aug_sep": 16.223892107762154,
+                    "prec_jun_sep": 124.3581758693052,
+                    "vintage_score": -4.057152929915475
+                },
+                "Deviation missing": 2.636375466933086,
+                "Deviation filled": 2.1596566157986206,
+                "Improvement": 0.47671885113446555
+            }
+        }
+    },
+    "best_trial": 8
+}

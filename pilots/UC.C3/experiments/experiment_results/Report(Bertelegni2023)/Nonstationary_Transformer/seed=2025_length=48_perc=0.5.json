@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 48,
+        "seed": 2025
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 256,
+        "n_heads": 4,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            128,
+            128
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.003947660496431522,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 2.0562028786840303,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.3826206598144221,
+        "Mean square error": 2.91497228601502,
+        "Root mean square error": 1.7073289917338779,
+        "Mean relative error": 0.2735777781014077,
+        "Euclidean Distance": 23.65744447134742,
+        "r2 score": 0.07344666715535586,
+        "Execution Time": 13.591402053833008
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.275245942535907,
+            "Tmin_aug_sep": 16.081666666666663,
+            "prec_jun_sep": 108.2,
+            "vintage_score": -3.5914379686328743
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.33216890312955,
+            "Tmin_aug_sep": 16.23442089175887,
+            "prec_jun_sep": 107.53739225890799,
+            "vintage_score": -3.9448840056066956
+        },
+        "Deviation missing": 13.390614018234759,
+        "Deviation filled": 4.867079849651111,
+        "Improvement": 8.523534168583648
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "dataset": "33UUP_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2025
+    },
+    "algorithm": "TimesNet",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 16,
+        "d_ffn": 256,
+        "n_heads": 2,
+        "top_k": 3,
+        "n_kernels": 5,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "attn_dropout": 0.5,
+        "apply_nonstationary_norm": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.002963428941513939,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 63.69390448159041,
+        "Mean absolute error": 0.5377124061177306,
+        "Mean square error": 0.5491055019904847,
+        "Root mean square error": 0.7410165328725701,
+        "Mean relative error": 0.672411059031095,
+        "Euclidean Distance": 257.1978612368186,
+        "r2 score": 0.4551884742790845,
+        "Execution Time": 6117.924092531204
+    }
+}

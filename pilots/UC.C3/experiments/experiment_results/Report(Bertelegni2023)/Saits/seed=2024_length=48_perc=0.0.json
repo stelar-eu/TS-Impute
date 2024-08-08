@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 48,
+        "seed": 2024
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 3,
+        "d_model": 128,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "d_k": 64,
+        "d_v": 128,
+        "dropout": 0.2,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.4,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0022511528688296573,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 2.0562028786840303,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.13183359246610377,
+        "Mean square error": 0.03225726623145539,
+        "Root mean square error": 0.17960307968254718,
+        "Mean relative error": 0.16048833005038657,
+        "Euclidean Distance": 2.4886532736481124,
+        "r2 score": 0.9354198155448845,
+        "Execution Time": 13.410878419876099
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.317645209935172,
+            "Tmin_aug_sep": 16.10833333333333,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -3.9383016709991523
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.298277122535445,
+            "Tmin_aug_sep": 16.143402237022123,
+            "prec_jun_sep": 125.08383754707472,
+            "vintage_score": -3.8525419237897154
+        },
+        "Deviation missing": 5.025816256534636,
+        "Deviation filled": 7.093956960239494,
+        "Improvement": -2.0681407037048576
+    }
+}

@@ -1,0 +1,350 @@
+{
+    "Report(Torrevilla2023)": {
+        "SoftImpute": {
+            "max_rank": 2
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 2,
+            "eps": 9.042666231981757e-05
+        },
+        "Saits": {
+            "n_layers": 2,
+            "d_model": 64,
+            "d_ffn": 256,
+            "n_heads": 1,
+            "d_k": 64,
+            "d_v": 64,
+            "dropout": 0.3,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.4,
+            "diagonal_attention_mask": true,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.008610459441905952,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 1,
+            "d_model": 128,
+            "d_ffn": 128,
+            "n_heads": 1,
+            "top_k": 2,
+            "n_kernels": 3,
+            "dropout": 0.3,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0,
+            "apply_nonstationary_norm": true,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.009978373271498147,
+            "device": "cuda"
+        },
+        "Nonstationary_Transformer": {
+            "n_layers": 2,
+            "d_model": 32,
+            "d_ffn": 64,
+            "n_heads": 4,
+            "n_projector_hidden_layers": 2,
+            "d_projector_hidden": [
+                64,
+                64
+            ],
+            "dropout": 0.2,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.007037859132857435,
+            "device": "cuda"
+        },
+        "Autoformer": {
+            "n_layers": 2,
+            "d_model": 64,
+            "d_ffn": 64,
+            "n_heads": 2,
+            "factor": 3,
+            "moving_avg_window_size": 25,
+            "dropout": 0.1,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0009696220076141339,
+            "device": "cuda"
+        },
+        "DynaMMo": {
+            "H": 2,
+            "max_iter": 100,
+            "fast": false
+        }
+    },
+    "Report(Barbieri2023)": {
+        "SoftImpute": {
+            "max_rank": 4
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 1,
+            "eps": 5.673247685737722e-05
+        },
+        "Saits": {
+            "n_layers": 3,
+            "d_model": 32,
+            "d_ffn": 16,
+            "n_heads": 2,
+            "d_k": 16,
+            "d_v": 128,
+            "dropout": 0.2,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.4,
+            "diagonal_attention_mask": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0007963406280958749,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 1,
+            "d_model": 64,
+            "d_ffn": 128,
+            "n_heads": 1,
+            "top_k": 3,
+            "n_kernels": 4,
+            "dropout": 0.2,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0.5,
+            "apply_nonstationary_norm": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.005739805989966285,
+            "device": "cuda"
+        },
+        "Nonstationary_Transformer": {
+            "n_layers": 1,
+            "d_model": 128,
+            "d_ffn": 16,
+            "n_heads": 2,
+            "n_projector_hidden_layers": 2,
+            "d_projector_hidden": [
+                64,
+                64
+            ],
+            "dropout": 0.3,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0060002798206847075,
+            "device": "cuda"
+        },
+        "Autoformer": {
+            "n_layers": 2,
+            "d_model": 64,
+            "d_ffn": 64,
+            "n_heads": 2,
+            "factor": 3,
+            "moving_avg_window_size": 25,
+            "dropout": 0,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0010085436428869498,
+            "device": "cuda"
+        },
+        "DynaMMo": {
+            "H": 9,
+            "max_iter": 100,
+            "fast": false
+        }
+    },
+    "Report(Bertelegni2023)": {
+        "SoftImpute": {
+            "max_rank": 3
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 4,
+            "eps": 0.005443562636928096
+        },
+        "Saits": {
+            "n_layers": 3,
+            "d_model": 128,
+            "d_ffn": 128,
+            "n_heads": 2,
+            "d_k": 64,
+            "d_v": 128,
+            "dropout": 0.2,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.4,
+            "diagonal_attention_mask": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0022511528688296573,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 3,
+            "d_model": 128,
+            "d_ffn": 16,
+            "n_heads": 2,
+            "top_k": 3,
+            "n_kernels": 5,
+            "dropout": 0.5,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0.4,
+            "apply_nonstationary_norm": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0026526059709556992,
+            "device": "cuda"
+        },
+        "Nonstationary_Transformer": {
+            "n_layers": 1,
+            "d_model": 128,
+            "d_ffn": 256,
+            "n_heads": 4,
+            "n_projector_hidden_layers": 2,
+            "d_projector_hidden": [
+                128,
+                128
+            ],
+            "dropout": 0.3,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.003947660496431522,
+            "device": "cuda"
+        },
+        "Autoformer": {
+            "n_layers": 3,
+            "d_model": 128,
+            "d_ffn": 16,
+            "n_heads": 2,
+            "factor": 3,
+            "moving_avg_window_size": 25,
+            "dropout": 0,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0016391197440885812,
+            "device": "cuda"
+        },
+        "DynaMMo": {
+            "H": 8,
+            "max_iter": 100,
+            "fast": false
+        }
+    },
+    "Report(Rebutti2023)": {
+        "SoftImpute": {
+            "max_rank": 3
+        },
+        "CDMissingValueRecovery": {
+            "truncation": 3,
+            "eps": 0.0006726626404970295
+        },
+        "Saits": {
+            "n_layers": 1,
+            "d_model": 64,
+            "d_ffn": 128,
+            "n_heads": 1,
+            "d_k": 64,
+            "d_v": 32,
+            "dropout": 0.5,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "attn_dropout": 0.5,
+            "diagonal_attention_mask": false,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.0014492869634879434,
+            "device": "cuda"
+        },
+        "TimesNet": {
+            "n_layers": 2,
+            "d_model": 256,
+            "d_ffn": 32,
+            "n_heads": 3,
+            "top_k": 1,
+            "n_kernels": 5,
+            "dropout": 0.1,
+            "epochs": 100,
+            "batch_size": 32,
+            "attn_dropout": 0.5,
+            "apply_nonstationary_norm": true,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.00506298674405962,
+            "device": "cuda"
+        },
+        "Nonstationary_Transformer": {
+            "n_layers": 2,
+            "d_model": 256,
+            "d_ffn": 128,
+            "n_heads": 2,
+            "n_projector_hidden_layers": 2,
+            "d_projector_hidden": [
+                32,
+                32
+            ],
+            "dropout": 0.4,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.008561435614770999,
+            "device": "cuda"
+        },
+        "Autoformer": {
+            "n_layers": 3,
+            "d_model": 32,
+            "d_ffn": 64,
+            "n_heads": 3,
+            "factor": 3,
+            "moving_avg_window_size": 25,
+            "dropout": 0.1,
+            "epochs": 100,
+            "batch_size": 32,
+            "ORT_weight": 1,
+            "MIT_weight": 1,
+            "num_workers": 0,
+            "patience": 10,
+            "lr": 0.009559894962576391,
+            "device": "cuda"
+        },
+        "DynaMMo": {
+            "H": 8,
+            "max_iter": 100,
+            "fast": true
+        }
+    }
+}

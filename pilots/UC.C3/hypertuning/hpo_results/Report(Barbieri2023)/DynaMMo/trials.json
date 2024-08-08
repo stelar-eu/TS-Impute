@@ -1,0 +1,1263 @@
+{
+    "0": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 9,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.057178636922589426,
+                "Mean square error": 0.005564960758722921,
+                "Root mean square error": 0.07459866459074802,
+                "Mean relative error": 0.14420144735897894,
+                "Euclidean Distance": 0.7309146549614435,
+                "r2 score": 0.9724828862329351,
+                "Execution Time": 28.728224515914917
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28737397296553,
+                    "Tmin_aug_sep": 18.397904732365316,
+                    "prec_jun_sep": 132.5268144888697,
+                    "vintage_score": -10.618699594190161
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.2411088144465407,
+                "Improvement": 0.9240231862103865
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 4,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09312634884937983,
+                "Mean square error": 0.015665999195356366,
+                "Root mean square error": 0.12516388934255904,
+                "Mean relative error": 0.2348596436378568,
+                "Euclidean Distance": 1.226350652445795,
+                "r2 score": 0.9225361865386639,
+                "Execution Time": 23.88701581954956
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287764073528336,
+                    "Tmin_aug_sep": 18.38574045615974,
+                    "prec_jun_sep": 132.3919364236396,
+                    "vintage_score": -10.615339314026699
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.20938758469285168,
+                "Improvement": 0.9557444159640756
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 1,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08796443795214483,
+                "Mean square error": 0.011788251167952275,
+                "Root mean square error": 0.10857371306146012,
+                "Mean relative error": 0.2218415819529113,
+                "Euclidean Distance": 1.0638007859197276,
+                "r2 score": 0.9417105236555668,
+                "Execution Time": 17.983388662338257
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287707423189275,
+                    "Tmin_aug_sep": 18.39832990130021,
+                    "prec_jun_sep": 132.82721313498195,
+                    "vintage_score": -10.623128526807477
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.2829181822025605,
+                "Improvement": 0.8822138184543667
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 14,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07799547506343454,
+                "Mean square error": 0.008857120754805579,
+                "Root mean square error": 0.09411227738613905,
+                "Mean relative error": 0.19670039365970024,
+                "Euclidean Distance": 0.9221082325092561,
+                "r2 score": 0.9562041117582746,
+                "Execution Time": 44.567402601242065
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28867967444482,
+                    "Tmin_aug_sep": 18.39581908236661,
+                    "prec_jun_sep": 132.5983564158519,
+                    "vintage_score": -10.626866807270034
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.318207755591667,
+                "Improvement": 0.8469242450652603
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 10,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.060138453333033866,
+                "Mean square error": 0.006252590551895642,
+                "Root mean square error": 0.07907332389558214,
+                "Mean relative error": 0.15166594517274767,
+                "Euclidean Distance": 0.7747571832400058,
+                "r2 score": 0.9690827567318064,
+                "Execution Time": 35.9176287651062
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287787368294474,
+                    "Tmin_aug_sep": 18.38809814637604,
+                    "prec_jun_sep": 132.40116553075262,
+                    "vintage_score": -10.616519307375029
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.22052678686926672,
+                "Improvement": 0.9446052137876605
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 5,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1246760687780925,
+                "Mean square error": 0.02316328815555503,
+                "Root mean square error": 0.15219490187110418,
+                "Mean relative error": 0.31442634061333896,
+                "Euclidean Distance": 1.4911994041486556,
+                "r2 score": 0.8854642713523849,
+                "Execution Time": 24.844573736190796
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.29155698317114,
+                    "Tmin_aug_sep": 18.402210549902424,
+                    "prec_jun_sep": 132.41965922361163,
+                    "vintage_score": -10.647038576210463
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.5086303650083365,
+                "Improvement": 0.6565016356485908
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 6,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15882489467865077,
+                "Mean square error": 0.030787512646341237,
+                "Root mean square error": 0.17546370749058404,
+                "Mean relative error": 0.40054784307477403,
+                "Euclidean Distance": 1.719186206915583,
+                "r2 score": 0.8477646968549806,
+                "Execution Time": 29.08709979057312
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.29159240565998,
+                    "Tmin_aug_sep": 18.401014430361624,
+                    "prec_jun_sep": 134.1490110020266,
+                    "vintage_score": -10.658744587603053
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.6191357570649876,
+                "Improvement": 0.5459962435919397
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 5,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.12467606877809381,
+                "Mean square error": 0.023163288155555323,
+                "Root mean square error": 0.15219490187110513,
+                "Mean relative error": 0.31442634061334224,
+                "Euclidean Distance": 1.4911994041486654,
+                "r2 score": 0.8854642713523835,
+                "Execution Time": 28.08424997329712
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.29155698317114,
+                    "Tmin_aug_sep": 18.402210549902428,
+                    "prec_jun_sep": 132.4196592236117,
+                    "vintage_score": -10.647038576210463
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.5086303650083365,
+                "Improvement": 0.6565016356485908
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 21,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07502285840805914,
+                "Mean square error": 0.007979634673962774,
+                "Root mean square error": 0.08932880092088315,
+                "Mean relative error": 0.18920361431658875,
+                "Euclidean Distance": 0.8752399263632997,
+                "r2 score": 0.9605430254294481,
+                "Execution Time": 44.365986585617065
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288573548926546,
+                    "Tmin_aug_sep": 18.393308505603407,
+                    "prec_jun_sep": 132.55046646601875,
+                    "vintage_score": -10.62481593490645
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.29884740756233513,
+                "Improvement": 0.8662845930945922
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 14,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07799547506753382,
+                "Mean square error": 0.008857120755655486,
+                "Root mean square error": 0.09411227739065443,
+                "Mean relative error": 0.1967003936700384,
+                "Euclidean Distance": 0.9221082325534977,
+                "r2 score": 0.956204111754072,
+                "Execution Time": 36.34004831314087
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288679674445042,
+                    "Tmin_aug_sep": 18.395819082367264,
+                    "prec_jun_sep": 132.59835641584468,
+                    "vintage_score": -10.626866807271682
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.31820775560722847,
+                "Improvement": 0.8469242450496988
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 11,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07408411038231233,
+                "Mean square error": 0.008625800288452907,
+                "Root mean square error": 0.09287518661328711,
+                "Mean relative error": 0.18683614227976245,
+                "Euclidean Distance": 0.909987267873286,
+                "r2 score": 0.9573479242423607,
+                "Execution Time": 30.063517570495605
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28851188140967,
+                    "Tmin_aug_sep": 18.386326008881735,
+                    "prec_jun_sep": 132.42498826666176,
+                    "vintage_score": -10.620690054733274
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.2598988715644711,
+                "Improvement": 0.9052331290924561
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 19,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.06712180839359429,
+                "Mean square error": 0.007357494172466749,
+                "Root mean square error": 0.08577583676343094,
+                "Mean relative error": 0.16927759108375093,
+                "Euclidean Distance": 0.8404281293226776,
+                "r2 score": 0.9636193294145087,
+                "Execution Time": 42.002275705337524
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287994691113113,
+                    "Tmin_aug_sep": 18.3913513735209,
+                    "prec_jun_sep": 132.29042111084146,
+                    "vintage_score": -10.618437023622079
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.23863013382720613,
+                "Improvement": 0.9265018668297211
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 17,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0671405702108494,
+                "Mean square error": 0.006689276944073192,
+                "Root mean square error": 0.08178800000044745,
+                "Mean relative error": 0.16932490737789302,
+                "Euclidean Distance": 0.8013554683353905,
+                "r2 score": 0.9669234694241209,
+                "Execution Time": 49.4968945980072
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288119753378922,
+                    "Tmin_aug_sep": 18.393426303400137,
+                    "prec_jun_sep": 132.5513487923072,
+                    "vintage_score": -10.621907114408287
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.2713879819055799,
+                "Improvement": 0.8937440187513473
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 25,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07515355532954775,
+                "Mean square error": 0.007975828819948202,
+                "Root mean square error": 0.08930749587771568,
+                "Mean relative error": 0.18953322492394784,
+                "Euclidean Distance": 0.8750311804244666,
+                "r2 score": 0.9605618442715641,
+                "Execution Time": 51.5955376625061
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28841327974206,
+                    "Tmin_aug_sep": 18.39469415351597,
+                    "prec_jun_sep": 132.7120416453629,
+                    "vintage_score": -10.625453781865673
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.3048687179760254,
+                "Improvement": 0.8602632826809018
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 8,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.059407700964054774,
+                "Mean square error": 0.005566752590171083,
+                "Root mean square error": 0.07461067343330365,
+                "Mean relative error": 0.14982302699667346,
+                "Euclidean Distance": 0.7310323171080945,
+                "r2 score": 0.9724740261471325,
+                "Execution Time": 31.213783502578735
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.286483705850355,
+                    "Tmin_aug_sep": 18.4007362828282,
+                    "prec_jun_sep": 132.1413927590094,
+                    "vintage_score": -10.61137971607917
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.17200876206029725,
+                "Improvement": 0.99312323859663
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 2,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09050870859268616,
+                "Mean square error": 0.014513286291362526,
+                "Root mean square error": 0.12047110147816582,
+                "Mean relative error": 0.22825809568225608,
+                "Euclidean Distance": 1.1803709094902404,
+                "r2 score": 0.9282360168690472,
+                "Execution Time": 21.475141763687134
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28771323248417,
+                    "Tmin_aug_sep": 18.387376051679148,
+                    "prec_jun_sep": 132.4238134501546,
+                    "vintage_score": -10.615896705883074
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.21464939450596587,
+                "Improvement": 0.9504826061509614
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 12,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07392423621023396,
+                "Mean square error": 0.008088853653761923,
+                "Root mean square error": 0.08993805453623023,
+                "Mean relative error": 0.18643294821551376,
+                "Euclidean Distance": 0.8812093682894847,
+                "r2 score": 0.9600029693135186,
+                "Execution Time": 31.590532064437866
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288560355161422,
+                    "Tmin_aug_sep": 18.39582024281482,
+                    "prec_jun_sep": 132.43391697489713,
+                    "vintage_score": -10.62495054124983
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.30011809885501045,
+                "Improvement": 0.8650139018019167
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 7,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15161395607178135,
+                "Mean square error": 0.03626747317342776,
+                "Root mean square error": 0.19044020891982807,
+                "Mean relative error": 0.3823622436989956,
+                "Euclidean Distance": 1.865925353450427,
+                "r2 score": 0.8206678845321801,
+                "Execution Time": 30.505554676055908
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.290940547604976,
+                    "Tmin_aug_sep": 18.399349862413647,
+                    "prec_jun_sep": 132.4936729661681,
+                    "vintage_score": -10.642353376641694
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.46440182312103034,
+                "Improvement": 0.700730177535897
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 16,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07543694896196784,
+                "Mean square error": 0.008609993193633756,
+                "Root mean square error": 0.0927900490011389,
+                "Mean relative error": 0.19024792842453359,
+                "Euclidean Distance": 0.9091530930425575,
+                "r2 score": 0.9574260857326792,
+                "Execution Time": 41.88539505004883
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288628647837527,
+                    "Tmin_aug_sep": 18.39587595705029,
+                    "prec_jun_sep": 132.13468152296224,
+                    "vintage_score": -10.623349157063842
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.28500094397012593,
+                "Improvement": 0.8801310566868012
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 9,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.05717863692282856,
+                "Mean square error": 0.005564960758761516,
+                "Root mean square error": 0.0745986645910067,
+                "Mean relative error": 0.144201447359582,
+                "Euclidean Distance": 0.7309146549639781,
+                "r2 score": 0.9724828862327443,
+                "Execution Time": 33.627788066864014
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287373972965554,
+                    "Tmin_aug_sep": 18.397904732365355,
+                    "prec_jun_sep": 132.52681448886653,
+                    "vintage_score": -10.618699594190304
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.24110881444788226,
+                "Improvement": 0.924023186209045
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 13,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.06448424096490488,
+                "Mean square error": 0.006583636292174673,
+                "Root mean square error": 0.0811396098842894,
+                "Mean relative error": 0.1626257878720229,
+                "Euclidean Distance": 0.7950025685799857,
+                "r2 score": 0.9674458317484484,
+                "Execution Time": 41.370439529418945
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287915827874173,
+                    "Tmin_aug_sep": 18.391782191250147,
+                    "prec_jun_sep": 132.4956552878627,
+                    "vintage_score": -10.619518093530928
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.2488354932883869,
+                "Improvement": 0.9162965073685403
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 11,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07408411038149076,
+                "Mean square error": 0.008625800288343814,
+                "Root mean square error": 0.0928751866126998,
+                "Mean relative error": 0.1868361422776905,
+                "Euclidean Distance": 0.9099872678675316,
+                "r2 score": 0.9573479242429002,
+                "Execution Time": 36.679991483688354
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288511881409633,
+                    "Tmin_aug_sep": 18.38632600888153,
+                    "prec_jun_sep": 132.42498826665252,
+                    "vintage_score": -10.620690054732904
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.2598988715609832,
+                "Improvement": 0.9052331290959441
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 12,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07392423620858377,
+                "Mean square error": 0.008088853653515774,
+                "Root mean square error": 0.0899380545348618,
+                "Mean relative error": 0.18643294821135206,
+                "Euclidean Distance": 0.8812093682760768,
+                "r2 score": 0.9600029693147357,
+                "Execution Time": 38.3774037361145
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.288560355161344,
+                    "Tmin_aug_sep": 18.395820242816033,
+                    "prec_jun_sep": 132.4339169749019,
+                    "vintage_score": -10.624950541249774
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.3001180988544739,
+                "Improvement": 0.8650139018024534
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 4,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09312634884937845,
+                "Mean square error": 0.015665999195355888,
+                "Root mean square error": 0.12516388934255712,
+                "Mean relative error": 0.23485964363785336,
+                "Euclidean Distance": 1.2263506524457761,
+                "r2 score": 0.9225361865386662,
+                "Execution Time": 22.441779851913452
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287764073528336,
+                    "Tmin_aug_sep": 18.38574045615974,
+                    "prec_jun_sep": 132.39193642363958,
+                    "vintage_score": -10.615339314026699
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.20938758469285168,
+                "Improvement": 0.9557444159640756
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 15,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07410527251630337,
+                "Mean square error": 0.008251341034205682,
+                "Root mean square error": 0.09083689247329899,
+                "Mean relative error": 0.186889512043628,
+                "Euclidean Distance": 0.890016145518582,
+                "r2 score": 0.9591995164362679,
+                "Execution Time": 46.16178059577942
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28852640718765,
+                    "Tmin_aug_sep": 18.39639359598348,
+                    "prec_jun_sep": 132.4487544203695,
+                    "vintage_score": -10.62506595590628
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.3012076195663976,
+                "Improvement": 0.8639243810905297
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 7,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15161395607178627,
+                "Mean square error": 0.03626747317342693,
+                "Root mean square error": 0.19044020891982588,
+                "Mean relative error": 0.3823622436990079,
+                "Euclidean Distance": 1.8659253534504054,
+                "r2 score": 0.8206678845321842,
+                "Execution Time": 26.4882972240448
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.290940547604976,
+                    "Tmin_aug_sep": 18.399349862413647,
+                    "prec_jun_sep": 132.49367296616862,
+                    "vintage_score": -10.642353376641694
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.46440182312103034,
+                "Improvement": 0.700730177535897
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 18,
+                "max_iter": 100,
+                "fast": true
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07204539052795186,
+                "Mean square error": 0.007559353321955734,
+                "Root mean square error": 0.0869445416455555,
+                "Mean relative error": 0.1816946004455932,
+                "Euclidean Distance": 0.8518790518070967,
+                "r2 score": 0.9626211945808165,
+                "Execution Time": 55.97004222869873
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.28841305383685,
+                    "Tmin_aug_sep": 18.393986937043977,
+                    "prec_jun_sep": 132.52055378160804,
+                    "vintage_score": -10.623838412923504
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.28961954622283004,
+                "Improvement": 0.8755124544340972
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "DynaMMo": {
+                "H": 10,
+                "max_iter": 100,
+                "fast": false
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 5.6956819739547635,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.06013845333308047,
+                "Mean square error": 0.006252590551908723,
+                "Root mean square error": 0.07907332389566486,
+                "Mean relative error": 0.15166594517286522,
+                "Euclidean Distance": 0.7747571832408163,
+                "r2 score": 0.9690827567317418,
+                "Execution Time": 29.02111005783081
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 21.284699453551912,
+                    "Tmin_aug_sep": 18.38196721311475,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.593158555185312
+                },
+                "missing": {
+                    "Tmean_apr_sep": 21.296205221615057,
+                    "Tmin_aug_sep": 18.5,
+                    "prec_jun_sep": 132.3,
+                    "vintage_score": -10.716582835392103
+                },
+                "filled": {
+                    "Tmean_apr_sep": 21.287787368294477,
+                    "Tmin_aug_sep": 18.38809814637631,
+                    "prec_jun_sep": 132.4011655307563,
+                    "vintage_score": -10.616519307375114
+                },
+                "Deviation missing": 1.1651320006569272,
+                "Deviation filled": 0.22052678687007163,
+                "Improvement": 0.9446052137868556
+            }
+        }
+    },
+    "best_trial": 0
+}

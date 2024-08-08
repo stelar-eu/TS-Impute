@@ -1,0 +1,1003 @@
+{
+    "0": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 0.001456345164619781
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6903070054931686,
+                "Mean square error": 0.876813274165444,
+                "Root mean square error": 0.9363830808838036,
+                "Mean relative error": 0.8795171466414942,
+                "Euclidean Distance": 102.77630813505175,
+                "r2 score": 0.097031717214768,
+                "Execution Time": 3.4371612071990967
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 3,
+                "eps": 0.005472105626164377
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6910948781458093,
+                "Mean square error": 0.8831959683583054,
+                "Root mean square error": 0.9397850649793842,
+                "Mean relative error": 0.8805209717538766,
+                "Euclidean Distance": 103.14970591723714,
+                "r2 score": 0.0904586296661597,
+                "Execution Time": 2.4399828910827637
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 0.0036407080124737025
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6895911828403181,
+                "Mean square error": 0.8748870609510728,
+                "Root mean square error": 0.9353539762844186,
+                "Mean relative error": 0.8786051201197778,
+                "Euclidean Distance": 102.66335482185245,
+                "r2 score": 0.09901538864140613,
+                "Execution Time": 2.279118299484253
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 4,
+                "eps": 0.0004046996935206773
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6954499803673815,
+                "Mean square error": 0.8971534823149057,
+                "Root mean square error": 0.9471818633794176,
+                "Mean relative error": 0.8860697885104335,
+                "Euclidean Distance": 103.96156982966193,
+                "r2 score": 0.07608476834279165,
+                "Execution Time": 6.425625562667847
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0018813387111842857
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900582115337033,
+                "Mean square error": 0.8682433860691806,
+                "Root mean square error": 0.9317957856038954,
+                "Mean relative error": 0.8792001593422356,
+                "Euclidean Distance": 102.27281198820836,
+                "r2 score": 0.1058572418343744,
+                "Execution Time": 2.247162342071533
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 0.009308792994851437
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6906613404308856,
+                "Mean square error": 0.8786711115750119,
+                "Root mean square error": 0.9373745844511744,
+                "Mean relative error": 0.8799686032410887,
+                "Euclidean Distance": 102.88513440310105,
+                "r2 score": 0.09511846121735124,
+                "Execution Time": 1.6997370719909668
+            }
+        }
+    },
+    "6": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 4,
+                "eps": 0.008112866121377054
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6910224058621685,
+                "Mean square error": 0.8883541244967856,
+                "Root mean square error": 0.9425253972688405,
+                "Mean relative error": 0.8804286351331972,
+                "Euclidean Distance": 103.45048157361458,
+                "r2 score": 0.08514660767934101,
+                "Execution Time": 2.262296438217163
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0031107482593066855
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900543704935467,
+                "Mean square error": 0.8684380615229651,
+                "Root mean square error": 0.9319002422593123,
+                "Mean relative error": 0.8791952654897153,
+                "Euclidean Distance": 102.28427702812957,
+                "r2 score": 0.10565675928537166,
+                "Execution Time": 1.9364173412322998
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 4,
+                "eps": 0.000833664457237662
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6946286782226667,
+                "Mean square error": 0.8946264394551064,
+                "Root mean square error": 0.9458469429326853,
+                "Mean relative error": 0.8850233710279194,
+                "Euclidean Distance": 103.81505052792522,
+                "r2 score": 0.07868719193612694,
+                "Execution Time": 5.630568265914917
+            }
+        }
+    },
+    "9": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.002221341385386503
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6901150116931031,
+                "Mean square error": 0.8684218134287376,
+                "Root mean square error": 0.9318915244966753,
+                "Mean relative error": 0.8792725281777343,
+                "Euclidean Distance": 102.28332017673266,
+                "r2 score": 0.10567349205410881,
+                "Execution Time": 2.184597969055176
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0057254725564553025
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900764007623684,
+                "Mean square error": 0.8686433037744719,
+                "Root mean square error": 0.9320103560446482,
+                "Mean relative error": 0.879223334159191,
+                "Euclidean Distance": 102.29636298799221,
+                "r2 score": 0.10544539473506331,
+                "Execution Time": 1.6900222301483154
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0026392853580702574
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900634519810832,
+                "Mean square error": 0.8682570662893141,
+                "Root mean square error": 0.9318031263573406,
+                "Mean relative error": 0.8792068361733993,
+                "Euclidean Distance": 102.27361770069233,
+                "r2 score": 0.10584315353844376,
+                "Execution Time": 2.0276970863342285
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.003968191410394417
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900597599214192,
+                "Mean square error": 0.8684866722714673,
+                "Root mean square error": 0.9319263234137488,
+                "Mean relative error": 0.8792021321362751,
+                "Euclidean Distance": 102.28713966503491,
+                "r2 score": 0.10560669849661164,
+                "Execution Time": 1.8848767280578613
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0023044388201868236
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6901250575024657,
+                "Mean square error": 0.8684337413721859,
+                "Root mean square error": 0.931897924330871,
+                "Mean relative error": 0.8792853274996535,
+                "Euclidean Distance": 102.28402261502387,
+                "r2 score": 0.10566120830461645,
+                "Execution Time": 2.173487901687622
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 3,
+                "eps": 0.006529777224137276
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6915961049409985,
+                "Mean square error": 0.8847599643327752,
+                "Root mean square error": 0.9406167999418122,
+                "Mean relative error": 0.8811595826287729,
+                "Euclidean Distance": 103.24099617069251,
+                "r2 score": 0.08884798028280683,
+                "Execution Time": 2.0904555320739746
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.004238876850416538
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900957809317644,
+                "Mean square error": 0.868585810703395,
+                "Root mean square error": 0.9319795119547398,
+                "Mean relative error": 0.8792480263485398,
+                "Euclidean Distance": 102.29297757687866,
+                "r2 score": 0.10550460280272389,
+                "Execution Time": 1.784186601638794
+            }
+        }
+    },
+    "16": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0019764843475931927
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900763674075341,
+                "Mean square error": 0.8682824070097468,
+                "Root mean square error": 0.9318167239375706,
+                "Mean relative error": 0.8792232916619418,
+                "Euclidean Distance": 102.27511015514193,
+                "r2 score": 0.10581705691389698,
+                "Execution Time": 2.2096877098083496
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0028691372673907384
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900707140938065,
+                "Mean square error": 0.8684529067370091,
+                "Root mean square error": 0.9319082072484441,
+                "Mean relative error": 0.8792160887995644,
+                "Euclidean Distance": 102.28515125599002,
+                "r2 score": 0.10564147124420176,
+                "Execution Time": 2.008392333984375
+            }
+        }
+    },
+    "18": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 3,
+                "eps": 0.004818441081446912
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6913305151915266,
+                "Mean square error": 0.8827723660041413,
+                "Root mean square error": 0.9395596660160234,
+                "Mean relative error": 0.8808211958866798,
+                "Euclidean Distance": 103.12496639151881,
+                "r2 score": 0.09089486791846935,
+                "Execution Time": 2.328019142150879
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.007105678118144719
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900926314514682,
+                "Mean square error": 0.8687651248040219,
+                "Root mean square error": 0.9320757076568522,
+                "Mean relative error": 0.879244013609423,
+                "Euclidean Distance": 102.30353590425925,
+                "r2 score": 0.10531993983023769,
+                "Execution Time": 1.5954439640045166
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.00012737203411541617
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897625187317006,
+                "Mean square error": 0.866970579336999,
+                "Root mean square error": 0.9311125492318311,
+                "Mean relative error": 0.8788234184321329,
+                "Euclidean Distance": 102.19782076577185,
+                "r2 score": 0.10716801591038172,
+                "Execution Time": 3.6164870262145996
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0009387820340081553
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6899480138803907,
+                "Mean square error": 0.8675994419429925,
+                "Root mean square error": 0.9314501822121205,
+                "Mean relative error": 0.8790597569925032,
+                "Euclidean Distance": 102.23487896548433,
+                "r2 score": 0.10652039457049933,
+                "Execution Time": 2.764493465423584
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.00037158179921503286
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897599428670413,
+                "Mean square error": 0.8669291560917951,
+                "Root mean square error": 0.9310903050143928,
+                "Mean relative error": 0.8788201365341988,
+                "Euclidean Distance": 102.19537926656889,
+                "r2 score": 0.10721067479533641,
+                "Execution Time": 3.161189079284668
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.00033944354738614155
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.689759206332471,
+                "Mean square error": 0.8669410535636297,
+                "Root mean square error": 0.9310966939924283,
+                "Mean relative error": 0.8788191981187132,
+                "Euclidean Distance": 102.19608051330073,
+                "r2 score": 0.10719842242641331,
+                "Execution Time": 3.2766036987304688
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.00017706418575645213
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897770086263149,
+                "Mean square error": 0.8669820210055691,
+                "Root mean square error": 0.931118693296171,
+                "Mean relative error": 0.8788418799436992,
+                "Euclidean Distance": 102.19849513106386,
+                "r2 score": 0.10715623294116272,
+                "Execution Time": 3.697232961654663
+            }
+        }
+    },
+    "25": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0012861450542296991
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6899872759929782,
+                "Mean square error": 0.8678285737476554,
+                "Root mean square error": 0.93157317144047,
+                "Mean relative error": 0.8791097806790068,
+                "Euclidean Distance": 102.24837811886312,
+                "r2 score": 0.10628442785069225,
+                "Execution Time": 2.5703811645507812
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 4,
+                "eps": 0.00010184427815958182
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6962676220227523,
+                "Mean square error": 0.8974998223902578,
+                "Root mean square error": 0.9473646723359795,
+                "Mean relative error": 0.8871115421794307,
+                "Euclidean Distance": 103.98163472621229,
+                "r2 score": 0.07572809707387418,
+                "Execution Time": 6.48179030418396
+            }
+        }
+    },
+    "27": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 3,
+                "eps": 0.0010499712550711177
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.693212253255676,
+                "Mean square error": 0.8878015338485616,
+                "Root mean square error": 0.9422322080297201,
+                "Mean relative error": 0.8832187101516917,
+                "Euclidean Distance": 103.41830146677921,
+                "r2 score": 0.08571568189777645,
+                "Execution Time": 4.373639106750488
+            }
+        }
+    },
+    "28": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 7.029707977446116e-05
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6903992613939633,
+                "Mean square error": 0.8755653496325541,
+                "Root mean square error": 0.9357164899864456,
+                "Mean relative error": 0.8796346894825522,
+                "Euclidean Distance": 102.70314390038592,
+                "r2 score": 0.09831686686488261,
+                "Execution Time": 5.268761873245239
+            }
+        }
+    },
+    "29": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 0.0017148372820396445
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6901489802506563,
+                "Mean square error": 0.8750424925790876,
+                "Root mean square error": 0.9354370596566546,
+                "Mean relative error": 0.8793158073688435,
+                "Euclidean Distance": 102.67247395529277,
+                "r2 score": 0.0988553205466649,
+                "Execution Time": 3.0126750469207764
+            }
+        }
+    },
+    "30": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.001372931985849182
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6899913648504186,
+                "Mean square error": 0.8679141909832748,
+                "Root mean square error": 0.9316191233456271,
+                "Mean relative error": 0.8791149902744482,
+                "Euclidean Distance": 102.25342174604972,
+                "r2 score": 0.1061962566852892,
+                "Execution Time": 2.513266086578369
+            }
+        }
+    },
+    "31": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0005660743747966869
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6898415461138483,
+                "Mean square error": 0.8671100474114818,
+                "Root mean square error": 0.9311874394618314,
+                "Mean relative error": 0.8789241068752458,
+                "Euclidean Distance": 102.20604062953483,
+                "r2 score": 0.10702438755594224,
+                "Execution Time": 3.0548460483551025
+            }
+        }
+    },
+    "32": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0001134961099067471
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897819870227694,
+                "Mean square error": 0.8669963908818328,
+                "Root mean square error": 0.9311264097220273,
+                "Mean relative error": 0.8788482228969211,
+                "Euclidean Distance": 102.19934207691088,
+                "r2 score": 0.10714143441691915,
+                "Execution Time": 3.6903586387634277
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0008423189765200209
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6899573399133796,
+                "Mean square error": 0.8675474484629809,
+                "Root mean square error": 0.9314222718310857,
+                "Mean relative error": 0.879071639250482,
+                "Euclidean Distance": 102.23181555481413,
+                "r2 score": 0.10657393899637102,
+                "Execution Time": 2.93320894241333
+            }
+        }
+    },
+    "34": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0006123878609876976
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6898726188302687,
+                "Mean square error": 0.8671685319319584,
+                "Root mean square error": 0.9312188421267894,
+                "Mean relative error": 0.8789636964877907,
+                "Euclidean Distance": 102.20948734919041,
+                "r2 score": 0.10696415846432084,
+                "Execution Time": 3.0667786598205566
+            }
+        }
+    },
+    "35": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 3,
+                "eps": 0.0014439747417346561
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6935953956280925,
+                "Mean square error": 0.88679714221058,
+                "Root mean square error": 0.9416990720026117,
+                "Mean relative error": 0.8837068701782648,
+                "Euclidean Distance": 103.35978508206594,
+                "r2 score": 0.0867500341587586,
+                "Execution Time": 4.111098527908325
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 0.0032234920876335464
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897280878202268,
+                "Mean square error": 0.8750959589580032,
+                "Root mean square error": 0.9354656375078687,
+                "Mean relative error": 0.8787795501579089,
+                "Euclidean Distance": 102.67561062670656,
+                "r2 score": 0.09880025928587177,
+                "Execution Time": 2.5065479278564453
+            }
+        }
+    },
+    "37": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 4,
+                "eps": 0.009915476351631558
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897022846470363,
+                "Mean square error": 0.8849222892629333,
+                "Root mean square error": 0.9407030824138578,
+                "Mean relative error": 0.8787466744474233,
+                "Euclidean Distance": 103.25046643357386,
+                "r2 score": 0.0886808132613246,
+                "Execution Time": 2.166262149810791
+            }
+        }
+    },
+    "38": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0017396601489445811
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900418072503002,
+                "Mean square error": 0.8681694335123784,
+                "Root mean square error": 0.931756101945342,
+                "Mean relative error": 0.8791792587162583,
+                "Euclidean Distance": 102.26845635641337,
+                "r2 score": 0.1059334003679987,
+                "Execution Time": 2.3377840518951416
+            }
+        }
+    },
+    "39": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.00043564934810670956
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6898041507031862,
+                "Mean square error": 0.8669843204056568,
+                "Root mean square error": 0.9311199280466812,
+                "Mean relative error": 0.8788764615455285,
+                "Euclidean Distance": 102.19863065583095,
+                "r2 score": 0.10715386495083845,
+                "Execution Time": 3.094912052154541
+            }
+        }
+    },
+    "40": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0024885188360890733
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6901349200595595,
+                "Mean square error": 0.868511900086299,
+                "Root mean square error": 0.9319398586208764,
+                "Mean relative error": 0.8792978933406556,
+                "Euclidean Distance": 102.288625273486,
+                "r2 score": 0.10558071814559689,
+                "Execution Time": 2.036146640777588
+            }
+        }
+    },
+    "41": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0004960459503027617
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6898241955445515,
+                "Mean square error": 0.8670241313460038,
+                "Root mean square error": 0.9311413057887636,
+                "Mean relative error": 0.8789020005905362,
+                "Euclidean Distance": 102.20097705171567,
+                "r2 score": 0.10711286646518536,
+                "Execution Time": 3.0797998905181885
+            }
+        }
+    },
+    "42": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 7.346280025471996e-05
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897844108890567,
+                "Mean square error": 0.8669757389245096,
+                "Root mean square error": 0.9311153198849805,
+                "Mean relative error": 0.8788513111343921,
+                "Euclidean Distance": 102.19812486941025,
+                "r2 score": 0.10716270241432546,
+                "Execution Time": 3.926034927368164
+            }
+        }
+    },
+    "43": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0012272443671695592
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900074389444771,
+                "Mean square error": 0.8678736651597908,
+                "Root mean square error": 0.931597372881542,
+                "Mean relative error": 0.879135470207621,
+                "Euclidean Distance": 102.25103444063537,
+                "r2 score": 0.10623799137877299,
+                "Execution Time": 2.52661395072937
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0001548319743742768
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6897840407808553,
+                "Mean square error": 0.8669954716842742,
+                "Root mean square error": 0.931125916127499,
+                "Mean relative error": 0.8788508395811461,
+                "Euclidean Distance": 102.19928790055464,
+                "r2 score": 0.10714238103379403,
+                "Execution Time": 3.5470492839813232
+            }
+        }
+    },
+    "45": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 4,
+                "eps": 0.0008665381438181164
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6968536803473753,
+                "Mean square error": 0.8993433124413124,
+                "Root mean square error": 0.9483371301606367,
+                "Mean relative error": 0.8878582365361969,
+                "Euclidean Distance": 104.08837055589106,
+                "r2 score": 0.07382961641125363,
+                "Execution Time": 5.608551263809204
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.008442174220915765
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6902380648837378,
+                "Mean square error": 0.869040483249594,
+                "Root mean square error": 0.9322234084432733,
+                "Mean relative error": 0.8794293097115315,
+                "Euclidean Distance": 102.31974736925353,
+                "r2 score": 0.10503636754629231,
+                "Execution Time": 1.5735313892364502
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 2,
+                "eps": 0.0020585602690360353
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6901489115580938,
+                "Mean square error": 0.8752084610524538,
+                "Root mean square error": 0.9355257671771814,
+                "Mean relative error": 0.879315719847949,
+                "Euclidean Distance": 102.6822103886497,
+                "r2 score": 0.09868440129645761,
+                "Execution Time": 2.7823517322540283
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0005523848493721275
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.68982924217989,
+                "Mean square error": 0.8670835253596679,
+                "Root mean square error": 0.9311731983684174,
+                "Mean relative error": 0.8789084304866226,
+                "Euclidean Distance": 102.20447754383325,
+                "r2 score": 0.10705170075053916,
+                "Execution Time": 3.1249072551727295
+            }
+        }
+    },
+    "49": {
+        "parameters": {
+            "CDMissingValueRecovery": {
+                "truncation": 1,
+                "eps": 0.0015716152932310997
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 44.27720400394406,
+                "Mean absolute error": 0.6900368071621724,
+                "Mean square error": 0.868089675622901,
+                "Root mean square error": 0.9317133011945794,
+                "Mean relative error": 0.8791728881257701,
+                "Euclidean Distance": 102.26375859623525,
+                "r2 score": 0.10601553740517955,
+                "Execution Time": 2.4144604206085205
+            }
+        }
+    },
+    "best_trial": 22
+}

@@ -1,0 +1,48 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 3,
+        "seed": 2024
+    },
+    "algorithm": "CDMissingValueRecovery",
+    "algorithm_parameters": {
+        "truncation": 3,
+        "eps": 0.0006726626404970295
+    },
+    "metrics": {
+        "Missing value percentage": 0.10281014393420151,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.06020925404469041,
+        "Mean square error": 0.005305597829741314,
+        "Root mean square error": 0.07283953479904519,
+        "Mean relative error": 0.054222699176041875,
+        "Euclidean Distance": 0.25232355014326563,
+        "r2 score": 0.9889927682290034,
+        "Execution Time": 0.32497406005859375
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.909940150923756,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.120121984867723
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.910330826386566,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.31518595164444,
+            "vintage_score": -8.122577330798691
+        },
+        "Deviation missing": 0.0243329599224654,
+        "Deviation filled": 0.005897478452744312,
+        "Improvement": 0.01843548146972109
+    }
+}

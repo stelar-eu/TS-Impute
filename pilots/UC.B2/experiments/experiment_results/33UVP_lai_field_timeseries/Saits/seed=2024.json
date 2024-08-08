@@ -1,0 +1,37 @@
+{
+    "dataset": "33UVP_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2024
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 128,
+        "d_ffn": 32,
+        "n_heads": 4,
+        "d_k": 32,
+        "d_v": 128,
+        "dropout": 0,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.2,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.00044607767692763967,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 29.255729093549448,
+        "Mean absolute error": 0.41224485556385465,
+        "Mean square error": 0.40261997227882745,
+        "Root mean square error": 0.6345234213792486,
+        "Mean relative error": 0.5179447643567514,
+        "Euclidean Distance": 150.23204646823615,
+        "r2 score": 0.5941753004524241,
+        "Execution Time": 2383.8084728717804
+    }
+}

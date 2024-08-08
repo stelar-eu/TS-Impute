@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "100.0 %",
+        "length": 6,
+        "seed": 2023
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 64,
+        "d_ffn": 128,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 32,
+        "dropout": 0.5,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.5,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0014492869634879434,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.1439342015078821,
+        "Missing value percentage between 4 and 9": 0.1366120218579235,
+        "Mean absolute error": 0.05194442491630381,
+        "Mean square error": 0.004622364322910964,
+        "Root mean square error": 0.06798797189879224,
+        "Mean relative error": 0.06706258003741868,
+        "Euclidean Distance": 0.333071679597452,
+        "r2 score": 0.9832191779412889,
+        "Execution Time": 6.760095834732056
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.90454614450516,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.087693023045261
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.910647385979086,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.15351186663153,
+            "vintage_score": -8.123363432604918
+        },
+        "Deviation missing": 0.4236012339286439,
+        "Deviation filled": 0.01557603409334068,
+        "Improvement": 0.4080251998353032
+    }
+}

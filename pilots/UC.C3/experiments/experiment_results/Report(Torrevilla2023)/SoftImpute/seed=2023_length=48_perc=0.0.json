@@ -1,0 +1,47 @@
+{
+    "dataset": "Report(Torrevilla2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 48,
+        "seed": 2023
+    },
+    "algorithm": "SoftImpute",
+    "algorithm_parameters": {
+        "max_rank": 2
+    },
+    "metrics": {
+        "Missing value percentage": 0.9150102810143934,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.05912434220143526,
+        "Mean square error": 0.0071354728144227865,
+        "Root mean square error": 0.08447172790006599,
+        "Mean relative error": 0.13262824640076368,
+        "Euclidean Distance": 1.170474596208385,
+        "r2 score": 0.9725046799351987,
+        "Execution Time": 0.35053229331970215
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.869581056466302,
+            "Tmin_aug_sep": 17.044262295081968,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.541854756514482
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.882315323565322,
+            "Tmin_aug_sep": 17.175,
+            "prec_jun_sep": 144.89999999999998,
+            "vintage_score": -7.67133109084682
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.871344555918434,
+            "Tmin_aug_sep": 17.032765653258746,
+            "prec_jun_sep": 144.79885795427822,
+            "vintage_score": -7.546968218787782
+        },
+        "Deviation missing": 1.7167704565047408,
+        "Deviation filled": 0.06780112370744527,
+        "Improvement": 1.6489693327972956
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Bertelegni2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 3,
+        "seed": 2025
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 256,
+        "n_heads": 4,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            128,
+            128
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.003947660496431522,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 1.4393420150788212,
+        "Missing value percentage between 4 and 9": 0.06830601092896176,
+        "Mean absolute error": 0.6216878619907116,
+        "Mean square error": 0.5165607864654678,
+        "Root mean square error": 0.7187216335031719,
+        "Mean relative error": 0.6177114305765031,
+        "Euclidean Distance": 2.4897247714528867,
+        "r2 score": -0.3639451644203937,
+        "Execution Time": 14.664923906326294
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.354001429188713,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.14670757438347
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.356307994485302,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.0,
+            "vintage_score": -4.158845413171321
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.311497737346333,
+            "Tmin_aug_sep": 16.15245901639344,
+            "prec_jun_sep": 125.00048716223003,
+            "vintage_score": -3.924336987119659
+        },
+        "Deviation missing": 0.29271026640106024,
+        "Deviation filled": 5.362581838119429,
+        "Improvement": -5.069871571718369
+    }
+}

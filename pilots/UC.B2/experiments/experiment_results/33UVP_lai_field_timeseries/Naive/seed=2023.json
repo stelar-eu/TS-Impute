@@ -1,0 +1,19 @@
+{
+    "dataset": "33UVP_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2023
+    },
+    "algorithm": "Naive",
+    "algorithm_parameters": {},
+    "metrics": {
+        "Missing value percentage": 29.255729093549448,
+        "Mean absolute error": 0.8458300171918596,
+        "Mean square error": 1.2723031464322951,
+        "Root mean square error": 1.1279641600832426,
+        "Mean relative error": 1.053893466230069,
+        "Euclidean Distance": 267.06084976940207,
+        "r2 score": -0.2655145896853406,
+        "Execution Time": 9.669571876525879
+    }
+}

@@ -1,0 +1,2853 @@
+{
+    "0": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 4,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005431095176981607,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09334141337336772,
+                "Mean square error": 0.015304725712186907,
+                "Root mean square error": 0.12371226985302188,
+                "Mean relative error": 0.2002136611281083,
+                "Euclidean Distance": 1.212127744245613,
+                "r2 score": 0.9380864451484691,
+                "Execution Time": 7.400200605392456
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.913057792081883,
+                    "Tmin_aug_sep": 18.316188475028017,
+                    "prec_jun_sep": 121.23394618042983,
+                    "vintage_score": -8.158667160278355
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.45023868198588923,
+                "Improvement": 0.9429032930781558
+            }
+        }
+    },
+    "1": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 3,
+                "n_kernels": 4,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 8.126824698312336e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.3246019102092389,
+                "Mean square error": 0.16486760939077322,
+                "Root mean square error": 0.4060389259551025,
+                "Mean relative error": 0.69625833275321,
+                "Euclidean Distance": 3.9783527371909084,
+                "r2 score": 0.3330465394013352,
+                "Execution Time": 1.572725772857666
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.910301003514657,
+                    "Tmin_aug_sep": 18.257236484035545,
+                    "prec_jun_sep": 122.71709125553927,
+                    "vintage_score": -8.128231568070959
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.07551295269700396,
+                "Improvement": 1.317629022367041
+            }
+        }
+    },
+    "2": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 32,
+                "d_ffn": 256,
+                "n_heads": 2,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00018048332240311763,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.32814957329600586,
+                "Mean square error": 0.20037438544852426,
+                "Root mean square error": 0.44763197545363564,
+                "Mean relative error": 0.7038679305660209,
+                "Euclidean Distance": 4.38587972966183,
+                "r2 score": 0.1894078510384276,
+                "Execution Time": 1.1606659889221191
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.91770111060201,
+                    "Tmin_aug_sep": 18.211610445150445,
+                    "prec_jun_sep": 119.64640579577947,
+                    "vintage_score": -8.132889702978616
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.1328643256718915,
+                "Improvement": 1.2602776493921535
+            }
+        }
+    },
+    "3": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0010271876245468612,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.30064460186189074,
+                "Mean square error": 0.14536295959599968,
+                "Root mean square error": 0.38126494671815775,
+                "Mean relative error": 0.6448708484453484,
+                "Euclidean Distance": 3.7356183050756293,
+                "r2 score": 0.41195041704267177,
+                "Execution Time": 0.9101505279541016
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90632581931832,
+                    "Tmin_aug_sep": 18.296692923298174,
+                    "prec_jun_sep": 121.47350734076342,
+                    "vintage_score": -8.111857463689773
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.12608648272324233,
+                "Improvement": 1.2670554923408026
+            }
+        }
+    },
+    "4": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.006742733784436902,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10932893468796796,
+                "Mean square error": 0.02487827170073113,
+                "Root mean square error": 0.15772847460344988,
+                "Mean relative error": 0.2345062656546332,
+                "Euclidean Distance": 1.545417122743958,
+                "r2 score": 0.8993577363932769,
+                "Execution Time": 0.6492879390716553
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90800200642206,
+                    "Tmin_aug_sep": 18.271499737625064,
+                    "prec_jun_sep": 120.355217041491,
+                    "vintage_score": -8.103896754954945
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.22409943959252956,
+                "Improvement": 1.1690425354715155
+            }
+        }
+    },
+    "5": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 32,
+                "d_ffn": 64,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001104418389019666,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.3908838306461285,
+                "Mean square error": 0.27647131278357867,
+                "Root mean square error": 0.5258053944032703,
+                "Mean relative error": 0.8384304456200805,
+                "Euclidean Distance": 5.1518196811635235,
+                "r2 score": -0.11843375116945909,
+                "Execution Time": 0.8090362548828125
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.900805822515515,
+                    "Tmin_aug_sep": 18.19461747933448,
+                    "prec_jun_sep": 122.14935500777216,
+                    "vintage_score": -8.041635474054914
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.9906658902382456,
+                "Improvement": 0.40247608482579944
+            }
+        }
+    },
+    "6": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 64,
+                "d_ffn": 256,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00031105779836337796,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2834595866114723,
+                "Mean square error": 0.15308509905663178,
+                "Root mean square error": 0.39126090918545875,
+                "Mean relative error": 0.6080096665167453,
+                "Euclidean Distance": 3.8335583352072273,
+                "r2 score": 0.3807113661731545,
+                "Execution Time": 0.7150158882141113
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.925421819997734,
+                    "Tmin_aug_sep": 18.141082428436803,
+                    "prec_jun_sep": 121.42175932100061,
+                    "vintage_score": -8.162900000565742
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5023537896153293,
+                "Improvement": 0.8907881854487157
+            }
+        }
+    },
+    "7": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005333930877722995,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.25967379251418543,
+                "Mean square error": 0.12563828551771278,
+                "Root mean square error": 0.35445491323680756,
+                "Mean relative error": 0.5569900735306386,
+                "Euclidean Distance": 3.4729346970106634,
+                "r2 score": 0.49174437829623074,
+                "Execution Time": 1.8946795463562012
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90870506843151,
+                    "Tmin_aug_sep": 18.1196697478921,
+                    "prec_jun_sep": 118.00946767065446,
+                    "vintage_score": -8.029813472407284
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.1362194302802875,
+                "Improvement": 0.25692254478375753
+            }
+        }
+    },
+    "8": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 16,
+                "d_ffn": 128,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0002962507346672304,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.48858933665751103,
+                "Mean square error": 0.3712723511899734,
+                "Root mean square error": 0.6093212216803001,
+                "Mean relative error": 1.0480049138431504,
+                "Euclidean Distance": 5.970104330264071,
+                "r2 score": -0.5019407412151975,
+                "Execution Time": 0.9239201545715332
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.875992698127455,
+                    "Tmin_aug_sep": 18.198640709571034,
+                    "prec_jun_sep": 122.40508219306598,
+                    "vintage_score": -7.896507259474703
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 2.7774974287337186,
+                "Improvement": -1.3843554536696736
+            }
+        }
+    },
+    "9": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005024642732106495,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08191468053412143,
+                "Mean square error": 0.010724567604382217,
+                "Root mean square error": 0.10355948823928311,
+                "Mean relative error": 0.17570376853277037,
+                "Euclidean Distance": 1.0146716168400018,
+                "r2 score": 0.9566149621287142,
+                "Execution Time": 0.379650354385376
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.908106673015766,
+                    "Tmin_aug_sep": 18.29775346600902,
+                    "prec_jun_sep": 120.48388630653872,
+                    "vintage_score": -8.116151413117109
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.07321899390543478,
+                "Improvement": 1.3199229811586102
+            }
+        }
+    },
+    "10": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 16,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0027769567067609992,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2846525731159545,
+                "Mean square error": 0.12757803318248034,
+                "Root mean square error": 0.35718067302484374,
+                "Mean relative error": 0.610568575655858,
+                "Euclidean Distance": 3.4996415795790057,
+                "r2 score": 0.4838973462291951,
+                "Execution Time": 0.3976099491119385
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.922759450497693,
+                    "Tmin_aug_sep": 18.318710612433083,
+                    "prec_jun_sep": 120.08126915007455,
+                    "vintage_score": -8.210191480147927
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.0846107095670283,
+                "Improvement": 0.3085312654970167
+            }
+        }
+    },
+    "11": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.009355226738565153,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08677572914285082,
+                "Mean square error": 0.01172803105111565,
+                "Root mean square error": 0.10829603432774282,
+                "Mean relative error": 0.18613052664261803,
+                "Euclidean Distance": 1.0610801010796094,
+                "r2 score": 0.9525555630699408,
+                "Execution Time": 1.2724711894989014
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.905260165529445,
+                    "Tmin_aug_sep": 18.298705029509218,
+                    "prec_jun_sep": 120.5976736676811,
+                    "vintage_score": -8.100216546023063
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.2694105006206118,
+                "Improvement": 1.1237314744434332
+            }
+        }
+    },
+    "12": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 128,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.009513880885951044,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.15297598318859412,
+                "Mean square error": 0.030139036353333763,
+                "Root mean square error": 0.17360598017733653,
+                "Mean relative error": 0.3281274683119289,
+                "Euclidean Distance": 1.7009842709208312,
+                "r2 score": 0.8780759018145265,
+                "Execution Time": 0.8084213733673096
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.917809095921665,
+                    "Tmin_aug_sep": 18.285424375689228,
+                    "prec_jun_sep": 117.91289703791526,
+                    "vintage_score": -8.151730558755133
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.36483462456314475,
+                "Improvement": 1.0283073505009002
+            }
+        }
+    },
+    "13": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0028505535053046658,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0882825650949495,
+                "Mean square error": 0.013495110435990826,
+                "Root mean square error": 0.11616845714732905,
+                "Mean relative error": 0.1893626305050523,
+                "Euclidean Distance": 1.1382137768693246,
+                "r2 score": 0.9454070412029099,
+                "Execution Time": 1.4820632934570312
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.91164559090158,
+                    "Tmin_aug_sep": 18.31787286023852,
+                    "prec_jun_sep": 119.99749578815488,
+                    "vintage_score": -8.142302139959156
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.24875109034806328,
+                "Improvement": 1.1443908847159818
+            }
+        }
+    },
+    "14": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0025667604046324746,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.259703681455525,
+                "Mean square error": 0.11258844491927596,
+                "Root mean square error": 0.33554201662277106,
+                "Mean relative error": 0.5570541841344594,
+                "Euclidean Distance": 3.2876269119610586,
+                "r2 score": 0.5445360478033612,
+                "Execution Time": 0.38411855697631836
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.914755879376344,
+                    "Tmin_aug_sep": 18.221000301404466,
+                    "prec_jun_sep": 121.32283652596463,
+                    "vintage_score": -8.130583988251459
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.1044761600407282,
+                "Improvement": 1.2886658150233168
+            }
+        }
+    },
+    "15": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004237600225087206,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1061855540055177,
+                "Mean square error": 0.016733763435987002,
+                "Root mean square error": 0.1293590485276813,
+                "Mean relative error": 0.22776383770108022,
+                "Euclidean Distance": 1.2674546500189934,
+                "r2 score": 0.932305432985216,
+                "Execution Time": 0.5499908924102783
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90942140732501,
+                    "Tmin_aug_sep": 18.290354488072342,
+                    "prec_jun_sep": 120.14637278343474,
+                    "vintage_score": -8.1186979981548
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.04186521150019859,
+                "Improvement": 1.3512767635638465
+            }
+        }
+    },
+    "16": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 4,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0015857940729076306,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.27939468382532706,
+                "Mean square error": 0.13880414866658045,
+                "Root mean square error": 0.3725642879646148,
+                "Mean relative error": 0.5992906098887021,
+                "Euclidean Distance": 3.650369607586588,
+                "r2 score": 0.43848335254742676,
+                "Execution Time": 0.41226983070373535
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.888621277381795,
+                    "Tmin_aug_sep": 18.27013684603785,
+                    "prec_jun_sep": 120.09062312627042,
+                    "vintage_score": -7.985226431981488
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.6851790538202867,
+                "Improvement": -0.29203707875624163
+            }
+        }
+    },
+    "17": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00997814914237299,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10281644001303289,
+                "Mean square error": 0.01803684410604322,
+                "Root mean square error": 0.13430131833322864,
+                "Mean relative error": 0.22053722067423986,
+                "Euclidean Distance": 1.3158788067980147,
+                "r2 score": 0.9270339659848468,
+                "Execution Time": 0.3931713104248047
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.904107164838564,
+                    "Tmin_aug_sep": 18.288283505360987,
+                    "prec_jun_sep": 121.02490510403305,
+                    "vintage_score": -8.091982897563128
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.370783915760131,
+                "Improvement": 1.022358059303914
+            }
+        }
+    },
+    "18": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00453708230893689,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1047685396678722,
+                "Mean square error": 0.015305286018756161,
+                "Root mean square error": 0.12371453438766264,
+                "Mean relative error": 0.22472439766950283,
+                "Euclidean Distance": 1.212149932063112,
+                "r2 score": 0.9380841784909567,
+                "Execution Time": 0.87363600730896
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.908039116307457,
+                    "Tmin_aug_sep": 18.273910454393093,
+                    "prec_jun_sep": 120.95306895784272,
+                    "vintage_score": -8.109241581750808
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.15829345476547055,
+                "Improvement": 1.2348485202985744
+            }
+        }
+    },
+    "19": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 64,
+                "d_ffn": 128,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0017705509108894627,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.2798636798627341,
+                "Mean square error": 0.1525251661457936,
+                "Root mean square error": 0.39054470441396794,
+                "Mean relative error": 0.6002965879461398,
+                "Euclidean Distance": 3.82654099024123,
+                "r2 score": 0.38297651209215355,
+                "Execution Time": 0.8951892852783203
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.904252246908854,
+                    "Tmin_aug_sep": 18.106362041331092,
+                    "prec_jun_sep": 121.05253563235439,
+                    "vintage_score": -8.018657994010283
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.2735666765371412,
+                "Improvement": 0.11957529852690385
+            }
+        }
+    },
+    "20": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0005811794725897152,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.32066613632723584,
+                "Mean square error": 0.1510548175357385,
+                "Root mean square error": 0.38865771256433146,
+                "Mean relative error": 0.6878162525466868,
+                "Euclidean Distance": 3.80805232151963,
+                "r2 score": 0.38892464282193373,
+                "Execution Time": 0.4738790988922119
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.912969009739623,
+                    "Tmin_aug_sep": 18.329673589779325,
+                    "prec_jun_sep": 121.59865084597186,
+                    "vintage_score": -8.16616979222249
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5426117564999048,
+                "Improvement": 0.8505302185641402
+            }
+        }
+    },
+    "21": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0030548661607769276,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09172200774926181,
+                "Mean square error": 0.014349961482212386,
+                "Root mean square error": 0.11979132473686226,
+                "Mean relative error": 0.1967400997459083,
+                "Euclidean Distance": 1.1737104848694175,
+                "r2 score": 0.9419488369766177,
+                "Execution Time": 1.1126654148101807
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.905024722220475,
+                    "Tmin_aug_sep": 18.27684987835137,
+                    "prec_jun_sep": 120.20343053087382,
+                    "vintage_score": -8.087137778661088
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.4304374523723404,
+                "Improvement": 0.9627045226917046
+            }
+        }
+    },
+    "22": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00695420252341925,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11402490000263436,
+                "Mean square error": 0.017938668969276483,
+                "Root mean square error": 0.13393531636307313,
+                "Mean relative error": 0.24457892659045127,
+                "Euclidean Distance": 1.312292734511077,
+                "r2 score": 0.9274311225121554,
+                "Execution Time": 1.7717766761779785
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.908991248800938,
+                    "Tmin_aug_sep": 18.29474163598821,
+                    "prec_jun_sep": 118.08337243001178,
+                    "vintage_score": -8.10363279107429
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.22734938646429012,
+                "Improvement": 1.1657925885997549
+            }
+        }
+    },
+    "23": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.004070790219579645,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0989740407957322,
+                "Mean square error": 0.013902964738683354,
+                "Root mean square error": 0.11791083384779939,
+                "Mean relative error": 0.21229542545163776,
+                "Euclidean Distance": 1.1552855122927908,
+                "r2 score": 0.9437571122714113,
+                "Execution Time": 1.286201000213623
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.908524245771254,
+                    "Tmin_aug_sep": 18.295730741435374,
+                    "prec_jun_sep": 118.95148479454147,
+                    "vintage_score": -8.10723423796793
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.18300805068484424,
+                "Improvement": 1.2101339243792009
+            }
+        }
+    },
+    "24": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 64,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.3,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0020673105570485537,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.11276392851802394,
+                "Mean square error": 0.020145204436236,
+                "Root mean square error": 0.1419338030077261,
+                "Mean relative error": 0.24187419234240495,
+                "Euclidean Distance": 1.3906615784865402,
+                "r2 score": 0.9185048302521992,
+                "Execution Time": 1.0351603031158447
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.907896732208606,
+                    "Tmin_aug_sep": 18.296799335489364,
+                    "prec_jun_sep": 121.02058799604393,
+                    "vintage_score": -8.1182117834405
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.047851530483760694,
+                "Improvement": 1.3452904445802842
+            }
+        }
+    },
+    "25": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.2,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007072190163365223,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.17561222764611661,
+                "Mean square error": 0.042690153240084704,
+                "Root mean square error": 0.20661595591842538,
+                "Mean relative error": 0.3766813225256313,
+                "Euclidean Distance": 2.0244146588701075,
+                "r2 score": 0.8273017632622067,
+                "Execution Time": 0.3963193893432617
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90261846538168,
+                    "Tmin_aug_sep": 18.245788053343222,
+                    "prec_jun_sep": 118.41214611131133,
+                    "vintage_score": -8.047589170193163
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.9173634516930336,
+                "Improvement": 0.47577852337101145
+            }
+        }
+    },
+    "26": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.003597567763688233,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0850541552481261,
+                "Mean square error": 0.011050986441079698,
+                "Root mean square error": 0.1051236721251674,
+                "Mean relative error": 0.18243781833760583,
+                "Euclidean Distance": 1.0299974263772032,
+                "r2 score": 0.9552944712600442,
+                "Execution Time": 0.7367401123046875
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.909432468064317,
+                    "Tmin_aug_sep": 18.30213242130894,
+                    "prec_jun_sep": 120.62859659911408,
+                    "vintage_score": -8.126916549778713
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.05932233004599109,
+                "Improvement": 1.333819645018054
+            }
+        }
+    },
+    "27": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.000999813341557805,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.24825596174819278,
+                "Mean square error": 0.11486867047200766,
+                "Root mean square error": 0.33892280901704985,
+                "Mean relative error": 0.5324992755323646,
+                "Euclidean Distance": 3.3207517771301194,
+                "r2 score": 0.5353116505493485,
+                "Execution Time": 0.5410950183868408
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.92477076075066,
+                    "Tmin_aug_sep": 18.19376929941352,
+                    "prec_jun_sep": 119.29104502872258,
+                    "vintage_score": -8.165773404225916
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.5377313920869072,
+                "Improvement": 0.8554105829771378
+            }
+        }
+    },
+    "28": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005449591411130298,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08864784160960093,
+                "Mean square error": 0.011543266003958266,
+                "Root mean square error": 0.10743959234825058,
+                "Mean relative error": 0.1901461342648459,
+                "Euclidean Distance": 1.0526887177033888,
+                "r2 score": 0.9533030093879571,
+                "Execution Time": 0.9586293697357178
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.91133219060374,
+                    "Tmin_aug_sep": 18.280776357611867,
+                    "prec_jun_sep": 120.71323206856943,
+                    "vintage_score": -8.130198862710927
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.09973445999230071,
+                "Improvement": 1.2934075150717443
+            }
+        }
+    },
+    "29": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0045145374992078425,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09468023937027764,
+                "Mean square error": 0.016256809671161585,
+                "Root mean square error": 0.1275021947699787,
+                "Mean relative error": 0.2030853902434862,
+                "Euclidean Distance": 1.2492612730856296,
+                "r2 score": 0.9342348960566547,
+                "Execution Time": 0.8821933269500732
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.909845225270676,
+                    "Tmin_aug_sep": 18.268084420392046,
+                    "prec_jun_sep": 120.46258823208714,
+                    "vintage_score": -8.114328730432334
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.09566002589391703,
+                "Improvement": 1.297481949170128
+            }
+        }
+    },
+    "30": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005332229135048496,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10917937118745387,
+                "Mean square error": 0.023118233590711627,
+                "Root mean square error": 0.15204681381308727,
+                "Mean relative error": 0.2341854578274656,
+                "Euclidean Distance": 1.4897484434320913,
+                "r2 score": 0.9064777735709904,
+                "Execution Time": 0.9114854335784912
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.9061519915921,
+                    "Tmin_aug_sep": 18.266961125396747,
+                    "prec_jun_sep": 120.23185544116896,
+                    "vintage_score": -8.090065562164256
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.39439032041747424,
+                "Improvement": 0.9987516546465708
+            }
+        }
+    },
+    "31": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007971325737740701,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09176522109694378,
+                "Mean square error": 0.014107466188895378,
+                "Root mean square error": 0.11877485503630547,
+                "Mean relative error": 0.19683279067736448,
+                "Euclidean Distance": 1.1637511564479628,
+                "r2 score": 0.9429298245438803,
+                "Execution Time": 0.9497323036193848
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90919187928238,
+                    "Tmin_aug_sep": 18.286887509851418,
+                    "prec_jun_sep": 120.66936017737845,
+                    "vintage_score": -8.11951780346186
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.03177169534747797,
+                "Improvement": 1.361370279716567
+            }
+        }
+    },
+    "32": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 5.8818826250965154e-05,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.5497681424869525,
+                "Mean square error": 0.47097030836197296,
+                "Root mean square error": 0.6862727652777524,
+                "Mean relative error": 1.179231046551925,
+                "Euclidean Distance": 6.724072397197243,
+                "r2 score": -0.9052576680281355,
+                "Execution Time": 1.189197063446045
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.93761836617872,
+                    "Tmin_aug_sep": 18.16973264355003,
+                    "prec_jun_sep": 122.70780297025067,
+                    "vintage_score": -8.25724009743459
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.663877487247594,
+                "Improvement": -0.2707355121835491
+            }
+        }
+    },
+    "33": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 4,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0034322111516515126,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1493733616958295,
+                "Mean square error": 0.035103485834506315,
+                "Root mean square error": 0.18735924272505564,
+                "Mean relative error": 0.3203999868794374,
+                "Euclidean Distance": 1.8357381730826,
+                "r2 score": 0.8579927770960301,
+                "Execution Time": 0.6451046466827393
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.910061847395713,
+                    "Tmin_aug_sep": 18.28079572450942,
+                    "prec_jun_sep": 120.66173392969726,
+                    "vintage_score": -8.122207210001022
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.0013405181384390516,
+                "Improvement": 1.3918014569256059
+            }
+        }
+    },
+    "34": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.4,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0056958767702648665,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.10864742553375056,
+                "Mean square error": 0.017513838660063275,
+                "Root mean square error": 0.13233986043540802,
+                "Mean relative error": 0.23304445531850304,
+                "Euclidean Distance": 1.2966605227915637,
+                "r2 score": 0.9291497259779543,
+                "Execution Time": 0.7936487197875977
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.909623239821613,
+                    "Tmin_aug_sep": 18.30090999498789,
+                    "prec_jun_sep": 117.74403480788749,
+                    "vintage_score": -8.107608819788453
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.17839616585876888,
+                "Improvement": 1.214745809205276
+            }
+        }
+    },
+    "35": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0057988982418773795,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.08294963382743084,
+                "Mean square error": 0.01091355086179649,
+                "Root mean square error": 0.10446794178979736,
+                "Mean relative error": 0.17792370264841545,
+                "Euclidean Distance": 1.0235726074551204,
+                "r2 score": 0.9558504515132367,
+                "Execution Time": 0.5735211372375488
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.9068212976027,
+                    "Tmin_aug_sep": 18.295113093497037,
+                    "prec_jun_sep": 120.31303770823514,
+                    "vintage_score": -8.10616172520605
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.19621292358918602,
+                "Improvement": 1.196929051474859
+            }
+        }
+    },
+    "36": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "top_k": 2,
+                "n_kernels": 3,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0020446522934538273,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09276797621998295,
+                "Mean square error": 0.012414096632965449,
+                "Root mean square error": 0.1114185650282997,
+                "Mean relative error": 0.19898366098394074,
+                "Euclidean Distance": 1.0916745287697682,
+                "r2 score": 0.9497801615480578,
+                "Execution Time": 0.7324678897857666
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.909601589341168,
+                    "Tmin_aug_sep": 18.294788022315046,
+                    "prec_jun_sep": 119.35600256614302,
+                    "vintage_score": -8.116126904982423
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.07352074024837396,
+                "Improvement": 1.319621234815671
+            }
+        }
+    },
+    "37": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00015428360191160664,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.27735962510517465,
+                "Mean square error": 0.1445822725705634,
+                "Root mean square error": 0.3802397566938042,
+                "Mean relative error": 0.5949254889606248,
+                "Euclidean Distance": 3.725573535279398,
+                "r2 score": 0.4151085990238581,
+                "Execution Time": 3.8621506690979004
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.905775526562994,
+                    "Tmin_aug_sep": 18.17975348319778,
+                    "prec_jun_sep": 120.92200502103181,
+                    "vintage_score": -8.056918144755599
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.8025042837621151,
+                "Improvement": 0.5906376913019299
+            }
+        }
+    },
+    "38": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.001377605652467443,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1772573226394938,
+                "Mean square error": 0.0584608748563521,
+                "Root mean square error": 0.24178683764082798,
+                "Mean relative error": 0.3802099865947094,
+                "Euclidean Distance": 2.369017514964771,
+                "r2 score": 0.7635030741383965,
+                "Execution Time": 0.4716804027557373
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90011458054361,
+                    "Tmin_aug_sep": 18.2316456654358,
+                    "prec_jun_sep": 119.22956672913757,
+                    "vintage_score": -8.032427799482178
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.1040316018633498,
+                "Improvement": 0.2891103732006952
+            }
+        }
+    },
+    "39": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0054322125332907515,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1384161163717663,
+                "Mean square error": 0.03054647424111145,
+                "Root mean square error": 0.17477549668392148,
+                "Mean relative error": 0.29689712654204,
+                "Euclidean Distance": 1.7124431456684133,
+                "r2 score": 0.8764276574429578,
+                "Execution Time": 1.7152893543243408
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.907410984920496,
+                    "Tmin_aug_sep": 18.25184948166584,
+                    "prec_jun_sep": 120.33162292325645,
+                    "vintage_score": -8.092144926637673
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.36878899932442855,
+                "Improvement": 1.0243529757396166
+            }
+        }
+    },
+    "40": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 128,
+                "d_ffn": 16,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.2,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0036243540346701723,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.13563300426331923,
+                "Mean square error": 0.026693230894314447,
+                "Root mean square error": 0.16338063194367455,
+                "Mean relative error": 0.2909274605125224,
+                "Euclidean Distance": 1.600796728461866,
+                "r2 score": 0.8920155221191765,
+                "Execution Time": 0.36360788345336914
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90852544764616,
+                    "Tmin_aug_sep": 18.296870266042497,
+                    "prec_jun_sep": 118.10830190069038,
+                    "vintage_score": -8.101874278127497
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.24900035490810044,
+                "Improvement": 1.1441416201559447
+            }
+        }
+    },
+    "41": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 64,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.1,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.007440718891180965,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.1127516557271536,
+                "Mean square error": 0.022516054832675488,
+                "Root mean square error": 0.15005350656574304,
+                "Mean relative error": 0.24184786768860328,
+                "Euclidean Distance": 1.4702181008057509,
+                "r2 score": 0.9089138203363636,
+                "Execution Time": 0.4438447952270508
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.90698173805173,
+                    "Tmin_aug_sep": 18.287214130913245,
+                    "prec_jun_sep": 120.80456497787102,
+                    "vintage_score": -8.10729672440982
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.18223871203196992,
+                "Improvement": 1.210903263032075
+            }
+        }
+    },
+    "42": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.005859220446697633,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.27169399909152464,
+                "Mean square error": 0.12802095793820242,
+                "Root mean square error": 0.3578001648101946,
+                "Mean relative error": 0.5827729439564244,
+                "Euclidean Distance": 3.5057113346748277,
+                "r2 score": 0.48210554370530767,
+                "Execution Time": 0.3364593982696533
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.920902635065197,
+                    "Tmin_aug_sep": 18.273221306069146,
+                    "prec_jun_sep": 120.4242618322075,
+                    "vintage_score": -8.1827637003789
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.7469174356301429,
+                "Improvement": 0.6462245394339021
+            }
+        }
+    },
+    "43": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 128,
+                "d_ffn": 32,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.3,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.009300092338553083,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09344714128070038,
+                "Mean square error": 0.012332131797730198,
+                "Root mean square error": 0.11105013191225933,
+                "Mean relative error": 0.20044044333169259,
+                "Euclidean Distance": 1.088064636215198,
+                "r2 score": 0.9501117411148967,
+                "Execution Time": 0.8022153377532959
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.912910862553293,
+                    "Tmin_aug_sep": 18.298051375125457,
+                    "prec_jun_sep": 119.45290677357535,
+                    "vintage_score": -8.138045178328355
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.19633899858435486,
+                "Improvement": 1.1968029764796901
+            }
+        }
+    },
+    "44": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 32,
+                "d_ffn": 128,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 4,
+                "dropout": 0.5,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0022627031587611176,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.0999464826146918,
+                "Mean square error": 0.01869254231608038,
+                "Root mean square error": 0.13672067259957574,
+                "Mean relative error": 0.21438127491300377,
+                "Euclidean Distance": 1.3395835406363186,
+                "r2 score": 0.9243814122666929,
+                "Execution Time": 1.205653190612793
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.905213427633715,
+                    "Tmin_aug_sep": 18.282517929564413,
+                    "prec_jun_sep": 119.94413043038179,
+                    "vintage_score": -8.08879556616239
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.4100266246086487,
+                "Improvement": 0.9831153504553963
+            }
+        }
+    },
+    "45": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 256,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.00506298674405962,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.07640621648556194,
+                "Mean square error": 0.009723591536909874,
+                "Root mean square error": 0.09860827316665613,
+                "Mean relative error": 0.16388832976345202,
+                "Euclidean Distance": 0.9661598147011485,
+                "r2 score": 0.9606642987730926,
+                "Execution Time": 0.8274836540222168
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.910439353998875,
+                    "Tmin_aug_sep": 18.293327564992662,
+                    "prec_jun_sep": 120.73473860506448,
+                    "vintage_score": -8.130107651063469
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.09861145404319818,
+                "Improvement": 1.2945305210208469
+            }
+        }
+    },
+    "46": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 3,
+                "d_model": 128,
+                "d_ffn": 256,
+                "n_heads": 1,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": false,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0033025409267823094,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.09074766837187515,
+                "Mean square error": 0.015507098882973237,
+                "Root mean square error": 0.12452750251640493,
+                "Mean relative error": 0.1946501800963359,
+                "Euclidean Distance": 1.2201153604333674,
+                "r2 score": 0.9372677671371421,
+                "Execution Time": 1.8399782180786133
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.907523360573563,
+                    "Tmin_aug_sep": 18.284502660266753,
+                    "prec_jun_sep": 120.40467901797483,
+                    "vintage_score": -8.106677854112064
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.18985829840577376,
+                "Improvement": 1.2032836766582713
+            }
+        }
+    },
+    "47": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 16,
+                "d_ffn": 32,
+                "n_heads": 2,
+                "top_k": 2,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0049129667854980255,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.22353201769609138,
+                "Mean square error": 0.09104319411970409,
+                "Root mean square error": 0.30173364764259236,
+                "Mean relative error": 0.47946738778498993,
+                "Euclidean Distance": 2.95637389981235,
+                "r2 score": 0.6316949484105826,
+                "Execution Time": 0.8499219417572021
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.912530068003914,
+                    "Tmin_aug_sep": 18.22888426263515,
+                    "prec_jun_sep": 121.16262758192383,
+                    "vintage_score": -8.119298411544662
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.03447286822468508,
+                "Improvement": 1.35866910683936
+            }
+        }
+    },
+    "48": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 1,
+                "d_model": 256,
+                "d_ffn": 16,
+                "n_heads": 3,
+                "top_k": 1,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.5,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.0007952295065174665,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.19031733452550126,
+                "Mean square error": 0.05098158170083123,
+                "Root mean square error": 0.22579101333053808,
+                "Mean relative error": 0.4082231985182843,
+                "Euclidean Distance": 2.212291084663103,
+                "r2 score": 0.7937597174617255,
+                "Execution Time": 0.6548371315002441
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.897895887143726,
+                    "Tmin_aug_sep": 18.250693378401664,
+                    "prec_jun_sep": 121.04662352045243,
+                    "vintage_score": -8.039472763887602
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 1.0172933709576601,
+                "Improvement": 0.3758486041063849
+            }
+        }
+    },
+    "49": {
+        "parameters": {
+            "TimesNet": {
+                "n_layers": 2,
+                "d_model": 64,
+                "d_ffn": 32,
+                "n_heads": 3,
+                "top_k": 3,
+                "n_kernels": 5,
+                "dropout": 0.1,
+                "epochs": 100,
+                "batch_size": 32,
+                "attn_dropout": 0.4,
+                "apply_nonstationary_norm": true,
+                "num_workers": 0,
+                "patience": 10,
+                "lr": 0.002661065391715841,
+                "device": "cuda"
+            }
+        },
+        "result": {
+            "metrics": {
+                "Missing value percentage": 0.39067854694996573,
+                "Missing value percentage between 4 and 9": 0.546448087431694,
+                "Mean absolute error": 0.16417311817324529,
+                "Mean square error": 0.04756654258216829,
+                "Root mean square error": 0.21809755290275104,
+                "Mean relative error": 0.3521448825378664,
+                "Euclidean Distance": 2.136910875045612,
+                "r2 score": 0.8075748759800581,
+                "Execution Time": 1.8805317878723145
+            },
+            "vintage_score": {
+                "original": {
+                    "Tmean_apr_sep": 20.91026867030965,
+                    "Tmin_aug_sep": 18.283606557377052,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.122098331799663
+                },
+                "missing": {
+                    "Tmean_apr_sep": 20.9220415907711,
+                    "Tmin_aug_sep": 18.38688524590164,
+                    "prec_jun_sep": 120.3,
+                    "vintage_score": -8.23525069291594
+                },
+                "filled": {
+                    "Tmean_apr_sep": 20.908970345504255,
+                    "Tmin_aug_sep": 18.230544205754757,
+                    "prec_jun_sep": 120.05275868002495,
+                    "vintage_score": -8.09088095522705
+                },
+                "Deviation missing": 1.393141975064045,
+                "Deviation filled": 0.3843511282101887,
+                "Improvement": 1.0087908468538562
+            }
+        }
+    },
+    "best_trial": 45
+}

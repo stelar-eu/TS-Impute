@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Barbieri2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 24,
+        "seed": 2025
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 128,
+        "d_ffn": 16,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            64,
+            64
+        ],
+        "dropout": 0.3,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0060002798206847075,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 5.6956819739547635,
+        "Missing value percentage between 4 and 9": 0.546448087431694,
+        "Mean absolute error": 0.10516533097352881,
+        "Mean square error": 0.020721915483388222,
+        "Root mean square error": 0.14395108712124485,
+        "Mean relative error": 0.07983509491963726,
+        "Euclidean Distance": 1.4104268454639148,
+        "r2 score": 0.9741846563631488,
+        "Execution Time": 11.58121371269226
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 21.284699453551912,
+            "Tmin_aug_sep": 18.38196721311475,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.593158555185312
+        },
+        "missing": {
+            "Tmean_apr_sep": 21.27610324557046,
+            "Tmin_aug_sep": 18.447540983606554,
+            "prec_jun_sep": 132.3,
+            "vintage_score": -10.563934838011932
+        },
+        "filled": {
+            "Tmean_apr_sep": 21.281360449032956,
+            "Tmin_aug_sep": 18.38891016246574,
+            "prec_jun_sep": 132.0687209613706,
+            "vintage_score": -10.572619367055523
+        },
+        "Deviation missing": 0.2758734991186867,
+        "Deviation filled": 0.1938910667936207,
+        "Improvement": 0.081982432325066
+    }
+}

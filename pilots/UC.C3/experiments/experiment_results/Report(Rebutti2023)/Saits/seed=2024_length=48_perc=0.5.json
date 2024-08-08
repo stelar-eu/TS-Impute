@@ -1,0 +1,63 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "50.0 %",
+        "length": 48,
+        "seed": 2024
+    },
+    "algorithm": "Saits",
+    "algorithm_parameters": {
+        "n_layers": 1,
+        "d_model": 64,
+        "d_ffn": 128,
+        "n_heads": 1,
+        "d_k": 64,
+        "d_v": 32,
+        "dropout": 0.5,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "attn_dropout": 0.5,
+        "diagonal_attention_mask": false,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.0014492869634879434,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.7196710075394106,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.8618523810919345,
+        "Mean square error": 11.270590195366514,
+        "Root mean square error": 3.357169968197397,
+        "Mean relative error": 0.6004103818787994,
+        "Euclidean Distance": 46.518311636498396,
+        "r2 score": -0.12394697074103589,
+        "Execution Time": 6.82623553276062
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.883550824175824,
+            "Tmin_aug_sep": 18.281666666666673,
+            "prec_jun_sep": 53.0,
+            "vintage_score": -7.495469977554762
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.92328475182081,
+            "Tmin_aug_sep": 18.259178410937334,
+            "prec_jun_sep": 53.0510681896738,
+            "vintage_score": -7.725303219341441
+        },
+        "Deviation missing": 7.715104258114226,
+        "Deviation filled": 4.885376860123547,
+        "Improvement": 2.8297273979906787
+    }
+}

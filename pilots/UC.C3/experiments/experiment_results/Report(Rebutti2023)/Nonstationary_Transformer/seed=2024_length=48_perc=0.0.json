@@ -1,0 +1,64 @@
+{
+    "dataset": "Report(Rebutti2023)",
+    "gap_parameters": {
+        "gap_type": "overlap",
+        "perc": "0.0 %",
+        "length": 48,
+        "seed": 2024
+    },
+    "algorithm": "Nonstationary_Transformer",
+    "algorithm_parameters": {
+        "n_layers": 2,
+        "d_model": 256,
+        "d_ffn": 128,
+        "n_heads": 2,
+        "n_projector_hidden_layers": 2,
+        "d_projector_hidden": [
+            32,
+            32
+        ],
+        "dropout": 0.4,
+        "epochs": 100,
+        "batch_size": 32,
+        "ORT_weight": 1,
+        "MIT_weight": 1,
+        "num_workers": 0,
+        "patience": 10,
+        "lr": 0.008561435614770999,
+        "device": "cuda"
+    },
+    "metrics": {
+        "Missing value percentage": 0.7196710075394106,
+        "Missing value percentage between 4 and 9": 1.092896174863388,
+        "Mean absolute error": 0.20788812040704382,
+        "Mean square error": 0.06696436678414604,
+        "Root mean square error": 0.25877474139518725,
+        "Mean relative error": 0.2811881151001693,
+        "Euclidean Distance": 3.585687998495701,
+        "r2 score": 0.8391821366004221,
+        "Execution Time": 13.40335988998413
+    },
+    "vintage_score": {
+        "original": {
+            "Tmean_apr_sep": 20.91026867030965,
+            "Tmin_aug_sep": 18.283606557377052,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -8.122098331799663
+        },
+        "missing": {
+            "Tmean_apr_sep": 20.883550824175824,
+            "Tmin_aug_sep": 18.281666666666673,
+            "prec_jun_sep": 120.3,
+            "vintage_score": -7.961051377554753
+        },
+        "filled": {
+            "Tmean_apr_sep": 20.9308462904223,
+            "Tmin_aug_sep": 18.296974377562876,
+            "prec_jun_sep": 119.00763755960347,
+            "vintage_score": -8.242709328172225
+        },
+        "Deviation missing": 1.9828244828602732,
+        "Deviation filled": 1.4849733584281517,
+        "Improvement": 0.49785112443212154
+    }
+}

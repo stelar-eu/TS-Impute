@@ -14,14 +14,20 @@
 		"MIT_weight": 1,
 		"attn_dropout": 0,
 		"diagonal_attention_mask": true,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.008610459441905952,
+		"device": "cuda"
 	},
 	"brits":
 	{
 		"rnn_hidden_size": 256,
 		"batch_size": 32,
 		"epochs": 50,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.001,
+		"device": "cuda"
 	},
 	"csdi":
 	{
@@ -37,7 +43,10 @@
 		"epochs": 50,
 		"batch_size": 32,
 		"n_diffusion_steps": 50,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.001,
+		"device": "cuda"
 	},
 	"usgan":
 	{
@@ -49,14 +58,19 @@
 		"D_steps": 1,
 		"epochs": 50,
 		"batch_size": 32,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"device": "cuda"
 	},
 	"mrnn":
 	{
 		"rnn_hidden_size": 256,
 		"batch_size": 32,
 		"epochs": 50,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.001,
+		"device": "cuda"
 	},
 	"gpvae":
 	{
@@ -64,7 +78,7 @@
 		"encoder_sizes": [64, 64],
 		"decoder_sizes": [64, 64], 
 		"kernel": "cauchy",
-		"_comment": " The type of kernel function chosen in the Gaussain Process Proir. ['cauchy', 'diffusion', 'rbf', 'matern']",
+		"_comment": " The type of kernel function chosen in the Gaussian Process kernel. ['cauchy', 'diffusion', 'rbf', 'matern']",
 		"beta": 0.2,
 		"M": 1,
 		"K": 1,
@@ -74,7 +88,10 @@
 		"window_size": 3,
 		"batch_size": 32, 
 		"epochs": 50,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.001,
+		"device": "cuda"
 	},
 	"timesnet":
 	{
@@ -87,6 +104,48 @@
 		"apply_nonstationary_norm": false,
 		"batch_size": 32,
 		"epochs":50,
-		"num_workers": 0
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.009978373271498147,
+		"device": "cuda"
+	},
+	"nonstationary_transformer":
+	{
+		"n_layers": 2,
+		"d_model": 32,
+		"d_ffn": 64,
+		"n_heads": 4,
+		"n_projector_hidden_layers": 2,
+		"d_projector_hidden": [
+			64,
+			64
+		],
+		"dropout": 0.2,
+		"epochs": 100,
+		"batch_size": 32,
+		"ORT_weight": 1,
+		"MIT_weight": 1,
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.007037859132857435,
+		"device": "cuda"
+	},
+	"autoformer":
+	{
+		"n_layers": 2,
+		"d_model": 64,
+		"d_ffn": 64,
+		"n_heads": 2,
+		"factor": 3,
+		"moving_avg_window_size": 25,
+		"dropout": 0.1,
+		"epochs": 100,
+		"batch_size": 32,
+		"ORT_weight": 1,
+		"MIT_weight": 1,
+		"num_workers": 0,
+		"patience": 10,
+		"lr": 0.0009696220076141339,
+		"device": "cuda"
 	}
 }

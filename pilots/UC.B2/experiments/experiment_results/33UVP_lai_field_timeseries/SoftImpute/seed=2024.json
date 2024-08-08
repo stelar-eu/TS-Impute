@@ -1,0 +1,21 @@
+{
+    "dataset": "33UVP_lai_field_timeseries",
+    "gap_parameters": {
+        "gap_type": "custom_single",
+        "seed": 2024
+    },
+    "algorithm": "SoftImpute",
+    "algorithm_parameters": {
+        "max_rank": 4
+    },
+    "metrics": {
+        "Missing value percentage": 29.255729093549448,
+        "Mean absolute error": 0.6386939463795049,
+        "Mean square error": 0.7935745906083597,
+        "Root mean square error": 0.8908280364965843,
+        "Mean relative error": 0.8024555821349134,
+        "Euclidean Distance": 210.91564860325758,
+        "r2 score": 0.2001088073713434,
+        "Execution Time": 13.026230096817017
+    }
+}
