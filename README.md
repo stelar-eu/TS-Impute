@@ -12,7 +12,7 @@ TS-Impute is a Python library providing the following functionalities:
 Please see the provided [notebooks](https://github.com/stelar-eu/TS-Impute/tree/main/notebooks).
 
 ### Installation
-TS-Impute needs python version >=3.8 and < 4.0.
+TS-Impute needs python version 3.8 or 3.9.
 
 #### Python Module - Local library
 TS-Impute, after it is downloaded from [here](https://github.com/stelar-eu/TS-Impute) can be installed with:
