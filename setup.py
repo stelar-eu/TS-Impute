@@ -12,6 +12,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "jupyter==1.0.0",
+        "h5py==3.12.1",
         "numpy==1.24.4",
         "pandas==2.0.3",
         "scipy==1.10.1",
