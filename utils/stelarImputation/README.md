@@ -9,7 +9,7 @@ stelarImputation is a Python library providing the following functionalities:
 * Ensemble model Imputation
 
 ### Quick start
-Please see the provided [notebooks]().
+Please see the provided [notebooks](https://github.com/stelar-eu/TS-Impute/tree/main/utils/stelarImputation/notebooks).
 
 ### Installation
 stelarImputation requires Python version 3.8 or higher, up to 3.13.
