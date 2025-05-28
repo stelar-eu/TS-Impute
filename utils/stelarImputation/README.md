@@ -30,4 +30,4 @@ import stelarImputation
 ```
 
 ### License
-The contents of this project are licensed under the [MIT License]().
+The contents of this project are licensed under the [MIT License](https://github.com/stelar-eu/TS-Impute/blob/main/utils/stelarImputation/LICENSE).
