@@ -16,7 +16,7 @@ Please see the provided [notebooks](https://github.com/stelar-eu/TS-Impute/tree/
 stelarImputation requires Python version 3.8 or higher, up to 3.13.
 
 #### Python Module - Local library
-stelarImputation, after it is downloaded from [here](https://github.com/stelar-eu/TS-Impute/tree/main/utils/stelarImputation) can be installed with:
+stelarImputation, after it is downloaded from [here](https://github.com/stelar-eu/TS-Impute/tree/main) can be installed with:
 ```sh
 $ cd TS-Impute/utils/stelarImputation
 $ chmod +x install_custom_library.sh
