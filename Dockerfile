@@ -1,19 +1,9 @@
 FROM ubuntu:bionic
 
-# LABEL about the custom image
-LABEL maintainer="pbetchavas@hotmail.gr"
-LABEL version="0.1"
-LABEL description="This is custom Docker Image for \
-imputation algorithms."
-
 # WORKDIR
 WORKDIR /app
-COPY AlgoCollection/ /app/AlgoCollection/
-COPY stelarImputation/ /app/stelarImputation/
-COPY setup.py /app/setup.py
-COPY main.py /app/main.py
-COPY run.sh /app/run.sh
- 
+COPY . /app/
+
 RUN : \
     && apt-get update \
 	&& apt-get install -y curl jq \
@@ -33,6 +23,8 @@ RUN : \
 RUN python3.8 -m venv /venv
 ENV PATH=/venv/bin:$PATH
 
+WORKDIR /app/utils/stelarImputation
+
 # Update Ubuntu Software repository + Essenstials
 RUN apt update && \
 apt-get install build-essential -y && \
@@ -51,36 +43,47 @@ RUN echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https:
 apt-get update && \
 apt-get install cmake -y
 
-RUN apt-get install -y kitware-archive-keyring
+RUN apt-get install -y kitware-archive-keyring git
 
-# Install Armadillo
-RUN wget http://sourceforge.net/projects/arma/files/armadillo-10.8.2.tar.xz
-RUN tar -xvf armadillo-10.8.2.tar.xz
-RUN cd armadillo-10.8.2 && \
-./configure && \
-make && \
-make install && \
-cd ..
+# Install carma
+RUN git clone https://github.com/RUrlus/carma.git \
+&& cd carma \
+&& git checkout v0.8.0 \
+&& mkdir build && cd build \
+&& cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCARMA_INSTALL_LIB=ON -DCMAKE_BUILD_TYPE=Release \
+&& make \
+&& make install \
+&& ln -sf /usr/local/share/carma/cmake/carmaConfig.cmake /usr/local/share/carma/cmake/CarmaConfig.cmake \
+&& ln -sf /usr/local/share/carma/cmake/carmaConfigVersion.cmake /usr/local/share/carma/cmake/CarmaConfigVersion.cmake
+
+# Install armadillo
+RUN ARMA_VER=10.8.2 \
+&& wget https://downloads.sourceforge.net/project/arma/armadillo-${ARMA_VER}.tar.xz \
+&& tar xf armadillo-${ARMA_VER}.tar.xz \
+&& cd armadillo-${ARMA_VER} \
+&& ./configure -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+&& make \
+&& make install 
 
 # Install pybind11 + other libraries
-RUN pip install --upgrade pip && \
-	pip install --no-cache-dir pybind11==2.9.2 
+RUN pip install --upgrade pip setuptools wheel && \
+pip install --no-cache-dir numpy>=1.14 pybind11>=2.12.0
 
 
 # Install Custom library
-RUN cd /app/AlgoCollection && \
-mkdir build && \
+WORKDIR /app/utils/stelarImputation/AlgoCollection 
+RUN mkdir build && \
 cd build && \
 cmake .. -DPYTHON_LIBRARY_DIR=/venv/lib/python3.8/site-packages -DPYTHON_EXECUTABLE=/venv/bin/python3 -Dpybind11_DIR=/venv/lib/python3.8/site-packages/pybind11/share/cmake/pybind11 && \
 make && \
-make install && \
-cd .. && \
-cd ..
+make install
 
 # Install stelarImputation library
-RUN pip3 install --no-cache-dir torch==2.1.2+cu121  -f https://download.pytorch.org/whl/torch_stable.html
-RUN pip install --no-cache-dir torch-cluster==1.6.3 torch-sparse==0.6.18 torch-scatter==2.1.2 -f https://data.pyg.org/whl/torch-2.1.2+cu121.html
-RUN cd /app && pip install --no-cache-dir .
+WORKDIR /app/utils/stelarImputation
+RUN pip install --no-cache-dir .
+
+WORKDIR /app
+RUN pip install --no-cache-dir -r requirements.txt
 
 RUN chmod +x run.sh
 ENTRYPOINT ["./run.sh"]

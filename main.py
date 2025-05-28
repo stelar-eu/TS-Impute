@@ -1,305 +1,141 @@
-import math
-import pandas as pd
-import numpy as np
-from stelarImputation import imputation as tsi
-from typing import Union
-from minio import Minio
 import json
-import uuid
 import sys
-from xgboost import XGBRegressor
-from pathlib import Path
-import tempfile
-import time
-import ast
+import os
+import traceback
+from utils.mclient import MinioClient
+import stelarImputation as tsi
+import pandas as pd
 
 
-def prep_df(input_file, header, sep, minio):
-    """
-    Prepare DataFrame from input file.
-    """
-    if input_file.startswith('s3://'):
-        bucket, key = input_file.replace('s3://', '').split('/', 1)
-        client = Minio(minio['endpoint_url'], access_key=minio['id'], secret_key=minio['key'])
-        df = pd.read_csv(client.get_object(bucket, key), header=header, sep=sep)
-    else:
-        df = pd.read_csv(input_file, header=header, sep=sep)
-
-    return df
-
-
-def prep_model(input_file, minio):
-    """
-    Prepare DataFrame from input file.
-    """
-    model_xgb = XGBRegressor()
-    if input_file.startswith('s3://'):
-        bucket, key = input_file.replace('s3://', '').split('/', 1)
-        client = Minio(minio['endpoint_url'], access_key=minio['id'], secret_key=minio['key'])
-        dict_as_string = client.get_object(bucket, key).data.decode("utf-8")
-        # Create a temporary file (in-memory) with a .json extension
-        with tempfile.NamedTemporaryFile(suffix='.json', mode='w+') as temp_file:
-            # Write the JSON data to the temporary file
-            temp_file.write(dict_as_string)
-            temp_file.seek(0)
-
-            model_xgb.load_model(temp_file.name)
-    else:
-        model_xgb.load_model(input_file)
-    return model_xgb
-
-
-def find_type(dict_or_list_str: Union[str, dict, list]):
-    """
-    Check if the dictionary or list is of str type. 
-    If we get a string then evaluate it and get the Python dictionary or list object.
-    """
-    if type(dict_or_list_str) == str:
-        return ast.literal_eval(dict_or_list_str)
-    else:
-        return dict_or_list_str
-
-
-def run(j):
+def run(json_blob):
     try:
-        inputs = j['input']
 
-        parameters = j['parameters']
+        minio = json_blob["minio"]
 
-        if 'imp_type' in parameters:
-            imp_type = parameters['imp_type']
-            if imp_type not in ['gap_generation', 'imputation', 'train_ensemble', 'imputation_ensemble']:
-                raise ValueError(
-                    "imp_type must be in ['gap_generation', 'imputation', 'train_ensemble', 'imputation_ensemble']")
-        else:
-            raise ValueError(
-                "Missing imp_type. It must be in ['gap_generation', 'imputation', 'train_ensemble', 'imputation_ensemble']")
+        mc = MinioClient(
+            minio["endpoint_url"],
+            minio["id"],
+            minio["key"],
+            secure=True,
+            session_token=minio["skey"],
+        )
 
-        if 'time_column' in parameters:
-            time_column = parameters['time_column']
-        else:
-            time_column = ''
+        # check imp_method
+        traditional_algorithms = ["iterativesvd", "rosl", "cdmissingvaluerecovery",
+                                  "ogdimpute", "nmfmissingvaluerecovery", "dynammo", "grouse", "softimpute",
+                                  "pca_mme", "svt", "spirit", "tkcm", "linearimpute", "meanimpute", "zeroimpute",
+                                  "naive", "saits", "brits", "csdi", "usgan", "mrnn", "gpvae", "timesnet",
+                                  "nonstationary_transformer", "autoformer"]
 
-        if 'spatial_x_column' in parameters:
-            spatial_x_column = parameters['spatial_x_column']
-        else:
-            spatial_x_column = ''
+        # Common field
+        parameters = json_blob["parameters"]
+        imp_method = parameters.get("imp_method", "naive")
+        
+        if imp_method.lower() in traditional_algorithms:
 
-        if 'spatial_y_column' in parameters:
-            spatial_y_column = parameters['spatial_y_column']
-        else:
-            spatial_y_column = ''
+            # parameters
+            time_column = parameters.get("time_column", "time")
+            tuning = parameters.get("hyperparameter_tuning", False)
+            sep = parameters.get("sep", ",")
+            header = parameters.get("header", 0)
+            is_multivariate = parameters.get("is_multivariate", False)
+            default = parameters.get("default", True)
 
-        header = parameters['header']
-        sep = parameters['sep']
+            # Download the file from S3
+            missing_s3_path = json_blob["input"]["missing"][0]
+            missing_original_filename = os.path.basename(missing_s3_path)
+            missing_local_path = os.path.join(os.getcwd(), missing_original_filename)
+            mc.get_object(s3_path=missing_s3_path, local_path=missing_local_path)
+            df_missing = pd.read_csv(missing_local_path, header=header, sep=sep)
 
-        if 'dimension_column' in parameters:
-            dimension_column = parameters['dimension_column']
-        else:
-            dimension_column = ''
-
-        if 'is_multivariate' in parameters:
-            is_multivariate = parameters['is_multivariate']
-        else:
-            is_multivariate = False
-
-        if 'areaVStime' in parameters:
-            areaVStime = parameters['areaVStime']
-        else:
-            areaVStime = 0
-
-        if 'algorithms' in parameters:
-            algorithms = find_type(parameters['algorithms'])
-        else:
-            algorithms = dict()
-
-        if 'params' in parameters:
-            params = find_type(parameters['params'])
-        else:
-            params = dict()
-
-        if 'preprocessing' in parameters:
-            preprocessing = parameters['preprocessing']
-        else:
-            preprocessing = True
-
-        if 'index' in parameters:
-            index = parameters['index']
-        else:
-            index = False
-
-        output_file = parameters['output_file']
-        minio = j['minio']
-
-        if imp_type == 'gap_generation':
-            ground_truth = inputs[0]
-            train_params = find_type(parameters['train_params'])
-            df = prep_df(ground_truth, header, sep, minio)
-            start_time = time.time()
-
-            df_gaps = tsi.run_gap_generation(ground_truth=df,
-                                             train_params=train_params,
-                                             dimension_column=dimension_column,
-                                             time_column=time_column,
-                                             spatial_x_column=spatial_x_column,
-                                             spatial_y_column=spatial_y_column,
-                                             preprocessing=preprocessing,
-                                             index=index)
-
-            log = {'total_time': (time.time() - start_time), 'missing values': str(df_gaps.isnull().sum().sum())}
-            output_split = output_file.split('.')
-
-            # include gap type and parameters in the file name
-            added_text = ''
-            gap_type = train_params['gap_type']
-            if gap_type == 'random':
-                max_gap_length = train_params['max_gap_length']
-                max_gap_count = train_params['max_gap_count']
-
-                added_text = ('_random_max_gap_length=' + str(max_gap_length) +
-                              '_max_gap_count=' + str(max_gap_count))
-            elif gap_type == 'single':
-                miss_perc = train_params['miss_perc']
-                added_text = '_single_miss_perc=' + str(miss_perc)
-            elif gap_type == 'blackout':
-                gap_length = train_params['gap_length']
-                added_text = '_blackout_gap_length=' + str(gap_length)
+            if "ground_truth" in json_blob["input"]:
+                gt_s3_path = json_blob["input"]["ground_truth"][0]
+                gt_original_filename = os.path.basename(gt_s3_path)
+                gt_local_path = os.path.join(os.getcwd(), gt_original_filename)
+                mc.get_object(s3_path=gt_s3_path, local_path=gt_local_path)
+                df_gt = pd.read_csv(gt_local_path, header=header, sep=sep)
             else:
-                added_text = '_no_overlap'
+                df_gt = None
 
-            name = str('.'.join(output_split[:-1]) + added_text)
+            metrics = {}
+            if tuning:
+                if default:
+                    hyper_params = tsi.default_hyperparameter_tuning_imputation_params()
+                else:
+                    hyper_params = parameters.get("params", tsi.default_hyperparameter_tuning_imputation_params())
+                
+                
+                n_trials = parameters.get("n_trials", 20)
 
-            df_gaps.to_csv(output_file, index=False, sep=',', header=True)
+                best_params, logs = tsi.perform_hyperparameter_tuning(missing_df=df_missing,
+                                                                      algorithm=imp_method,
+                                                                      params=hyper_params,
+                                                                      n_trials=n_trials,
+                                                                      time_column=time_column,
+                                                                      is_multivariate=is_multivariate,
+                                                                      preprocessing=False,
+                                                                      index=False)
 
-            # Save to minio
-            basename = str(uuid.uuid4()) + "." + output_file.split('.')[-1]
-            client = Minio(minio['endpoint_url'], access_key=minio['id'], secret_key=minio['key'])
-            result = client.fput_object(minio['bucket'], basename, output_file)
-            object_path = f"s3://{result.bucket_name}/{result.object_name}"
+                params = best_params
+                metrics["Hyperparameter tuning results"] = logs
+            else:
+                if default:
+                    params = tsi.default_imputation_params()
+                else:
+                    params = parameters.get("params", tsi.default_imputation_params())
 
-            return {'message': 'StelarImputation project Gap Generation executed successfully!',
-                    'output': [{"name": name, "path": object_path}],
-                    'metrics': log,
-                    'status': 200}
+            df_imputed = tsi.run_imputation(missing=df_missing,
+                                            algorithms=[imp_method],
+                                            params=params,
+                                            time_column=time_column,
+                                            is_multivariate=is_multivariate,
+                                            preprocessing=False,
+                                            index=False)[imp_method]
 
-        elif imp_type == 'imputation':
-            imputation_input = inputs[0]
-            df = prep_df(imputation_input, header, sep, minio)
-            start_time = time.time()
+            # output 
+            out_obj = json_blob["output"]["imputed_timeseries"]
+            output_file = f"imputed_{missing_original_filename}.csv"
+            df_imputed.to_csv(output_file, index=False)
+            mc.put_object(file_path=output_file, s3_path=out_obj)
 
-            dict_of_imputed_dfs = tsi.run_imputation(missing=df,
-                                                     algorithms=algorithms, params=params,
-                                                     dimension_column=dimension_column,
-                                                     time_column=time_column,
-                                                     spatial_x_column=spatial_x_column,
-                                                     spatial_y_column=spatial_y_column,
-                                                     is_multivariate=is_multivariate,
-                                                     areaVStime=areaVStime,
-                                                     preprocessing=preprocessing,
-                                                     index=index)
+            if df_gt is not None:
+                df_missing.set_index(time_column, inplace=True)
 
-            log = {'total_time': (time.time() - start_time)}
+                df_gt.set_index(time_column, inplace=True)
 
-            # save csvs + execution_time metrics
-            output = []
-            for imputed_df_name in dict_of_imputed_dfs:
-                output_split = output_file.split('.')
-                alg_output_file = str('.'.join(output_split[:-1]) + '_' + imputed_df_name) + '.' + output_split[-1]
-                dict_of_imputed_dfs[imputed_df_name].to_csv(alg_output_file, index=False, sep=',', header=True)
+                df_imputed.set_index(time_column, inplace=True)
 
-                # Save to minio
-                basename = str(uuid.uuid4()) + "." + output_split[-1]
-                client = Minio(minio['endpoint_url'], access_key=minio['id'], secret_key=minio['key'])
-                result = client.fput_object(minio['bucket'], basename, alg_output_file)
-                object_path = f"s3://{result.bucket_name}/{result.object_name}"
-                output.append({"name": imputed_df_name, "path": object_path})
+                calc_metrics = tsi.compute_metrics(df_gt, df_missing, df_imputed)
+                metrics[f"Imputation results for {imp_method}"] = calc_metrics
 
-            return {'message': 'StelarImputation project Imputation executed successfully!',
-                    'output': output,
-                    'metrics': log,
-                    'status': 200}
-
-        elif imp_type == 'train_ensemble':
-            ground_truth = inputs[0]
-            train_params = find_type(parameters['train_params'])
-            df = prep_df(ground_truth, header, sep, minio)
-
-            start_time = time.time()
-            model, metrics = tsi.train_ensemble(ground_truth=df,
-                                                algorithms=algorithms,
-                                                params=params, train_params=train_params,
-                                                dimension_column=dimension_column,
-                                                time_column=time_column,
-                                                spatial_x_column=spatial_x_column,
-                                                spatial_y_column=spatial_y_column,
-                                                is_multivariate=is_multivariate,
-                                                areaVStime=areaVStime,
-                                                preprocessing=preprocessing,
-                                                index=index)
-
-            log = {'total_time': (time.time() - start_time)}
-            log.update(metrics)
-            # Save model
-            output_split = output_file.split('.')
-            model_output_file = str('.'.join(output_split[:-1]) + '_imputation_model.json')
-            model.save_model(model_output_file)
-
-            # Save to minio
-            basename = str(uuid.uuid4()) + "." + model_output_file.split('.')[-1]
-            client = Minio(minio['endpoint_url'], access_key=minio['id'], secret_key=minio['key'])
-            result = client.fput_object(minio['bucket'], basename, model_output_file)
-            object_path = f"s3://{result.bucket_name}/{result.object_name}"
-
-            return {'message': 'StelarImputation project Train Ensemble Model executed successfully!',
-                    'output': [{"name": 'Model in JSON format', "path": object_path}],
-                    'metrics': log,
-                    'status': 200}
-
-        elif imp_type == 'imputation_ensemble':
-            imputation_input = inputs[0]
-            model_input = inputs[1]
-            df = prep_df(imputation_input, header, sep, minio)
-            model = prep_model(model_input, minio)
-
-            start_time = time.time()
-            imputed_df = tsi.run_imputation_ensemble(missing=df,
-                                                     algorithms=algorithms,
-                                                     params=params, model=model,
-                                                     dimension_column=dimension_column,
-                                                     time_column=time_column,
-                                                     spatial_x_column=spatial_x_column,
-                                                     spatial_y_column=spatial_y_column,
-                                                     is_multivariate=is_multivariate,
-                                                     areaVStime=areaVStime,
-                                                     preprocessing=preprocessing,
-                                                     index=index)
-
-            log = {'total_time': (time.time() - start_time)}
-            imputed_df.to_csv(output_file, index=False, sep=',', header=True)
-
-            # Save to minio
-            basename = str(uuid.uuid4()) + "." + output_file.split('.')[-1]
-            client = Minio(minio['endpoint_url'], access_key=minio['id'], secret_key=minio['key'])
-            result = client.fput_object(minio['bucket'], basename, output_file)
-            object_path = f"s3://{result.bucket_name}/{result.object_name}"
-
-        return {'message': 'StelarImputation project Imputation Ensemble Model executed successfully!',
-                'output': [{"name": 'Model imputed results in CSV format', "path": object_path}],
-                'metrics': log,
-                'status': 200}
-    except Exception as e:
+            return {
+                "message": "Tool Executed Succesfully",
+                "output": {"imputed_timeseries": out_obj},
+                "metrics": metrics,
+                "status": "success",
+            }
+        else:
+            # code for llm methods
+            return {
+                "message": "Tool Executed Succesfully",
+                "output": {"imputed_timeseries": ""},
+                "metrics": {},
+                "status": "success",
+            }
+    except Exception:
+        print(traceback.format_exc())
         return {
-            'message': 'An error occurred during data processing.',
-            'error': str(e),
-            'status': 500
+            "message": "An error occurred during data processing.",
+            "error": traceback.format_exc(),
+            "status": 500
         }
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) != 3:
         raise ValueError("Please provide 2 files.")
     with open(sys.argv[1]) as o:
         j = json.load(o)
     response = run(j)
-    with open(sys.argv[2], 'w') as o:
+    with open(sys.argv[2], "w") as o:
         o.write(json.dumps(response, indent=4))
