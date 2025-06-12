@@ -65,7 +65,7 @@ def default_imputation_params() -> dict:
         },
         "saits": {
             "n_layers": 4,  # Number of layers in the 1st and 2nd DMSA blocks in the SAITS model
-            "d_model": 64,  # Dimension of the model’s backbone; input dimension of the multi-head DMSA layers
+            "d_model": 64,  # Dimension of the modelï¿½s backbone; input dimension of the multi-head DMSA layers
             "d_ffn": 64,  # Dimension of the feed-forward network within each Transformer layer
             "n_heads": 2,  # Number of attention heads in the multi-head attention mechanism
             "d_k": 32,  # Dimension of the key vectors in the attention mechanism

@@ -70,12 +70,12 @@ def run_gap_generation(ground_truth: Union[str, pd.DataFrame], train_params: dic
     if 'max_gap_length' in train_params:
         max_gap_length = train_params['max_gap_length']
     else:
-        max_gap_length = 10
+        max_gap_length = 1
 
     if 'max_gap_count' in train_params:
         max_gap_count = train_params['max_gap_count']
     else:
-        max_gap_count = 5
+        max_gap_count = 1
 
     if 'random_seed' in train_params:
         random_seed = train_params['random_seed']

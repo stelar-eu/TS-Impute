@@ -66,8 +66,16 @@ def run(json_blob):
                 
                 
                 n_trials = parameters.get("n_trials", 20)
+                tuning_top_k = parameters.get("tuning_top_k_fewer_missing", 1000) + 1
+                
+                if tuning_top_k >= (df_missing.shape[1] - 1):
+                    hpt_df_missing = df_missing.copy()
+                else:
+                    nan_counts =df_missing.isnull().sum()
+                    least_nan_cols = nan_counts.nsmallest(int(tuning_top_k)).index
+                    hpt_df_missing = df_missing[least_nan_cols].copy()
 
-                best_params, logs = tsi.perform_hyperparameter_tuning(missing_df=df_missing,
+                best_params, logs = tsi.perform_hyperparameter_tuning(missing_df=hpt_df_missing,
                                                                       algorithm=imp_method,
                                                                       params=hyper_params,
                                                                       n_trials=n_trials,
