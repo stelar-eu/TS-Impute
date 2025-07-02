@@ -46,14 +46,24 @@ def run(json_blob):
             missing_original_filename = os.path.basename(missing_s3_path)
             missing_local_path = os.path.join(os.getcwd(), missing_original_filename)
             mc.get_object(s3_path=missing_s3_path, local_path=missing_local_path)
-            df_missing = pd.read_csv(missing_local_path, header=header, sep=sep)
+            if missing_local_path.endswith('.csv'):
+                df_missing = pd.read_csv(missing_local_path, header=header, sep=sep)
+            elif missing_local_path.endswith(('.xlsx', '.xls')):
+                df_missing = pd.read_excel(missing_local_path, header=header)
+            else:
+                raise ValueError("Unsupported file type")
 
             if "ground_truth" in json_blob["input"]:
                 gt_s3_path = json_blob["input"]["ground_truth"][0]
                 gt_original_filename = os.path.basename(gt_s3_path)
                 gt_local_path = os.path.join(os.getcwd(), gt_original_filename)
                 mc.get_object(s3_path=gt_s3_path, local_path=gt_local_path)
-                df_gt = pd.read_csv(gt_local_path, header=header, sep=sep)
+                if gt_local_path.endswith('.csv'):
+                    df_gt = pd.read_csv(gt_local_path, header=header, sep=sep)
+                elif gt_local_path.endswith(('.xlsx', '.xls')):
+                    df_gt = pd.read_excel(gt_local_path, header=header)
+                else:
+                    raise ValueError("Unsupported file type")
             else:
                 df_gt = None
 
@@ -102,8 +112,16 @@ def run(json_blob):
 
             # output 
             out_obj = json_blob["output"]["imputed_timeseries"]
-            output_file = f"imputed_{missing_original_filename}.csv"
-            df_imputed.to_csv(output_file, index=False)
+            output_file = f"imputed_{missing_original_filename}"
+            if missing_original_filename.lower().endswith(".csv"):
+                df_imputed.to_csv(output_file, index=False, header=header, sep=sep)
+            elif missing_original_filename.lower().endswith((".xlsx", ".xls")):
+                if header==0:
+                    header=True
+                df_imputed.to_excel(output_file, index=False, header=header)
+            else:
+                raise ValueError(f"Unsupported file type in: {missing_original_filename}")
+
             mc.put_object(file_path=output_file, s3_path=out_obj)
 
             if df_gt is not None:
