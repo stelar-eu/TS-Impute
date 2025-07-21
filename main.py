@@ -143,7 +143,7 @@ def run(json_blob):
         else:
             # code for llm methods
             return {
-                "message": "Tool Executed Succesfully",
+                "message": "Tool Executed Successfully",
                 "output": {"imputed_timeseries": ""},
                 "metrics": {},
                 "status": "success",
