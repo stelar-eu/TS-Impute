@@ -46,6 +46,8 @@ def run(json_blob):
             missing_original_filename = os.path.basename(missing_s3_path)
             missing_local_path = os.path.join(os.getcwd(), missing_original_filename)
             mc.get_object(s3_path=missing_s3_path, local_path=missing_local_path)
+            if header==True:
+                header=0
             if missing_local_path.endswith('.csv'):
                 df_missing = pd.read_csv(missing_local_path, header=header, sep=sep)
             elif missing_local_path.endswith(('.xlsx', '.xls')):
@@ -113,11 +115,11 @@ def run(json_blob):
             # output 
             out_obj = json_blob["output"]["imputed_timeseries"]
             output_file = f"imputed_{missing_original_filename}"
+            if header==0:
+                header=True
             if missing_original_filename.lower().endswith(".csv"):
                 df_imputed.to_csv(output_file, index=False, header=header, sep=sep)
             elif missing_original_filename.lower().endswith((".xlsx", ".xls")):
-                if header==0:
-                    header=True
                 df_imputed.to_excel(output_file, index=False, header=header)
             else:
                 raise ValueError(f"Unsupported file type in: {missing_original_filename}")
@@ -143,7 +145,7 @@ def run(json_blob):
         else:
             # code for llm methods
             return {
-                "message": "Tool Executed Successfully",
+                "message": "Tool Executed Succesfully",
                 "output": {"imputed_timeseries": ""},
                 "metrics": {},
                 "status": "success",
