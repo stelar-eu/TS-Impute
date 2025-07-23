@@ -137,7 +137,7 @@ def run(json_blob):
                 metrics[f"Imputation results for {imp_method}"] = calc_metrics
 
             return {
-                "message": "Tool Executed Succesfully",
+                "message": "Tool Executed Successfully",
                 "output": {"imputed_timeseries": out_obj},
                 "metrics": metrics,
                 "status": "success",
@@ -145,7 +145,7 @@ def run(json_blob):
         else:
             # code for llm methods
             return {
-                "message": "Tool Executed Succesfully",
+                "message": "Tool Executed Successfully",
                 "output": {"imputed_timeseries": ""},
                 "metrics": {},
                 "status": "success",
