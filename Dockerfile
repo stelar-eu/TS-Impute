@@ -84,6 +84,7 @@ RUN pip install --no-cache-dir .
 
 WORKDIR /app
 RUN pip install --no-cache-dir -r requirements.txt
+RUN python -c "from pypots.imputation import SAITS"
 
 RUN chmod +x run.sh
 ENTRYPOINT ["./run.sh"]
