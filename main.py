@@ -34,7 +34,9 @@ def run(json_blob):
         if imp_method.lower() in traditional_algorithms:
 
             # parameters
+            # Get column name and format
             time_column = parameters.get("time_column", "time")
+            time_format = parameters.get("time_format", "%Y-%m-%d %H:%M:%S")
             tuning = parameters.get("hyperparameter_tuning", False)
             sep = parameters.get("sep", ",")
             header = parameters.get("header", 0)
@@ -46,14 +48,25 @@ def run(json_blob):
             missing_original_filename = os.path.basename(missing_s3_path)
             missing_local_path = os.path.join(os.getcwd(), missing_original_filename)
             mc.get_object(s3_path=missing_s3_path, local_path=missing_local_path)
-            if header==True:
-                header=0
+            # Normalize header argument
+            if header is True:
+                header = 0
+            elif header is False:
+                header = None
+            elif isinstance(header, (int, list, type(None))):
+                # Valid Pandas options, pass through
+                pass
+            else:
+                raise ValueError(f"Invalid header value: {header}")
             if missing_local_path.endswith('.csv'):
                 df_missing = pd.read_csv(missing_local_path, header=header, sep=sep)
             elif missing_local_path.endswith(('.xlsx', '.xls')):
                 df_missing = pd.read_excel(missing_local_path, header=header)
             else:
                 raise ValueError("Unsupported file type")
+            
+            # Sort missing dataframe by datetime column (time_column) using temporary conversion
+            df_missing = df_missing.iloc[pd.to_datetime(df_missing[time_column], format=time_format).argsort()]
 
             if "ground_truth" in json_blob["input"]:
                 gt_s3_path = json_blob["input"]["ground_truth"][0]
@@ -66,6 +79,9 @@ def run(json_blob):
                     df_gt = pd.read_excel(gt_local_path, header=header)
                 else:
                     raise ValueError("Unsupported file type")
+                
+                # Sort missing dataframe by datetime column (time_column) using temporary conversion
+                df_gt = df_gt.iloc[pd.to_datetime(df_gt[time_column], format=time_format).argsort()]
             else:
                 df_gt = None
 
@@ -115,12 +131,11 @@ def run(json_blob):
             # output 
             out_obj = json_blob["output"]["imputed_timeseries"]
             output_file = f"imputed_{missing_original_filename}"
-            if header==0:
-                header=True
+            write_header = header not in (None, False)
             if missing_original_filename.lower().endswith(".csv"):
-                df_imputed.to_csv(output_file, index=False, header=header, sep=sep)
+                df_imputed.to_csv(output_file, index=False, header=write_header, sep=sep)
             elif missing_original_filename.lower().endswith((".xlsx", ".xls")):
-                df_imputed.to_excel(output_file, index=False, header=header)
+                df_imputed.to_excel(output_file, index=False, header=write_header)
             else:
                 raise ValueError(f"Unsupported file type in: {missing_original_filename}")
 
@@ -137,7 +152,7 @@ def run(json_blob):
                 metrics[f"Imputation results for {imp_method}"] = calc_metrics
 
             return {
-                "message": "Tool Executed Successfully",
+                "message": "Tool Executed Succesfully",
                 "output": {"imputed_timeseries": out_obj},
                 "metrics": metrics,
                 "status": "success",
@@ -145,7 +160,7 @@ def run(json_blob):
         else:
             # code for llm methods
             return {
-                "message": "Tool Executed Successfully",
+                "message": "Tool Executed Succesfully",
                 "output": {"imputed_timeseries": ""},
                 "metrics": {},
                 "status": "success",
