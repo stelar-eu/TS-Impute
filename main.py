@@ -65,6 +65,11 @@ def run(json_blob):
             else:
                 raise ValueError("Unsupported file type")
             
+            # columns with timeseries with no values at all in the missing data
+            cols_to_drop = df_missing.columns[df_missing.isna().all()]
+
+            # drop timeseries with no values 
+            df_missing.drop(columns=cols_to_drop, inplace=True)
 
             original_order = df_missing[time_column].tolist()
             # Sort missing dataframe by datetime column (time_column) using temporary conversion
@@ -82,6 +87,9 @@ def run(json_blob):
                 else:
                     raise ValueError("Unsupported file type")
                 
+                # drop timeseries with no values using the columns from the missing data
+                df_gt.drop(columns=cols_to_drop, inplace=True)
+
                 # Sort missing dataframe by datetime column (time_column) using temporary conversion
                 df_gt = df_gt.iloc[pd.to_datetime(df_gt[time_column], format=time_format).argsort()]
             else:
