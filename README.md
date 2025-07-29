@@ -1,10 +1,13 @@
-Welcome to the KLMS Tool version of TS-Impute
+# Welcome to the KLMS Tool version of TS-Impute
+
+# Instructions
+
+## Input
+TS-Impute can be executed from the KLMS with the following input json:
 
 
-Instructions
-Input
-stelardataprofiler can be executed from the KLMS with the following input json:
+### Input
 
-Input
-Parameters
-Output
+### Parameters  
+
+## Output
