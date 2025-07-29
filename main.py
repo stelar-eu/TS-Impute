@@ -65,6 +65,8 @@ def run(json_blob):
             else:
                 raise ValueError("Unsupported file type")
             
+
+            original_order = df_missing[time_column].tolist()
             # Sort missing dataframe by datetime column (time_column) using temporary conversion
             df_missing = df_missing.iloc[pd.to_datetime(df_missing[time_column], format=time_format).argsort()]
 
@@ -127,20 +129,7 @@ def run(json_blob):
                                             is_multivariate=is_multivariate,
                                             preprocessing=False,
                                             index=False)[imp_method]
-
-            # output 
-            out_obj = json_blob["output"]["imputed_timeseries"]
-            output_file = f"imputed_{missing_original_filename}"
-            write_header = header not in (None, False)
-            if missing_original_filename.lower().endswith(".csv"):
-                df_imputed.to_csv(output_file, index=False, header=write_header, sep=sep)
-            elif missing_original_filename.lower().endswith((".xlsx", ".xls")):
-                df_imputed.to_excel(output_file, index=False, header=write_header)
-            else:
-                raise ValueError(f"Unsupported file type in: {missing_original_filename}")
-
-            mc.put_object(file_path=output_file, s3_path=out_obj)
-
+            
             if df_gt is not None:
                 df_missing.set_index(time_column, inplace=True)
 
@@ -151,8 +140,27 @@ def run(json_blob):
                 calc_metrics = tsi.compute_metrics(df_gt, df_missing, df_imputed)
                 metrics[f"Imputation results for {imp_method}"] = calc_metrics
 
+                df_imputed.reset_index(inplace=True, names=[time_column])
+                df_imputed.columns.name = ''
+            
+            positions = [df_imputed[time_column].tolist().index(val) for val in original_order]
+            df_imputed = df_imputed.iloc[positions].reset_index(drop=True)
+
+            # output 
+            out_obj = json_blob["output"]["imputed_timeseries"]
+            output_file = f"imputed_{missing_original_filename}"
+            write_header = (header is not None) and (header is not False)
+            if missing_original_filename.lower().endswith(".csv"):
+                df_imputed.to_csv(output_file, index=False, header=write_header, sep=sep)
+            elif missing_original_filename.lower().endswith((".xlsx", ".xls")):
+                df_imputed.to_excel(output_file, index=False, header=write_header)
+            else:
+                raise ValueError(f"Unsupported file type in: {missing_original_filename}")
+
+            mc.put_object(file_path=output_file, s3_path=out_obj)
+
             return {
-                "message": "Tool Executed Succesfully",
+                "message": "Tool Executed Successfully",
                 "output": {"imputed_timeseries": out_obj},
                 "metrics": metrics,
                 "status": "success",
@@ -160,7 +168,7 @@ def run(json_blob):
         else:
             # code for llm methods
             return {
-                "message": "Tool Executed Succesfully",
+                "message": "Tool Executed Successfully",
                 "output": {"imputed_timeseries": ""},
                 "metrics": {},
                 "status": "success",
