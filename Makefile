@@ -1,5 +1,5 @@
 DOCKER=docker
-IMGTAG=panosbetchavas/stelarimputation:v0.0
+IMGTAG=img.stelar.gr/stelar/ts-imputation:latest
 IMGPATH=.
 DOCKERFILE=$(IMGPATH)/Dockerfile
 

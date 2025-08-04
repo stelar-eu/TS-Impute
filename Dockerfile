@@ -82,6 +82,9 @@ make install
 WORKDIR /app/utils/stelarImputation
 RUN pip install --no-cache-dir .
 
+WORKDIR /app/utils/LLMs
+RUN pip install --no-cache-dir -r requirements.txt
+
 WORKDIR /app
 RUN pip install --no-cache-dir -r requirements.txt
 RUN python -c "from pypots.imputation import SAITS"
