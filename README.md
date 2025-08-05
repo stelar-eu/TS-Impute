@@ -190,3 +190,6 @@ The output of TS-Impute has the following format:
 	"status": "success"
 }
 ```
+
+## Remote Execution
+For the following models — `"saits"`, `"brits"`, `"csdi"`, `"usgan"`, `"mrnn"`, `"gpvae"`, `"timesnet"`, `"nonstationary_transformer"`, and `"autoformer"` — GPUs can be used to accelerate the imputation process. To achieve this, the imputation can be executed remotely. We conducted tests in an environment equipped with a GPU running CUDA 12. An example of remote execution can be found [here](https://github.com/stelar-eu/TS-Impute/blob/main/notebooks/ts-imputation-remote-gpu.ipynb).
