@@ -188,21 +188,6 @@ def run(json_blob):
             ##############################
             ### parameters to be monitored
             ##############################
-            # crop_type = json_blob['parameters']['crop_type']
-            # prompt_mode = json_blob['parameters']['prompt_mode']
-            # num_of_examples = json_blob['parameters']['num_of_examples']
-            # model_name = json_blob['parameters']['model_name']
-            # groq_api_key = json_blob['secrets']['groq_api_key']
-            # api_url = json_blob['parameters']['api_url']
-            # api_token = json_blob['secrets']['api_token']
-            # starting_date = json_blob['parameters']['starting_date']
-            # end_date = json_blob['parameters']['end_date']
-            # llm_method = json_blob['parameters']['LLM']
-            # inference_engine = json_blob['parameters']['inference_engine']
-            # datetime_column_name = json_blob['parameters']['datetime_column_name']
-            # missingness_category = json_blob['parameters']['missingness_category']
-            # number_of_missing = json_blob['parameters']['number_of_missing']
-            # prefix = json_blob['parameters']['prefix']
 
             crop_type = parameters.get("crop_type", "Unknown crop type")
             prompt_mode = parameters.get("prompt_mode", "simple")
@@ -210,22 +195,18 @@ def run(json_blob):
             model_name = parameters.get("model_name", "llama-3.1-8b-instant")
             groq_api_key = secrets.get("groq_api_key")
             api_token = secrets.get('api_token')
-            api_url = parameters.get("api_url", 'None')
             starting_date = parameters.get("starting_date")
             end_date = parameters.get("end_date")
             llm_method = parameters.get("llm_method", 'zero_shot_prompting')
             inference_engine = parameters.get("inference_engine", "groq")
-            datetime_column_name = parameters.get("datetime_column_name", "time")
-            prefix = parameters.get("prefix", "None")
+            datetime_column_name = parameters.get("time_column", "time")
+            
 
 
             sep = parameters.get("sep", ",")
             header = parameters.get("header", 0)
 
             time_format = parameters.get("time_format", "%Y-%m-%d %H:%M:%S")
-
-            #TODO 
-            #prefix = 'testing'
 
             # Download the file from S3
             missing_s3_path = json_blob["input"]["missing"][0]
@@ -297,6 +278,8 @@ def run(json_blob):
             else:
                 low_missing_values_combined_lai_df = None
 
+            api_url = "None"
+            prefix = "None"
             ### main code 
             if json_blob['parameters']['LLM'] == 'zero_shot_prompting':
                 results, df_imputed = simple_LLM_main_loop(inference_engine, groq_api_key, llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, model_name, prefix)
