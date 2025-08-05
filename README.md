@@ -42,7 +42,7 @@ To run TS-Impute, via STELAR KLMS API the following input JSON structure is expe
 
 ### Input
 - **`missing`** *(str, required)*  
-  Path to the **csv**, **xlsx** or **xls** file containing the data with missing values  
+  Path to the **csv**, **xlsx** or **xls** file containing the data with missing values.
 
 - **`ground_truth`** *(str, optional, default=None)*  
   Path to the **csv**, **xlsx**, or **xls** file containing the ground truth values.   
