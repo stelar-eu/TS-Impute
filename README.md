@@ -4,7 +4,7 @@ It includes a plethora of state of the art missing value imputation models (e.g.
 # Instructions
 
 ## Input
-To run TS-Impute, via STELAR KLMS API the following input JSON structure is expected:
+To run TS-Impute, via STELAR KLMS API, the following input JSON structure is expected:
 ```json
 {
   "process_id": "<PROCESS_ID>",
