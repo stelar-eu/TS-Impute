@@ -1,8 +1,11 @@
 # Welcome to the KLMS Tool version of TS-Impute
 TS-Impute is a library implemented in python and c# for time series missing value imputation.    
 It includes a plethora of state of the art missing value imputation models (e.g. deep learning such as SAITS, TimesNet, etc.), statistical-methods (e.g. DynaMMO, SoftImpute, etc.) and llm-based-methods (e.g. zero_shot_prompting, few_shot_prompting, etc.)
-# Instructions
 
+# Quick start
+Please see the provided [notebooks](https://github.com/stelar-eu/TS-Impute/tree/main/notebooks).
+
+# Instructions
 ## Input
 To run TS-Impute, via STELAR KLMS API, the following input JSON structure is expected:
 ```json
