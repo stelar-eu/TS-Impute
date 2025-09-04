@@ -247,18 +247,18 @@ def perform_hyperparameter_tuning(missing_df: pd.DataFrame, groundTruth_df: pd.D
         already_seen = []
 
         def objective(trial):
-            H = trial.suggest_int("H", model_parameters['H'][0], model_parameters['H'][1])
+            find_h = trial.suggest_int("H", model_parameters['H'][0], model_parameters['H'][1])
             max_iter = trial.suggest_categorical("max_iter", model_parameters['max_iter'])
             fast = trial.suggest_categorical("fast", model_parameters['fast'])
 
             parameters = {
                 algorithm: {
-                    "H": H,
+                    "H": find_h,
                     "max_iter": max_iter,
                     "fast": fast
                 }
             }
-            value = str(H) + '_' + str(fast)
+            value = str(find_h) + '_' + str(fast)
             if value in already_seen:
                 raise optuna.exceptions.TrialPruned()
             else:
