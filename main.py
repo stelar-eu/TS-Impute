@@ -281,22 +281,22 @@ def run(json_blob):
             api_url = "None"
             prefix = "None"
             ### main code 
-            if json_blob['parameters']['LLM'] == 'zero_shot_prompting':
+            if llm_method == 'zero_shot_prompting':
                 results, df_imputed = simple_LLM_main_loop(inference_engine, groq_api_key, llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, model_name, prefix)
 
-            elif json_blob['parameters']['LLM'] == 'few_shot_prompting_random_examples':
+            elif llm_method == 'few_shot_prompting_random_examples':
                 results, df_imputed = few_shot_random_examples_main_loop(inference_engine, groq_api_key, llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, num_of_examples, model_name, prefix)
 
-            elif json_blob['parameters']['LLM'] == 'few_shot_prompting_rag_examples':
+            elif llm_method == 'few_shot_prompting_rag_examples':
                 results, df_imputed = few_shot_RAG_examples_main_loop(inference_engine, groq_api_key, llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, num_of_examples, model_name, prefix)
 
-            elif json_blob['parameters']['LLM'] == 'few_shot_prompting_rag_contextual_info':
+            elif llm_method == 'few_shot_prompting_rag_contextual_info':
                 results, df_imputed = few_shot_RAG_context_main_loop(inference_engine, groq_api_key, llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, num_of_examples, model_name, prefix)
 
-            elif json_blob['parameters']['LLM'] == 'hybrid_multiple_choice':
+            elif llm_method == 'hybrid_multiple_choice':
                 results, df_imputed = LLM_hybrid_main_loop(inference_engine, groq_api_key,  llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, model_name, prefix)
 
-            elif json_blob['parameters']['LLM'] == 'hybrid_multiple_choice_v2':
+            elif llm_method == 'hybrid_multiple_choice_v2':
                 results, df_imputed = LLM_hybrid_main_loop(inference_engine, groq_api_key,  llm_method, low_missing_values_combined_lai_df, df_missing, crop_type, prompt_mode, api_url, api_token, starting_date, end_date, model_name, prefix)
             
             print(results)
